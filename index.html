@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dream Team de Calidad y Mejoramiento Continuo</title>
+  <meta name="theme-color" content="#0a3d91">
+  <meta name="description" content="Portal Dream Team de Calidad y Mejoramiento Continuo">
+  <link rel="icon" href="assets/logo/dream-team-logo.png">
+  <link rel="stylesheet" href="css/styles.css?v=v8-eliminar-visible">
+</head>
+<body>
+  <a class="skip-link" href="#app">Saltar al contenido principal</a>
+
+  <div class="bg-video" aria-hidden="true">
+    <video src="assets/backgrounds/portal-bg.mp4" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div id="custom-bg" class="bg-custom" aria-hidden="true"></div>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#/inicio" aria-label="Ir al inicio">
+      <img src="assets/logo/dream-team-logo.png" alt="Dream Team">
+      <span><strong>Dream Team</strong><small>Calidad y Mejoramiento Continuo</small></span>
+    </a>
+
+    <button id="menu-btn" class="btn icon-btn menu-btn" type="button" aria-label="Abrir menú">☰</button>
+
+    <nav id="main-nav" class="nav" aria-label="Navegación principal">
+      <a href="#/inicio" data-route="inicio">Inicio</a>
+      <a href="#/apps" data-route="apps">Apps</a>
+      <a href="#/noticias" data-route="noticias">Noticias</a>
+      <a href="#/auditorias" data-route="auditorias">Auditoría</a>
+      <a href="#/documentos" data-route="documentos">Documentos</a>
+      <a href="#/publicaciones" data-route="publicaciones">Publicaciones</a>
+      <a href="#/perfil" data-route="perfil">Mi perfil</a>
+      <a href="#/admin" data-route="admin">Administración</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="btn secondary" id="audio-btn" type="button"><span>🔊</span><span class="label">Accesibilidad</span></button>
+      <button class="btn icon-btn" id="view-toggle" type="button" title="Acomodar vista" aria-label="Acomodar vista">☰</button>
+      <button class="btn" id="auth-btn" type="button">Ingresar</button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <section id="view-panel" class="view-panel" hidden aria-label="Acomodar vista"></section>
+  <div id="toast-zone" class="toast-zone" aria-live="polite"></div>
+  <div id="loading-overlay" class="loading-overlay" hidden><div class="loading-box"><img src="assets/notifications/loading.gif" alt=""><p id="loading-text">Cargando...</p></div></div>
+  <div id="modal" class="modal" hidden></div>
+
+  <footer class="footer">
+    <strong>Dream Team de Calidad y Mejoramiento Continuo</strong>
+    <p>Portal limpio, administrable y listo para repositorio nuevo.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js?v=clean-v1"></script>
+  <script src="js/app.js?v=v8-eliminar-visible"></script>
+</body>
+</html>

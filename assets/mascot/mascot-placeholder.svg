@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+<rect width="600" height="800" rx="44" fill="#fff4c4"/>
+<circle cx="300" cy="235" r="135" fill="#f4c542"/>
+<circle cx="250" cy="225" r="18" fill="#43331f"/><circle cx="350" cy="225" r="18" fill="#43331f"/>
+<path d="M255 290 Q300 332 345 290" stroke="#43331f" stroke-width="14" fill="none" stroke-linecap="round"/>
+<rect x="170" y="390" width="260" height="235" rx="65" fill="#0a3d91"/>
+<text x="300" y="720" text-anchor="middle" font-family="Century Gothic, Arial" font-size="42" font-weight="700" fill="#0a3d91">Mascota</text>
+</svg>

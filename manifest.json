@@ -1,0 +1,9 @@
+{
+  "name": "Dream Team de Calidad",
+  "short_name": "Dream Team",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f5fa",
+  "theme_color": "#0a3d91",
+  "icons": []
+}
