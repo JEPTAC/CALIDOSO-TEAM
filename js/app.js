@@ -111,7 +111,7 @@
   }
   async function saveHomeSettings(){
     saveState();
-    if(!supabaseClient || !isSuperAdmin()) return;
+    if(!supabaseClient || !canManageContent()) return;
     try{
       await supabaseClient.from("system_settings").upsert({setting_key:HOME_SETTING_KEY,setting_value:{visual:state.visual,banners:state.banners,mascot:state.mascot,team:state.team,modulePanels:state.modulePanels},description:"Configuración estable V6",updated_at:new Date().toISOString()});
     }catch(err){console.warn("No se pudo guardar settings",err);}
@@ -119,6 +119,12 @@
   function isSuperAdmin(){
     const email=state.profile?.email||state.session?.user?.email||"";
     return state.profile?.role==="super_admin" || email.toLowerCase()===(window.DREAM_CONFIG?.superAdminEmail||"").toLowerCase();
+  }
+  function isAdmin(){
+    return state.profile?.role === "admin";
+  }
+  function canManageContent(){
+    return isSuperAdmin() || isAdmin();
   }
   function getRole(){return isSuperAdmin()?"super_admin":(state.profile?.role||"visitante");}
 
@@ -293,23 +299,46 @@
   }
 
   function emptyState(label="contenido"){return `<article class="card empty-card"><h3>Aún no se ha subido nada.</h3><p>Cuando se publique ${esc(label)}, aparecerá en este espacio.</p></article>`;}
-  async function renderApps(){const rows=await list("app_modules");$("#app").innerHTML=moduleHero("apps","Ecosistema de herramientas","Lanzador de Apps","Accede a las herramientas digitales del sistema de calidad, logística, auditoría, capacitación y mejora continua.",isSuperAdmin()?'<a class="btn" href="#/admin?tab=app_modules">Administrar Apps</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Apps disponibles</h3><div class="filters"><input id="filter" placeholder="Buscar App..."></div></div><div class="grid cols-3" id="cards">${rows.length?rows.map(appCard).join(""):emptyState("Apps")}</div>`;bindFilter(rows,appCard);}
+  async function renderApps(){const rows=await list("app_modules");$("#app").innerHTML=moduleHero("apps","Ecosistema de herramientas","Lanzador de Apps","Accede a las herramientas digitales del sistema de calidad, logística, auditoría, capacitación y mejora continua.",canManageContent()?'<a class="btn" href="#/admin?tab=app_modules">Administrar Apps</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Apps disponibles</h3><div class="filters"><input id="filter" placeholder="Buscar App..."></div></div><div class="grid cols-3" id="cards">${rows.length?rows.map(appCard).join(""):emptyState("Apps")}</div>`;bindFilter(rows,appCard);}
   function appCard(x){const link=x.url||x.external_url||"#";return `<article class="card"><img class="card-icon" src="${esc(x.image_url||x.icon_url||"assets/notifications/app.gif")}" alt=""><h3>${esc(x.name||x.title||"App")}</h3><p>${esc(x.description||"Sin descripción.")}</p><div class="card-footer"><span class="badge">${esc(x.status||"activa")}</span><a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir App</a></div></article>`;}
-  async function renderNews(){const rows=await list("news_posts");$("#app").innerHTML=moduleHero("news","Comunicación institucional","Noticias de calidad","Publicaciones oficiales sobre novedades, mejoras, capacitaciones y actualizaciones.",isSuperAdmin()?'<a class="btn" href="#/admin?tab=news_posts">Crear noticia</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Últimas noticias</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"news_posts")).join(""):emptyState("noticias")}</div>`;}
-  async function renderAudits(){const rows=await list("audit_reports");$("#app").innerHTML=moduleHero("audits","Auditoría y seguimiento","Auditorías","Consulta resultados, reportes y acciones de mejora.",isSuperAdmin()?'<a class="btn" href="#/admin?tab=audit_reports">Gestionar auditorías</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Reportes de auditoría</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"audit_reports")).join(""):emptyState("auditorías")}</div>`;}
-  async function renderDocuments(){const rows=await list("documents");$("#app").innerHTML=moduleHero("documents","Gestión documental","Documentos","Repositorio institucional para políticas, procedimientos, guías y formatos.",isSuperAdmin()?'<a class="btn" href="#/admin?tab=documents">Gestionar documentos</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Documentos publicados</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"documents")).join(""):emptyState("documentos")}</div>`;}
-  async function renderPublications(){const rows=await list("publications");$("#app").innerHTML=moduleHero("publications","Comunidad interna","Publicaciones","Muro institucional para reconocimientos y comunicaciones internas.",isSuperAdmin()?'<a class="btn" href="#/admin?tab=publications">Crear publicación</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Muro interno</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"publications")).join(""):emptyState("publicaciones")}</div>`;}
+  async function renderNews(){const rows=await list("news_posts");$("#app").innerHTML=moduleHero("news","Comunicación institucional","Noticias de calidad","Publicaciones oficiales sobre novedades, mejoras, capacitaciones y actualizaciones.",canManageContent()?'<a class="btn" href="#/admin?tab=news_posts">Crear noticia</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Últimas noticias</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"news_posts")).join(""):emptyState("noticias")}</div>`;}
+  async function renderAudits(){const rows=await list("audit_reports");$("#app").innerHTML=moduleHero("audits","Auditoría y seguimiento","Auditorías","Consulta resultados, reportes y acciones de mejora.",canManageContent()?'<a class="btn" href="#/admin?tab=audit_reports">Gestionar auditorías</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Reportes de auditoría</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"audit_reports")).join(""):emptyState("auditorías")}</div>`;}
+  async function renderDocuments(){const rows=await list("documents");$("#app").innerHTML=moduleHero("documents","Gestión documental","Documentos","Repositorio institucional para políticas, procedimientos, guías y formatos.",canManageContent()?'<a class="btn" href="#/admin?tab=documents">Gestionar documentos</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Documentos publicados</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"documents")).join(""):emptyState("documentos")}</div>`;}
+  async function renderPublications(){const rows=await list("publications");$("#app").innerHTML=moduleHero("publications","Comunidad interna","Publicaciones","Muro institucional para reconocimientos y comunicaciones internas.",canManageContent()?'<a class="btn" href="#/admin?tab=publications">Crear publicación</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Muro interno</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"publications")).join(""):emptyState("publicaciones")}</div>`;}
   function contentCard(x,table){const cfg=TYPE_ASSETS[table]||TYPE_ASSETS.general;const title=x.title||x.name||"Registro";const desc=x.description||x.content||"";const link=x.file_url||x.external_url||x.url||"#";return `<article class="card"><img class="card-icon" src="${esc(x.image_url||cfg.gif)}" alt=""><h3>${esc(title)}</h3><p>${esc(desc)}</p><div class="card-footer"><span class="badge">${esc(x.status||x.publication_type||"publicado")}</span><a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir enlace</a></div></article>`;}
   function bindFilter(rows,renderer){$("#filter")?.addEventListener("input",e=>{const q=e.target.value.toLowerCase();$("#cards").innerHTML=rows.filter(x=>JSON.stringify(x).toLowerCase().includes(q)).map(renderer).join("")||emptyState("Apps");});}
 
   async function renderProfile(){ $("#app").innerHTML=`<section class="section"><div class="container"><div class="module-hero"><div class="module-hero-content"><span class="kicker">Mi perfil</span><h2>Perfil de usuario</h2><p>Información actual del usuario y rol dentro del portal.</p></div><article class="card"><h3>${esc(state.profile?.full_name||state.session?.user?.email||"Usuario visitante")}</h3><p><strong>Rol:</strong> ${esc(getRole())}</p><p><strong>Estado:</strong> ${state.session?"Sesión activa":"Sin sesión"}</p></article></div></div></section>`;}
   function currentAdminTab(){return params().get("tab")||"visual";}
   async function renderAdmin(){
-    if(!isSuperAdmin()){ $("#app").innerHTML=`<section class="section"><div class="container"><div class="hero"><h2>Administración</h2><p>Ingresa con el usuario Super Admin para administrar el portal.</p><button class="btn" id="open-login">Ingresar</button></div></div></section>`;$("#open-login")?.addEventListener("click",openLogin);return;}
-    const tab=currentAdminTab(); const tabs=[["visual","Visual Studio"],["banners","Banners"],["mascot","Mascota"],["team","Equipo"],["app_modules","Apps"],["news_posts","Noticias"],["audit_reports","Auditorías"],["documents","Documentos"],["publications","Publicaciones"]];
+    if(!canManageContent()){
+      $("#app").innerHTML=`<section class="section"><div class="container"><div class="hero"><h2>Administración</h2><p>Ingresa con un usuario autorizado para administrar el portal.</p><button class="btn" id="open-login">Ingresar</button></div></div></section>`;
+      $("#open-login")?.addEventListener("click",openLogin);
+      return;
+    }
+
+    let tab=currentAdminTab();
+    const superTabs=[["visual","Visual Studio"]];
+    const contentTabs=[["banners","Banners"],["mascot","Mascota"],["team","Equipo"],["app_modules","Apps"],["news_posts","Noticias"],["audit_reports","Auditorías"],["documents","Documentos"],["publications","Publicaciones"]];
+    const tabs=isSuperAdmin() ? [...superTabs, ...contentTabs] : contentTabs;
+
+    if(!isSuperAdmin() && tab==="visual"){
+      tab="banners";
+      history.replaceState(null,"", "#/admin?tab=banners");
+    }
+
     $("#app").innerHTML=`<section class="section"><div class="container"><div class="admin-layout"><aside class="admin-menu">${tabs.map(([k,l])=>`<button class="btn ${tab===k?"active":""}" data-admin-tab="${k}">${l}</button>`).join("")}</aside><section class="admin-panel" id="admin-panel"></section></div></div></section>`;
     $$(".admin-menu button").forEach(b=>b.addEventListener("click",()=>location.hash=`#/admin?tab=${b.dataset.adminTab}`));
-    if(tab==="visual") renderVisualStudio(); else renderCrud(tab);
+
+    if(tab==="visual"){
+      if(!isSuperAdmin()){
+        renderCrud("banners");
+      }else{
+        renderVisualStudio();
+      }
+    }else{
+      renderCrud(tab);
+    }
   }
   function assetOptions(selected){return ASSETS.map(a=>`<option value="${esc(a.value)}" ${a.value===selected?"selected":""}>${esc(a.label)}</option>`).join("");}
   function renderVisualStudio(){
@@ -630,8 +659,15 @@
   }
 
   function notifyType(table,title){const cfg=TYPE_ASSETS[table]||TYPE_ASSETS.general;toast(cfg.label,title?`Te invitamos a revisarlo: ${title}`:"Hay una novedad en el portal.",{gif:cfg.gif,sound:cfg.sound,duration:6500});}
-  function renderViewPanel(){$("#view-panel").innerHTML=`<h3>Acomodar vista</h3><div class="view-grid"><label><span>Escala texto</span><input id="quick-font" type="range" min="88" max="112" value="${Math.round((state.visual.fontScale||1)*100)}"></label><label><span>Escala paneles</span><input id="quick-panel" type="range" min="70" max="115" value="${Math.round((state.visual.panelScale||1)*100)}"></label><label><span>Escala visuales</span><input id="quick-media" type="range" min="0" max="100" value="${Math.round((state.visual.mediaScale||1)*100)}"></label><label><span>Movimiento reducido</span><select id="quick-motion"><option value="false">No</option><option value="true" ${state.visual.reducedMotion?"selected":""}>Sí</option></select></label><a class="btn secondary" href="#/admin?tab=visual">Abrir Visual Studio</a></div>`;const sync=()=>{state.visual.fontScale=Number($("#quick-font").value)/100;state.visual.panelScale=Number($("#quick-panel").value)/100;state.visual.mediaScale=Number($("#quick-media").value)/100;state.visual.reducedMotion=$("#quick-motion").value==="true";applyVisual();};["quick-font","quick-panel","quick-media","quick-motion"].forEach(id=>$("#"+id)?.addEventListener("input",sync));}
-  function openLogin(){const modal=$("#modal");modal.innerHTML=`<div class="modal-card"><h2>Ingresar</h2><p>Ingresa con Supabase o activa Super Admin local para configurar el portal.</p><div class="form-grid"><label class="span-2"><span>Correo</span><input id="login-email" value="${esc(window.DREAM_CONFIG?.superAdminEmail||"")}"></label><label class="span-2"><span>Clave Supabase</span><input id="login-pass" type="password"></label></div><div class="actions"><button class="btn" id="login-supabase">Ingresar con Supabase</button><button class="btn secondary" id="login-local">Activar Super Admin local</button><button class="btn secondary" id="close-modal">Cerrar</button></div></div>`;modal.hidden=false;$("#close-modal").onclick=()=>modal.hidden=true;$("#login-local").onclick=()=>{state.profile={email:$("#login-email").value,role:"super_admin",full_name:"Juan Esteban Pérez",is_active:true};saveState();modal.hidden=true;renderAuth();render();};$("#login-supabase").onclick=async()=>{if(!supabaseClient)return toast("Supabase no configurado","Revisa js/config.js.");const {error}=await supabaseClient.auth.signInWithPassword({email:$("#login-email").value,password:$("#login-pass").value});if(error)toast("Error de ingreso",error.message);else{modal.hidden=true;render();}};}
+  function renderViewPanel(){
+    const adminLink = isSuperAdmin()
+      ? '<a class="btn secondary" href="#/admin?tab=visual">Abrir Visual Studio</a>'
+      : (canManageContent() ? '<a class="btn secondary" href="#/admin?tab=banners">Abrir administración</a>' : '');
+    $("#view-panel").innerHTML=`<h3>Acomodar vista</h3><div class="view-grid"><label><span>Escala texto</span><input id="quick-font" type="range" min="88" max="112" value="${Math.round((state.visual.fontScale||1)*100)}"></label><label><span>Escala paneles</span><input id="quick-panel" type="range" min="70" max="115" value="${Math.round((state.visual.panelScale||1)*100)}"></label><label><span>Escala visuales</span><input id="quick-media" type="range" min="0" max="100" value="${Math.round((state.visual.mediaScale||1)*100)}"></label><label><span>Movimiento reducido</span><select id="quick-motion"><option value="false">No</option><option value="true" ${state.visual.reducedMotion?"selected":""}>Sí</option></select></label>${adminLink}</div>`;
+    const sync=()=>{state.visual.fontScale=Number($("#quick-font").value)/100;state.visual.panelScale=Number($("#quick-panel").value)/100;state.visual.mediaScale=Number($("#quick-media").value)/100;state.visual.reducedMotion=$("#quick-motion").value==="true";applyVisual();};
+    ["quick-font","quick-panel","quick-media","quick-motion"].forEach(id=>$("#"+id)?.addEventListener("input",sync));
+  }
+  function openLogin(){const modal=$("#modal");modal.innerHTML=`<div class="modal-card"><h2>Ingresar</h2><p>Ingresa con Supabase o activa Super Admin local para configurar el portal.</p><div class="form-grid"><label class="span-2"><span>Correo</span><input id="login-email" value="${esc(window.DREAM_CONFIG?.superAdminEmail||"")}"></label><label class="span-2"><span>Clave Supabase</span><input id="login-pass" type="password"></label></div><div class="actions"><button class="btn" id="login-supabase">Ingresar con Supabase</button><button class="btn secondary" id="login-local">Activar Super Admin local</button><button class="btn secondary" id="close-modal">Cerrar</button></div></div>`;modal.hidden=false;$("#close-modal").onclick=()=>modal.hidden=true;$("#login-local").onclick=()=>{const e=$("#login-email").value;state.profile={email:e,role:e.toLowerCase()===(window.DREAM_CONFIG?.superAdminEmail||"").toLowerCase()?"super_admin":"admin",full_name:e,is_active:true};saveState();modal.hidden=true;renderAuth();render();};$("#login-supabase").onclick=async()=>{if(!supabaseClient)return toast("Supabase no configurado","Revisa js/config.js.");const {error}=await supabaseClient.auth.signInWithPassword({email:$("#login-email").value,password:$("#login-pass").value});if(error)toast("Error de ingreso",error.message);else{modal.hidden=true;render();}};}
   function renderAuth(){const btn=$("#auth-btn");if(!btn)return;btn.textContent=state.profile||state.session?"Salir":"Ingresar";btn.onclick=async()=>{if(state.profile||state.session){if(supabaseClient)await supabaseClient.auth.signOut();state.profile=null;state.session=null;saveState();renderAuth();render();}else openLogin();};}
   async function render(){setRoute(routeName());$("#main-nav")?.classList.remove("open");clearInterval(bannerTimer);clearInterval(mascotTimer);switch(state.route){case"apps":await renderApps();break;case"noticias":await renderNews();break;case"auditorias":await renderAudits();break;case"documentos":await renderDocuments();break;case"publicaciones":await renderPublications();break;case"perfil":await renderProfile();break;case"admin":await renderAdmin();break;default:await renderHome();}bindPanelButtons();playVisibleVideos();}
   function bindPanelButtons(){$$("[data-edit-panel]").forEach(btn=>btn.addEventListener("click",()=>{if(!isSuperAdmin())return openLogin();location.hash="#/admin?tab=visual";}));}
