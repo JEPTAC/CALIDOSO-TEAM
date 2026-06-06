@@ -151,7 +151,7 @@
         const {data,error}=await supabaseClient.from(table).upsert(payload).select().maybeSingle();
         if(!error) return data||payload;
         console.warn("Upsert falló",table,error.message||error);
-        toast("No se pudo guardar en Supabase","Revisa las columnas obligatorias de esa tabla.",{gif:"assets/notifications/loading.gif"});
+        toast("No se pudo guardar en Supabase","Revisa las columnas obligatorias de esa tabla.",{gif:"assets/notifications/loading.gif?v=v10-loader"});
       }catch(err){console.warn("Upsert error",table,err?.message||err);}
     }
     DEMO[table]=DEMO[table]||[];
@@ -185,13 +185,13 @@
         }
         console.warn("Delete falló", table, error.message || error);
         toast("No se pudo eliminar", error.message || "Supabase no permitió eliminar el registro.", {
-          gif:"assets/notifications/loading.gif"
+          gif:"assets/notifications/loading.gif?v=v10-loader"
         });
         return false;
       }catch(err){
         console.warn("Delete error", table, err?.message || err);
         toast("Error al eliminar", err?.message || "No se pudo eliminar el registro.", {
-          gif:"assets/notifications/loading.gif"
+          gif:"assets/notifications/loading.gif?v=v10-loader"
         });
         return false;
       }
@@ -223,7 +223,7 @@
 
   async function uploadAsset(file,moduleKey="general"){
     if(!file) return "";
-    if((file.type||"").startsWith("video/") && file.size>20*1024*1024 && moduleKey==="background"){toast("Archivo muy pesado","El fondo animado no debe superar 20 MB.",{gif:"assets/notifications/loading.gif"});return "";}
+    if((file.type||"").startsWith("video/") && file.size>20*1024*1024 && moduleKey==="background"){toast("Archivo muy pesado","El fondo animado no debe superar 20 MB.",{gif:"assets/notifications/loading.gif?v=v10-loader"});return "";}
     return await withLoading("Subiendo archivo...",async()=>{
       if(supabaseClient){
         try{
@@ -232,7 +232,7 @@
           const {error}=await supabaseClient.storage.from("portal-assets").upload(path,file,{upsert:true,contentType:file.type||undefined});
           if(!error){const {data}=supabaseClient.storage.from("portal-assets").getPublicUrl(path); return data.publicUrl;}
           console.warn("Storage falló",error.message||error);
-          toast("Storage no aceptó el archivo","Se mostrará temporalmente en esta sesión.",{gif:"assets/notifications/loading.gif"});
+          toast("Storage no aceptó el archivo","Se mostrará temporalmente en esta sesión.",{gif:"assets/notifications/loading.gif?v=v10-loader"});
         }catch(err){console.warn("Storage error",err?.message||err);}
       }
       return URL.createObjectURL(file);
