@@ -44,28 +44,12 @@ button.btn.danger{
   border:1px solid rgba(180,35,24,.35);
   box-shadow:0 12px 24px rgba(180,35,24,.18);
 }
-
 .btn.danger:hover,
 button.btn.danger:hover{
   background:#8f1d15;
   box-shadow:0 16px 28px rgba(180,35,24,.24);
 }
-
-.admin-help{
-  margin:8px 0 18px;
-  color:var(--muted);
-}
-
-.admin-record-card{
-  border-left:5px solid var(--accent);
-}
-
-.admin-card-actions{
-  margin-top:14px;
-  justify-content:flex-start;
-}
-
-.admin-card-link{
-  word-break:break-all;
-  color:var(--muted);
-}
+.admin-help{margin:8px 0 18px;color:var(--muted)}
+.admin-record-card{border-left:5px solid var(--accent)}
+.admin-card-actions{margin-top:14px;justify-content:flex-start}
+.admin-card-link{word-break:break-all;color:var(--muted)}

@@ -159,6 +159,51 @@
     if(idx>=0) DEMO[table][idx]=payload; else DEMO[table].unshift(payload);
     return payload;
   }
+
+  async function deleteRecord(table, id){
+    if(!id) return false;
+
+    if(["banners","mascot","team"].includes(table)){
+      state[table] = (state[table] || []).filter(x => String(x.id) !== String(id));
+      await saveHomeSettings();
+      toast("Eliminado", "El registro fue eliminado correctamente.", {
+        gif:"assets/notifications/success.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return true;
+    }
+
+    if(supabaseClient){
+      try{
+        const { error } = await supabaseClient.from(table).delete().eq("id", id);
+        if(!error){
+          toast("Eliminado", "El registro fue eliminado correctamente.", {
+            gif:"assets/notifications/success.gif",
+            sound:"assets/notifications/new-notification.mp3"
+          });
+          return true;
+        }
+        console.warn("Delete falló", table, error.message || error);
+        toast("No se pudo eliminar", error.message || "Supabase no permitió eliminar el registro.", {
+          gif:"assets/notifications/loading.gif"
+        });
+        return false;
+      }catch(err){
+        console.warn("Delete error", table, err?.message || err);
+        toast("Error al eliminar", err?.message || "No se pudo eliminar el registro.", {
+          gif:"assets/notifications/loading.gif"
+        });
+        return false;
+      }
+    }
+
+    DEMO[table] = (DEMO[table] || []).filter(x => String(x.id) !== String(id));
+    toast("Eliminado", "El registro fue eliminado en modo local.", {
+      gif:"assets/notifications/success.gif"
+    });
+    return true;
+  }
+
   async function insertCompliment(payload){
     payload.id=crypto.randomUUID();
     payload.created_at=new Date().toISOString();
@@ -281,19 +326,309 @@
     $("#reset-visual")?.addEventListener("click",()=>{localStorage.removeItem(STORAGE_KEY);state=loadState();applyVisual();render();});
   }
   function renderCrud(tab){
-    const isLocal=["banners","mascot","team"].includes(tab);
-    const rows=isLocal?(tab==="banners"?state.banners:tab==="mascot"?state.mascot:state.team):[];
-    const labels={banners:"Banners",mascot:"Mascota",team:"Equipo",app_modules:"Apps",news_posts:"Noticias",audit_reports:"Auditorías",documents:"Documentos",publications:"Publicaciones"};
-    $("#admin-panel").innerHTML=`<span class="kicker">Administración</span><h2>${labels[tab]||tab}</h2>${crudForm(tab)}<div class="grid cols-2" style="margin-top:18px" id="admin-list">${isLocal?rows.map(localCard).join(""):""}</div>`;
-    if(!isLocal) loadAdminRemote(tab);
+    const isLocal = ["banners","mascot","team"].includes(tab);
+    const rows = isLocal ? getLocalAdminRows(tab) : [];
+    const labels = {
+      banners:"Banners",
+      mascot:"Mascota",
+      team:"Equipo",
+      app_modules:"Apps",
+      news_posts:"Noticias",
+      audit_reports:"Auditorías",
+      documents:"Documentos",
+      publications:"Publicaciones"
+    };
+
+    $("#admin-panel").innerHTML = `
+      <span class="kicker">Administración</span>
+      <h2>${labels[tab] || tab}</h2>
+      <p class="admin-help">En cada tarjeta encontrarás los botones <strong>Editar</strong> y <strong>Eliminar</strong>. Al editar, también aparece el botón <strong>Eliminar este registro</strong> dentro del formulario.</p>
+      ${crudForm(tab)}
+      <div class="grid cols-2" style="margin-top:18px" id="admin-list">
+        ${isLocal ? (rows.length ? rows.map(x => adminCard(x, tab)).join("") : emptyState("registros")) : ""}
+      </div>
+    `;
+
     bindCrud(tab);
+
+    if(isLocal){
+      bindAdminRecordButtons(tab, rows);
+    }else{
+      loadAdminRemote(tab);
+    }
   }
-  async function loadAdminRemote(table){const rows=await list(table);$("#admin-list").innerHTML=rows.length?rows.map(x=>`<article class="card"><h3>${esc(x.name||x.title||"Registro")}</h3><p>${esc(x.description||x.content||"")}</p><div class="card-footer"><button class="btn secondary" data-edit-record="${esc(x.id)}">Editar</button></div></article>`).join(""):emptyState("registros");}
-  function localCard(x){return `<article class="card"><h3>${esc(x.name||x.title||"Registro")}</h3><p>${esc(x.description||x.bio||"")}</p></article>`;}
-  function crudForm(tab){const banner=tab==="banners",team=tab==="team",mascot=tab==="mascot";return `<form id="crud-form" class="form-grid"><input type="hidden" name="id"><label><span>${team?"Nombre":"Título / Nombre"}</span><input name="title" required></label><label><span>${team?"Cargo":"Estado"}</span><input name="status" value="${team?"Calidad y mejora continua":"publicado"}"></label>${banner?`<label><span>Subtítulo</span><input name="subtitle"></label><label><span>Animación</span><select name="animation"><option value="fade">Fade</option><option value="slide">Slide</option><option value="zoom">Zoom</option></select></label>`:""}<label class="span-2"><span>Descripción / contenido</span><textarea name="description" rows="4"></textarea></label><label><span>Link directo / OneDrive / App</span><input name="url" placeholder="https://..."></label><label><span>Botón</span><input name="button_text" placeholder="Abrir"></label><label><span>Asset del portal</span><select name="asset">${assetOptions("")}</select></label><label><span>Subir archivo visual</span><input type="file" name="file" accept="image/*,video/mp4,video/webm"></label><div class="actions"><button class="btn" type="submit">Guardar</button></div></form>`;}
+
+  function getLocalAdminRows(tab){
+    if(tab === "banners") return state.banners || [];
+    if(tab === "mascot") return state.mascot || [];
+    if(tab === "team") return state.team || [];
+    return [];
+  }
+
+  async function loadAdminRemote(table){
+    const rows = await list(table);
+    $("#admin-list").innerHTML = rows.length
+      ? rows.map(x => adminCard(x, table)).join("")
+      : emptyState("registros");
+
+    bindAdminRecordButtons(table, rows);
+  }
+
+  function adminCard(x, table){
+    const title = x.name || x.title || "Registro";
+    const description = x.description || x.content || x.bio || "";
+    const asset = x.image_url || x.icon_url || x.media_url || x.photo_url || "";
+    const link = x.url || x.external_url || x.file_url || x.link_url || "";
+
+    return `
+      <article class="card admin-record-card" data-admin-card="${esc(x.id)}">
+        ${asset ? `<img class="card-icon" src="${esc(asset)}" alt="">` : ""}
+        <h3>${esc(title)}</h3>
+        <p>${esc(description || "Sin descripción.")}</p>
+        ${link ? `<p class="admin-card-link"><small>${esc(link)}</small></p>` : ""}
+        <div class="card-footer admin-card-actions">
+          <button class="btn secondary" type="button" data-edit-record="${esc(x.id)}">Editar</button>
+          <button class="btn danger" type="button" data-delete-record="${esc(x.id)}">Eliminar</button>
+        </div>
+      </article>
+    `;
+  }
+
+  function bindAdminRecordButtons(table, rows){
+    $$('[data-edit-record]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const record = rows.find(x => String(x.id) === String(btn.dataset.editRecord));
+        if(record) fillCrudForm(table, record);
+      });
+    });
+
+    $$('[data-delete-record]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const record = rows.find(x => String(x.id) === String(btn.dataset.deleteRecord));
+        const title = record?.name || record?.title || 'este registro';
+        const ok = confirm(`¿Seguro que deseas eliminar "${title}"? Esta acción no se puede deshacer.`);
+        if(!ok) return;
+
+        const deleted = await deleteRecord(table, btn.dataset.deleteRecord);
+        if(deleted) renderAdmin();
+      });
+    });
+  }
+
+  function fillCrudForm(table, record){
+    const form = $('#crud-form');
+    if(!form || !record) return;
+
+    form.elements.id.value = record.id || '';
+    form.elements.title.value = record.name || record.title || '';
+    form.elements.status.value = record.role || record.status || '';
+    form.elements.description.value = record.description || record.content || record.bio || '';
+    form.elements.url.value = record.url || record.external_url || record.file_url || record.link_url || '';
+
+    if(form.elements.button_text){
+      form.elements.button_text.value = record.button_text || '';
+    }
+    if(form.elements.subtitle){
+      form.elements.subtitle.value = record.subtitle || '';
+    }
+    if(form.elements.animation){
+      form.elements.animation.value = record.animation || 'fade';
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if(submitBtn) submitBtn.textContent = 'Actualizar';
+
+    const deleteBtn = $('#delete-current-record');
+    if(deleteBtn){
+      deleteBtn.hidden = false;
+      deleteBtn.dataset.table = table;
+      deleteBtn.dataset.id = record.id || '';
+      deleteBtn.dataset.title = record.name || record.title || 'este registro';
+    }
+
+    form.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  function crudForm(tab){
+    const banner = tab === 'banners';
+    const team = tab === 'team';
+
+    return `
+      <form id="crud-form" class="form-grid">
+        <input type="hidden" name="id">
+        <label>
+          <span>${team ? 'Nombre' : 'Título / Nombre'}</span>
+          <input name="title" required>
+        </label>
+        <label>
+          <span>${team ? 'Cargo' : 'Estado'}</span>
+          <input name="status" value="${team ? 'Calidad y mejora continua' : 'publicado'}">
+        </label>
+        ${banner ? `
+          <label>
+            <span>Subtítulo</span>
+            <input name="subtitle">
+          </label>
+          <label>
+            <span>Animación</span>
+            <select name="animation">
+              <option value="fade">Fade</option>
+              <option value="slide">Slide</option>
+              <option value="zoom">Zoom</option>
+            </select>
+          </label>
+        ` : ''}
+        <label class="span-2">
+          <span>Descripción / contenido</span>
+          <textarea name="description" rows="4"></textarea>
+        </label>
+        <label>
+          <span>Link directo / OneDrive / App</span>
+          <input name="url" placeholder="https://...">
+        </label>
+        <label>
+          <span>Botón</span>
+          <input name="button_text" placeholder="Abrir">
+        </label>
+        <label>
+          <span>Asset del portal</span>
+          <select name="asset">
+            <option value="">Mantener visual actual o subir nuevo</option>
+            ${assetOptions('')}
+          </select>
+        </label>
+        <label>
+          <span>Subir archivo visual</span>
+          <input type="file" name="file" accept="image/*,video/mp4,video/webm">
+        </label>
+        <div class="actions span-2">
+          <button class="btn" type="submit">Guardar</button>
+          <button class="btn danger" type="button" id="delete-current-record" hidden>Eliminar este registro</button>
+        </div>
+      </form>
+    `;
+  }
+
   function bindCrud(tab){
-    $("#crud-form").addEventListener("submit",async e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const file=fd.get("file");let media=fd.get("asset")||"";if(file&&file.size)media=await uploadAsset(file,tab);const title=fd.get("title");let payload={id:fd.get("id")||crypto.randomUUID(),title,name:title,description:fd.get("description"),status:fd.get("status")||"publicado",visibility:"interna",is_active:true,is_featured:true,updated_at:new Date().toISOString()};if(tab==="banners"){payload={id:payload.id,title,subtitle:fd.get("subtitle"),description:fd.get("description"),button_text:fd.get("button_text")||"Abrir",link_url:fd.get("url")||"#/apps",media_url:media||"assets/home/banner-placeholder.svg",animation:fd.get("animation")||"fade",is_active:true,sort_order:0};state.banners=[payload,...(state.banners||[]).filter(x=>x.id!==payload.id)].slice(0,15);await saveHomeSettings();}else if(tab==="mascot"){payload={id:payload.id,name:title,title,description:fd.get("description"),media_url:media||"assets/mascot/mascot-placeholder.svg",is_active:true,sort_order:0};state.mascot=[payload,...(state.mascot||[]).filter(x=>x.id!==payload.id)].slice(0,15);await saveHomeSettings();}else if(tab==="team"){payload={id:payload.id,name:title,role:fd.get("status"),bio:fd.get("description"),photo_url:media||"assets/team/team-placeholder.svg",is_active:true,sort_order:0};state.team=[payload,...(state.team||[]).filter(x=>x.id!==payload.id)];await saveHomeSettings();}else{if(tab==="app_modules")payload={...payload,name:title,title,description:fd.get("description"),url:fd.get("url")||"#",external_url:fd.get("url")||"#",image_url:media||"assets/notifications/app.gif"};else if(tab==="documents")payload={...payload,title,description:fd.get("description"),file_url:fd.get("url")||"#",external_url:fd.get("url")||"#",image_url:media||TYPE_ASSETS.documents.gif};else if(tab==="publications")payload={...payload,title,content:fd.get("description"),description:fd.get("description"),file_url:fd.get("url")||"#",external_url:fd.get("url")||"#",image_url:media||TYPE_ASSETS.publications.gif,publication_type:"novedad"};else payload={...payload,title,description:fd.get("description"),file_url:fd.get("url")||"#",external_url:fd.get("url")||"#",image_url:media||(TYPE_ASSETS[tab]?.gif||"")};await upsert(tab,payload);}notifyType(tab,title);renderAdmin();});
+    const deleteCurrent = $('#delete-current-record');
+    if(deleteCurrent){
+      deleteCurrent.addEventListener('click', async () => {
+        const id = deleteCurrent.dataset.id;
+        const table = deleteCurrent.dataset.table || tab;
+        const title = deleteCurrent.dataset.title || 'este registro';
+        if(!id) return;
+        const ok = confirm(`¿Seguro que deseas eliminar "${title}"? Esta acción no se puede deshacer.`);
+        if(!ok) return;
+        const deleted = await deleteRecord(table, id);
+        if(deleted) renderAdmin();
+      });
+    }
+
+    $('#crud-form').addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const fd = new FormData(e.currentTarget);
+      const file = fd.get('file');
+      let media = fd.get('asset') || '';
+      const id = fd.get('id') || crypto.randomUUID();
+      const title = fd.get('title');
+
+      if(file && file.size){
+        media = await uploadAsset(file, tab);
+      }
+
+      if(tab === 'banners'){
+        const previous = (state.banners || []).find(x => String(x.id) === String(id)) || {};
+        const payload = {
+          ...previous,
+          id,
+          title,
+          subtitle:fd.get('subtitle'),
+          description:fd.get('description'),
+          button_text:fd.get('button_text') || previous.button_text || 'Abrir',
+          link_url:fd.get('url') || previous.link_url || '#/apps',
+          media_url:media || previous.media_url || 'assets/home/banner-placeholder.svg',
+          animation:fd.get('animation') || previous.animation || 'fade',
+          is_active:true,
+          sort_order:previous.sort_order || 0
+        };
+        state.banners = [payload, ...(state.banners || []).filter(x => String(x.id) !== String(id))].slice(0,15);
+        await saveHomeSettings();
+        notifyType(tab, title);
+        renderAdmin();
+        return;
+      }
+
+      if(tab === 'mascot'){
+        const previous = (state.mascot || []).find(x => String(x.id) === String(id)) || {};
+        const payload = {
+          ...previous,
+          id,
+          name:title,
+          title,
+          description:fd.get('description'),
+          media_url:media || previous.media_url || 'assets/mascot/mascot-placeholder.svg',
+          is_active:true,
+          sort_order:previous.sort_order || 0
+        };
+        state.mascot = [payload, ...(state.mascot || []).filter(x => String(x.id) !== String(id))].slice(0,15);
+        await saveHomeSettings();
+        notifyType(tab, title);
+        renderAdmin();
+        return;
+      }
+
+      if(tab === 'team'){
+        const previous = (state.team || []).find(x => String(x.id) === String(id)) || {};
+        const payload = {
+          ...previous,
+          id,
+          name:title,
+          role:fd.get('status'),
+          bio:fd.get('description'),
+          photo_url:media || previous.photo_url || 'assets/team/team-placeholder.svg',
+          is_active:true,
+          sort_order:previous.sort_order || 0
+        };
+        state.team = [payload, ...(state.team || []).filter(x => String(x.id) !== String(id))];
+        await saveHomeSettings();
+        notifyType(tab, title);
+        renderAdmin();
+        return;
+      }
+
+      let payload = {
+        id,
+        title,
+        name:title,
+        description:fd.get('description'),
+        status:fd.get('status') || 'publicado',
+        visibility:'interna',
+        is_active:true,
+        is_featured:true,
+        updated_at:new Date().toISOString()
+      };
+
+      if(tab === 'app_modules'){
+        payload = { ...payload, url:fd.get('url') || '#', external_url:fd.get('url') || '#' };
+        if(media) payload.image_url = media;
+      }else if(tab === 'documents'){
+        payload = { ...payload, file_url:fd.get('url') || '#', external_url:fd.get('url') || '#' };
+        if(media) payload.image_url = media;
+      }else if(tab === 'publications'){
+        payload = { ...payload, content:fd.get('description'), file_url:fd.get('url') || '#', external_url:fd.get('url') || '#', publication_type:'novedad' };
+        if(media) payload.image_url = media;
+      }else{
+        payload = { ...payload, file_url:fd.get('url') || '#', external_url:fd.get('url') || '#' };
+        if(media) payload.image_url = media;
+      }
+
+      await upsert(tab, payload);
+      notifyType(tab, title);
+      renderAdmin();
+    });
   }
+
   function notifyType(table,title){const cfg=TYPE_ASSETS[table]||TYPE_ASSETS.general;toast(cfg.label,title?`Te invitamos a revisarlo: ${title}`:"Hay una novedad en el portal.",{gif:cfg.gif,sound:cfg.sound,duration:6500});}
   function renderViewPanel(){$("#view-panel").innerHTML=`<h3>Acomodar vista</h3><div class="view-grid"><label><span>Escala texto</span><input id="quick-font" type="range" min="88" max="112" value="${Math.round((state.visual.fontScale||1)*100)}"></label><label><span>Escala paneles</span><input id="quick-panel" type="range" min="70" max="115" value="${Math.round((state.visual.panelScale||1)*100)}"></label><label><span>Escala visuales</span><input id="quick-media" type="range" min="0" max="100" value="${Math.round((state.visual.mediaScale||1)*100)}"></label><label><span>Movimiento reducido</span><select id="quick-motion"><option value="false">No</option><option value="true" ${state.visual.reducedMotion?"selected":""}>Sí</option></select></label><a class="btn secondary" href="#/admin?tab=visual">Abrir Visual Studio</a></div>`;const sync=()=>{state.visual.fontScale=Number($("#quick-font").value)/100;state.visual.panelScale=Number($("#quick-panel").value)/100;state.visual.mediaScale=Number($("#quick-media").value)/100;state.visual.reducedMotion=$("#quick-motion").value==="true";applyVisual();};["quick-font","quick-panel","quick-media","quick-motion"].forEach(id=>$("#"+id)?.addEventListener("input",sync));}
   function openLogin(){const modal=$("#modal");modal.innerHTML=`<div class="modal-card"><h2>Ingresar</h2><p>Ingresa con Supabase o activa Super Admin local para configurar el portal.</p><div class="form-grid"><label class="span-2"><span>Correo</span><input id="login-email" value="${esc(window.DREAM_CONFIG?.superAdminEmail||"")}"></label><label class="span-2"><span>Clave Supabase</span><input id="login-pass" type="password"></label></div><div class="actions"><button class="btn" id="login-supabase">Ingresar con Supabase</button><button class="btn secondary" id="login-local">Activar Super Admin local</button><button class="btn secondary" id="close-modal">Cerrar</button></div></div>`;modal.hidden=false;$("#close-modal").onclick=()=>modal.hidden=true;$("#login-local").onclick=()=>{state.profile={email:$("#login-email").value,role:"super_admin",full_name:"Juan Esteban Pérez",is_active:true};saveState();modal.hidden=true;renderAuth();render();};$("#login-supabase").onclick=async()=>{if(!supabaseClient)return toast("Supabase no configurado","Revisa js/config.js.");const {error}=await supabaseClient.auth.signInWithPassword({email:$("#login-email").value,password:$("#login-pass").value});if(error)toast("Error de ingreso",error.message);else{modal.hidden=true;render();}};}
