@@ -446,8 +446,44 @@
   function teamCard(x){return `<article class="card team-card" data-team-id="${esc(x.id)}"><img class="team-photo" src="${esc(x.photo_url||"assets/team/team-placeholder.svg")}" alt="${esc(x.name||"Integrante")}"><h3>${esc(x.name||"Integrante")}</h3><p><strong>${esc(x.role||"Equipo")}</strong></p><p>${esc(x.bio||"")}</p><button class="btn secondary" type="button">Conocer y calificar</button></article>`;}
   function bindTeamCards(){ $$(".team-card").forEach(c=>c.addEventListener("click",()=>{const m=(state.team||[]).find(x=>x.id===c.dataset.teamId);if(m)openTeamModal(m);}));}
   function openTeamModal(member){
-    const modal=$("#modal");modal.innerHTML=`<div class="modal-card"><h2>${esc(member.name)}</h2><p><strong>${esc(member.role||"")}</strong></p><p>${esc(member.bio||"")}</p><label><span>Tu calificación</span><div class="rating-row" id="rating-row">${[1,2,3,4,5].map(i=>`<span data-star="${i}">⭐</span>`).join("")}</div></label><label><span>Déjanos un elogio o comentario</span><textarea id="compliment-text" rows="4"></textarea></label><div class="actions"><button class="btn" id="send-compliment">Enviar</button><button class="btn secondary" id="close-modal">Cerrar</button></div></div>`;
-    modal.hidden=false;let rating=5;const paint=()=>$$('#rating-row span').forEach(s=>s.classList.toggle("active",Number(s.dataset.star)<=rating));$$('#rating-row span').forEach(s=>s.addEventListener("click",()=>{rating=Number(s.dataset.star);paint();}));paint();$("#send-compliment").onclick=async()=>{await insertCompliment({team_member_id:member.id,team_member_name:member.name,rating,message:$("#compliment-text").value});modal.hidden=true;};$("#close-modal").onclick=()=>modal.hidden=true;
+    const modal = $("#modal");
+    const photo = member.photo_url || "assets/team/team-placeholder.svg";
+    modal.innerHTML = `
+      <div class="modal-card team-modal-card">
+        <div class="team-modal-layout">
+          <aside class="team-modal-media">
+            <img src="${esc(photo)}" alt="${esc(member.name || "Integrante del equipo")}" loading="eager">
+          </aside>
+          <section class="team-modal-content">
+            <span class="kicker">Presentación del equipo</span>
+            <h2>${esc(member.name || "Integrante")}</h2>
+            <p class="team-modal-role"><strong>${esc(member.role || "Equipo")}</strong></p>
+            <p class="team-modal-bio">${esc(member.bio || "")}</p>
+            <label>
+              <span>Tu calificación</span>
+              <div class="rating-row" id="rating-row">
+                ${[1,2,3,4,5].map(i=>`<span data-star="${i}">⭐</span>`).join("")}
+              </div>
+            </label>
+            <label>
+              <span>Déjanos un elogio o comentario</span>
+              <textarea id="compliment-text" rows="4" placeholder="Escribe un reconocimiento para este integrante..."></textarea>
+            </label>
+            <div class="actions">
+              <button class="btn" id="send-compliment">Enviar</button>
+              <button class="btn secondary" id="close-modal">Cerrar</button>
+            </div>
+          </section>
+        </div>
+      </div>`;
+    modal.hidden=false;
+    let rating=5;
+    const paint=()=>$$('#rating-row span').forEach(s=>s.classList.toggle("active",Number(s.dataset.star)<=rating));
+    $$('#rating-row span').forEach(s=>s.addEventListener("click",()=>{rating=Number(s.dataset.star);paint();}));
+    paint();
+    $("#send-compliment").onclick=async()=>{await insertCompliment({team_member_id:member.id,team_member_name:member.name,rating,message:$("#compliment-text").value});modal.hidden=true;};
+    $("#close-modal").onclick=()=>modal.hidden=true;
+    modal.onclick=(ev)=>{ if(ev.target===modal) modal.hidden=true; };
   }
 
   function emptyState(label="contenido"){return `<article class="card empty-card"><h3>Aún no se ha subido nada.</h3><p>Cuando se publique ${esc(label)}, aparecerá en este espacio.</p></article>`;}
