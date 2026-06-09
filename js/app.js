@@ -867,7 +867,84 @@
   async function render(){setRoute(routeName());$("#main-nav")?.classList.remove("open");clearInterval(bannerTimer);clearInterval(mascotTimer);switch(state.route){case"apps":await renderApps();break;case"noticias":await renderNews();break;case"auditorias":await renderAudits();break;case"documentos":await renderDocuments();break;case"publicaciones":await renderPublications();break;case"perfil":await renderProfile();break;case"admin":await renderAdmin();break;default:await renderHome();}bindPanelButtons();playVisibleVideos();}
   function bindPanelButtons(){$$("[data-edit-panel]").forEach(btn=>btn.addEventListener("click",()=>{if(!isSuperAdmin())return openLogin();location.hash="#/admin?tab=visual";}));}
   function playVisibleVideos(){$$("video").forEach(v=>{v.muted=true;v.playsInline=true;v.setAttribute("playsinline","");v.setAttribute("autoplay","");v.setAttribute("loop","");v.play?.().catch(()=>{});});}
-  function bindShell(){$("#menu-btn").addEventListener("click",()=>$("#main-nav").classList.toggle("open"));$("#view-toggle").addEventListener("click",()=>{const p=$("#view-panel");p.hidden=!p.hidden;if(!p.hidden)renderViewPanel();});$("#audio-btn").addEventListener("click",()=>toast("Accesibilidad sonora","Las notificaciones visuales y sonoras están activas.",{gif:"assets/notifications/loading.gif",sound:"assets/notifications/new-notification.mp3"}));window.addEventListener("hashchange",render);document.addEventListener("visibilitychange",()=>{if(!document.hidden)playVisibleVideos();});}
+
+  function openCreatorCertificate(){
+    const modal = $("#modal");
+    const isSecure = location.protocol === "https:";
+    const issuedAt = new Date().toLocaleDateString("es-CO", {
+      year:"numeric",
+      month:"long",
+      day:"2-digit"
+    });
+    const siteUrl = location.href.split("#")[0];
+    modal.innerHTML = `
+      <div class="modal-card creator-certificate-modal">
+        <div class="certificate-sheet">
+          <aside class="certificate-gif">
+            <img src="assets/notifications/success.gif" alt="Certificación del portal" loading="eager">
+            <span class="ssl-pill ${isSecure ? "ok" : "warn"}">${isSecure ? "SSL/TLS activo" : "SSL no detectado"}</span>
+          </aside>
+          <section class="certificate-content">
+            <span class="kicker">Certificado de creación</span>
+            <h2>Portal Dream Team de Calidad y Mejoramiento Continuo</h2>
+            <p class="certificate-lead">
+              Se deja constancia de que este portal fue creado, estructurado y configurado para la gestión institucional de Apps, noticias, documentos, auditorías, publicaciones y recursos internos del equipo de Calidad y Mejora Continua.
+            </p>
+
+            <div class="certificate-grid">
+              <div>
+                <small>Creador</small>
+                <strong>Juan Esteban Pérez</strong>
+              </div>
+              <div>
+                <small>Cargo</small>
+                <strong>Analista de Calidad</strong>
+              </div>
+              <div>
+                <small>Tipo de certificación</small>
+                <strong>Certificado interno de creación digital</strong>
+              </div>
+              <div>
+                <small>Fecha de expedición</small>
+                <strong>${esc(issuedAt)}</strong>
+              </div>
+              <div>
+                <small>Sitio certificado</small>
+                <strong>${esc(siteUrl)}</strong>
+              </div>
+              <div>
+                <small>Seguridad de conexión</small>
+                <strong>${isSecure ? "HTTPS con SSL/TLS activo" : "Abrir por HTTPS para activar SSL/TLS"}</strong>
+              </div>
+            </div>
+
+            <div class="certificate-note">
+              <strong>Nota SSL:</strong>
+              En GitHub Pages el certificado SSL/TLS real lo emite y administra GitHub cuando el sitio se abre por HTTPS. Esta constancia visual verifica si la página está cargando bajo conexión segura.
+            </div>
+
+            <div class="certificate-sign">
+              <div>
+                <strong>Juan Esteban Pérez</strong>
+                <span>Analista de Calidad · Creador del portal</span>
+              </div>
+              <div class="certificate-seal">DT</div>
+            </div>
+
+            <div class="actions no-print">
+              <button class="btn" id="print-certificate" type="button">Imprimir / guardar PDF</button>
+              <button class="btn secondary" id="close-modal" type="button">Cerrar</button>
+            </div>
+          </section>
+        </div>
+      </div>`;
+    modal.hidden=false;
+    $("#print-certificate")?.addEventListener("click",()=>window.print());
+    $("#close-modal")?.addEventListener("click",()=>modal.hidden=true);
+    modal.onclick=(ev)=>{ if(ev.target===modal) modal.hidden=true; };
+  }
+
+  function bindShell(){$("#menu-btn").addEventListener("click",()=>$("#main-nav").classList.toggle("open"));$("#view-toggle").addEventListener("click",()=>{const p=$("#view-panel");p.hidden=!p.hidden;if(!p.hidden)renderViewPanel();});$("#audio-btn").addEventListener("click",()=>toast("Accesibilidad sonora","Las notificaciones visuales y sonoras están activas.",{gif:"assets/notifications/loading.gif",sound:"assets/notifications/new-notification.mp3"}));$("#creator-cert-btn")?.addEventListener("click",openCreatorCertificate);window.addEventListener("hashchange",render);document.addEventListener("visibilitychange",()=>{if(!document.hidden)playVisibleVideos();});}
   async function boot(){applyVisual();bindShell();await initSupabase();renderAuth();await render();}
   document.addEventListener("DOMContentLoaded",boot);
 })();
