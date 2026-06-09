@@ -51,7 +51,7 @@
     audit_reports:{gif:"assets/notifications/audit.gif",sound:"assets/notifications/action-notification.mp3",label:"Nueva auditoría publicada"},
     documents:{gif:"assets/notifications/document.gif",sound:"assets/notifications/action-notification.mp3",label:"Nuevo documento disponible"},
     publications:{gif:"assets/notifications/publication.gif",sound:"assets/notifications/action-notification.mp3",label:"Nueva publicación interna"},
-    general:{gif:"assets/notifications/notify.gif",sound:"assets/notifications/new-notification.mp3",label:"Actualización del portal"}
+    general:{gif:"assets/notifications/loading.gif",sound:"assets/notifications/new-notification.mp3",label:"Actualización del portal"}
   };
 
   let state = loadState();
@@ -103,19 +103,103 @@
     }
   }
   async function loadHomeSettings(){
-    if(!supabaseClient) return;
+    if(!supabaseClient) return false;
+
+    const applyRemoteSettings = (payload) => {
+      if(!payload || typeof payload !== "object") return false;
+      state = merge(state, payload);
+      saveState();
+      applyVisual();
+      console.info("[DreamTeam] Configuración cargada desde Supabase:", HOME_SETTING_KEY);
+      return true;
+    };
+
     try{
-      const {data,error}=await supabaseClient.from("system_settings").select("setting_value").eq("setting_key",HOME_SETTING_KEY).maybeSingle();
-      if(!error && data?.setting_value){state=merge(state,data.setting_value);saveState();}
-    }catch(err){console.warn("No se pudo leer system_settings",err);}
+      const { data, error } = await supabaseClient.rpc("portal_get_home_settings");
+      if(!error && data){
+        return applyRemoteSettings(data);
+      }
+      if(error){
+        console.warn("RPC portal_get_home_settings falló:", error.message || error);
+      }
+    }catch(err){
+      console.warn("No se pudo leer por RPC portal_get_home_settings:", err?.message || err);
+    }
+
+    try{
+      const { data, error } = await supabaseClient
+        .from("system_settings")
+        .select("setting_value")
+        .eq("setting_key", HOME_SETTING_KEY)
+        .maybeSingle();
+
+      if(!error && data?.setting_value){
+        return applyRemoteSettings(data.setting_value);
+      }
+
+      if(error){
+        console.warn("No se pudo leer system_settings:", error.message || error);
+      }
+    }catch(err){
+      console.warn("No se pudo leer system_settings:", err?.message || err);
+    }
+
+    return false;
   }
+
   async function saveHomeSettings(){
     saveState();
-    if(!supabaseClient || !canManageContent()) return;
+
+    if(!supabaseClient){
+      toast("No se guardó en Supabase", "No hay conexión con Supabase. El cambio solo quedó en este navegador.", {
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return false;
+    }
+
+    if(!canManageContent()){
+      toast("Sin permisos", "Este usuario no tiene permisos para guardar cambios globales.", {
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return false;
+    }
+
+    const payload = {
+      visual: state.visual,
+      banners: state.banners,
+      mascot: state.mascot,
+      team: state.team,
+      modulePanels: state.modulePanels
+    };
+
     try{
-      await supabaseClient.from("system_settings").upsert({setting_key:HOME_SETTING_KEY,setting_value:{visual:state.visual,banners:state.banners,mascot:state.mascot,team:state.team,modulePanels:state.modulePanels},description:"Configuración estable V6",updated_at:new Date().toISOString()});
-    }catch(err){console.warn("No se pudo guardar settings",err);}
+      const { error } = await supabaseClient.rpc("portal_save_home_settings", {
+        payload
+      });
+
+      if(!error){
+        console.info("[DreamTeam] Configuración guardada en Supabase por RPC:", HOME_SETTING_KEY);
+        return true;
+      }
+
+      console.warn("RPC portal_save_home_settings falló:", error.message || error);
+      toast("No se guardó en Supabase", error.message || "La función RPC rechazó el guardado.", {
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return false;
+    }catch(err){
+      console.warn("No se pudo guardar por RPC portal_save_home_settings:", err?.message || err);
+      toast("No se guardó en Supabase", err?.message || "El cambio solo quedó en este navegador.", {
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return false;
+    }
   }
+
   function isSuperAdmin(){
     const email=state.profile?.email||state.session?.user?.email||"";
     return state.profile?.role==="super_admin" || email.toLowerCase()===(window.DREAM_CONFIG?.superAdminEmail||"").toLowerCase();
@@ -229,19 +313,87 @@
 
   async function uploadAsset(file,moduleKey="general"){
     if(!file) return "";
-    if((file.type||"").startsWith("video/") && file.size>20*1024*1024 && moduleKey==="background"){toast("Archivo muy pesado","El fondo animado no debe superar 20 MB.",{gif:"assets/notifications/loading.gif?v=v10-loader"});return "";}
-    return await withLoading("Subiendo archivo...",async()=>{
-      if(supabaseClient){
-        try{
-          const clean=file.name.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-zA-Z0-9._-]+/g,"-");
-          const path=`${moduleKey}/${Date.now()}-${clean}`;
-          const {error}=await supabaseClient.storage.from("portal-assets").upload(path,file,{upsert:true,contentType:file.type||undefined});
-          if(!error){const {data}=supabaseClient.storage.from("portal-assets").getPublicUrl(path); return data.publicUrl;}
-          console.warn("Storage falló",error.message||error);
-          toast("Storage no aceptó el archivo","Se mostrará temporalmente en esta sesión.",{gif:"assets/notifications/loading.gif?v=v10-loader"});
-        }catch(err){console.warn("Storage error",err?.message||err);}
+
+    if((file.type||"").startsWith("video/") && file.size > 20*1024*1024 && moduleKey === "background"){
+      toast("Archivo muy pesado","El fondo animado no debe superar 20 MB.",{
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return "";
+    }
+
+    if(!supabaseClient){
+      toast("No se subió la imagen","No hay conexión con Supabase. El archivo no se puede compartir entre dispositivos.",{
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return "";
+    }
+
+    const sessionResp = await supabaseClient.auth.getSession().catch(() => null);
+    const activeSession = state.session || sessionResp?.data?.session;
+
+    if(!activeSession?.user){
+      toast("Debes iniciar sesión","Para que la imagen quede visible para todos, primero inicia sesión.",{
+        gif:"assets/notifications/loading.gif",
+        sound:"assets/notifications/new-notification.mp3"
+      });
+      return "";
+    }
+
+    return await withLoading("Subiendo archivo a Supabase...", async()=>{
+      try{
+        const originalName = file.name || "archivo";
+        const cleanName = originalName
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g,"")
+          .replace(/[^a-zA-Z0-9._-]+/g,"-")
+          .replace(/^-+|-+$/g,"") || "archivo";
+
+        const safeModule = String(moduleKey || "general")
+          .replace(/[^a-zA-Z0-9._-]+/g,"-");
+
+        const path = `${safeModule}/${Date.now()}-${crypto.randomUUID()}-${cleanName}`;
+
+        const { error } = await supabaseClient.storage
+          .from("portal-assets")
+          .upload(path, file, {
+            upsert: false,
+            contentType: file.type || "application/octet-stream",
+            cacheControl: "3600"
+          });
+
+        if(error){
+          console.warn("Storage falló:", error.message || error);
+          toast("Storage no aceptó el archivo", error.message || "Revisa el bucket portal-assets y sus políticas.", {
+            gif:"assets/notifications/loading.gif",
+            sound:"assets/notifications/new-notification.mp3"
+          });
+          return "";
+        }
+
+        const { data } = supabaseClient.storage
+          .from("portal-assets")
+          .getPublicUrl(path);
+
+        if(!data?.publicUrl){
+          toast("No se generó URL pública","El archivo subió, pero Supabase no entregó URL pública.",{
+            gif:"assets/notifications/loading.gif",
+            sound:"assets/notifications/new-notification.mp3"
+          });
+          return "";
+        }
+
+        console.info("[DreamTeam] Archivo guardado en Supabase Storage:", data.publicUrl);
+        return data.publicUrl;
+      }catch(err){
+        console.warn("Error subiendo archivo:", err?.message || err);
+        toast("Error subiendo archivo", err?.message || "No se pudo subir a Supabase Storage.", {
+          gif:"assets/notifications/loading.gif",
+          sound:"assets/notifications/new-notification.mp3"
+        });
+        return "";
       }
-      return URL.createObjectURL(file);
     });
   }
 
@@ -350,8 +502,8 @@
     const live=()=>{state.visual.panelScale=Number($("#global-panel").value)/100;state.visual.mediaScale=Number($("#global-media").value)/100;state.visual.fontScale=Number($("#global-font").value)/100;state.visual.backgroundOpacity=Number($("#bg-opacity").value);state.visual.reducedMotion=$("#reduced-motion").value==="true";state.visual.backgroundLoop=$("#bg-loop").value==="true";applyVisual();scope.querySelectorAll("output").forEach(out=>{const inp=out.previousElementSibling;if(inp?.type==="range")out.textContent=`${inp.value}%`;});};
     ["global-panel","global-media","global-font","bg-opacity","reduced-motion","bg-loop"].forEach(id=>$("#"+id)?.addEventListener("input",live));
     $("#bg-upload")?.addEventListener("change",async e=>{const file=e.target.files?.[0];if(!file)return;const url=await uploadAsset(file,"background");if(url){state.visual.backgroundUrl=url;await saveHomeSettings();applyVisual();}});
-    scope.querySelectorAll("[data-panel-editor]").forEach(card=>{const key=card.dataset.panelEditor;card.querySelectorAll("[data-field]").forEach(input=>input.addEventListener("input",()=>{let v=input.value;if(input.dataset.field==="panelScale"||input.dataset.field==="mediaScale")v=Number(v);state.modulePanels[key][input.dataset.field]=v;saveState();card.querySelectorAll("output").forEach(out=>{const inp=out.previousElementSibling;if(inp?.type==="range")out.textContent=`${inp.value}%`;});}));card.querySelector(`[data-clear-panel="${key}"]`)?.addEventListener("click",()=>{state.modulePanels[key].mediaUrl="";saveState();renderVisualStudio();});card.querySelector(`[data-upload-panel="${key}"]`)?.addEventListener("change",async e=>{const file=e.target.files?.[0];if(!file)return;const url=await uploadAsset(file,key);if(url){state.modulePanels[key].mediaUrl=url;saveState();renderVisualStudio();}});});
-    $("#save-visual")?.addEventListener("click",async()=>{await saveHomeSettings();toast("Visualización guardada","Los cambios quedaron guardados.",{gif:"assets/notifications/success.gif",sound:"assets/notifications/new-notification.mp3"});render();});
+    scope.querySelectorAll("[data-panel-editor]").forEach(card=>{const key=card.dataset.panelEditor;card.querySelectorAll("[data-field]").forEach(input=>input.addEventListener("input",()=>{let v=input.value;if(input.dataset.field==="panelScale"||input.dataset.field==="mediaScale")v=Number(v);state.modulePanels[key][input.dataset.field]=v;saveState();card.querySelectorAll("output").forEach(out=>{const inp=out.previousElementSibling;if(inp?.type==="range")out.textContent=`${inp.value}%`;});}));card.querySelector(`[data-clear-panel="${key}"]`)?.addEventListener("click",()=>{state.modulePanels[key].mediaUrl="";saveState();renderVisualStudio();});card.querySelector(`[data-upload-panel="${key}"]`)?.addEventListener("change",async e=>{const file=e.target.files?.[0];if(!file)return;const url=await uploadAsset(file,key);if(url){state.modulePanels[key].mediaUrl=url;saveState();await saveHomeSettings();renderVisualStudio();}});});
+    $("#save-visual")?.addEventListener("click",async()=>{if(await saveHomeSettings()){toast("Visualización guardada","Los cambios quedaron guardados en Supabase.",{gif:"assets/notifications/success.gif",sound:"assets/notifications/new-notification.mp3"});render();}});
     $("#reset-visual")?.addEventListener("click",()=>{localStorage.removeItem(STORAGE_KEY);state=loadState();applyVisual();render();});
   }
   function renderCrud(tab){
@@ -564,6 +716,13 @@
 
       if(file && file.size){
         media = await uploadAsset(file, tab);
+        if(!media){
+          toast("No se guardó el registro", "Primero debe subir correctamente el archivo a Supabase.", {
+            gif:"assets/notifications/loading.gif",
+            sound:"assets/notifications/new-notification.mp3"
+          });
+          return;
+        }
       }
 
       if(tab === 'banners'){
@@ -582,7 +741,7 @@
           sort_order:previous.sort_order || 0
         };
         state.banners = [payload, ...(state.banners || []).filter(x => String(x.id) !== String(id))].slice(0,15);
-        await saveHomeSettings();
+        if(!(await saveHomeSettings())) return;
         notifyType(tab, title);
         renderAdmin();
         return;
@@ -601,7 +760,7 @@
           sort_order:previous.sort_order || 0
         };
         state.mascot = [payload, ...(state.mascot || []).filter(x => String(x.id) !== String(id))].slice(0,15);
-        await saveHomeSettings();
+        if(!(await saveHomeSettings())) return;
         notifyType(tab, title);
         renderAdmin();
         return;
@@ -620,7 +779,7 @@
           sort_order:previous.sort_order || 0
         };
         state.team = [payload, ...(state.team || []).filter(x => String(x.id) !== String(id))];
-        await saveHomeSettings();
+        if(!(await saveHomeSettings())) return;
         notifyType(tab, title);
         renderAdmin();
         return;
@@ -672,7 +831,7 @@
   async function render(){setRoute(routeName());$("#main-nav")?.classList.remove("open");clearInterval(bannerTimer);clearInterval(mascotTimer);switch(state.route){case"apps":await renderApps();break;case"noticias":await renderNews();break;case"auditorias":await renderAudits();break;case"documentos":await renderDocuments();break;case"publicaciones":await renderPublications();break;case"perfil":await renderProfile();break;case"admin":await renderAdmin();break;default:await renderHome();}bindPanelButtons();playVisibleVideos();}
   function bindPanelButtons(){$$("[data-edit-panel]").forEach(btn=>btn.addEventListener("click",()=>{if(!isSuperAdmin())return openLogin();location.hash="#/admin?tab=visual";}));}
   function playVisibleVideos(){$$("video").forEach(v=>{v.muted=true;v.playsInline=true;v.setAttribute("playsinline","");v.setAttribute("autoplay","");v.setAttribute("loop","");v.play?.().catch(()=>{});});}
-  function bindShell(){$("#menu-btn").addEventListener("click",()=>$("#main-nav").classList.toggle("open"));$("#view-toggle").addEventListener("click",()=>{const p=$("#view-panel");p.hidden=!p.hidden;if(!p.hidden)renderViewPanel();});$("#audio-btn").addEventListener("click",()=>toast("Accesibilidad sonora","Las notificaciones visuales y sonoras están activas.",{gif:"assets/notifications/notify.gif",sound:"assets/notifications/new-notification.mp3"}));window.addEventListener("hashchange",render);document.addEventListener("visibilitychange",()=>{if(!document.hidden)playVisibleVideos();});}
+  function bindShell(){$("#menu-btn").addEventListener("click",()=>$("#main-nav").classList.toggle("open"));$("#view-toggle").addEventListener("click",()=>{const p=$("#view-panel");p.hidden=!p.hidden;if(!p.hidden)renderViewPanel();});$("#audio-btn").addEventListener("click",()=>toast("Accesibilidad sonora","Las notificaciones visuales y sonoras están activas.",{gif:"assets/notifications/loading.gif",sound:"assets/notifications/new-notification.mp3"}));window.addEventListener("hashchange",render);document.addEventListener("visibilitychange",()=>{if(!document.hidden)playVisibleVideos();});}
   async function boot(){applyVisual();bindShell();await initSupabase();renderAuth();await render();}
   document.addEventListener("DOMContentLoaded",boot);
 })();
