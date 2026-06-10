@@ -294,11 +294,45 @@
     return true;
   }
 
+  function currentUserDisplayName(){
+    const profile = state.profile || {};
+    const user = state.session?.user || {};
+    return (
+      profile.full_name ||
+      profile.name ||
+      user.user_metadata?.full_name ||
+      user.user_metadata?.name ||
+      profile.email ||
+      user.email ||
+      "Visitante"
+    );
+  }
+
+  function currentUserEmail(){
+    const profile = state.profile || {};
+    const user = state.session?.user || {};
+    return profile.email || user.email || "";
+  }
+
   async function insertCompliment(payload){
-    payload.id=crypto.randomUUID();
-    payload.created_at=new Date().toISOString();
-    try{ if(supabaseClient) await supabaseClient.from("compliments").insert(payload); }catch{}
-    toast("Gracias por tu mensaje","Tu calificación o elogio fue recibido.",{gif:"assets/notifications/success.gif",sound:"assets/notifications/new-notification.mp3"});
+    payload.id = payload.id || crypto.randomUUID();
+    payload.created_at = payload.created_at || new Date().toISOString();
+    payload.sender_name = payload.sender_name || currentUserDisplayName();
+    payload.sender_email = payload.sender_email || currentUserEmail();
+    payload.created_by = payload.created_by || state.session?.user?.id || null;
+
+    try{
+      if(supabaseClient){
+        const { error } = await supabaseClient.from("compliments").insert(payload);
+        if(error){
+          console.warn("No se pudo guardar el elogio en Supabase:", error.message || error);
+        }
+      }
+    }catch(err){
+      console.warn("Error guardando elogio:", err?.message || err);
+    }
+
+    toast("Gracias por tu mensaje",`Tu calificación o elogio fue recibido a nombre de ${esc(payload.sender_name)}.`,{gif:"assets/notifications/success.gif",sound:"assets/notifications/new-notification.mp3"});
   }
 
   function playSound(src){try{const a=new Audio(src);a.volume=.62;a.play().catch(()=>{});}catch{}}
@@ -448,6 +482,7 @@
   function openTeamModal(member){
     const modal = $("#modal");
     const photo = member.photo_url || "assets/team/team-placeholder.svg";
+    const senderName = currentUserDisplayName();
     modal.innerHTML = `
       <div class="modal-card team-modal-card">
         <div class="team-modal-layout">
@@ -459,19 +494,26 @@
             <h2>${esc(member.name || "Integrante")}</h2>
             <p class="team-modal-role"><strong>${esc(member.role || "Equipo")}</strong></p>
             <p class="team-modal-bio">${esc(member.bio || "")}</p>
-            <label>
-              <span>Tu calificación</span>
-              <div class="rating-row" id="rating-row">
-                ${[1,2,3,4,5].map(i=>`<span data-star="${i}">⭐</span>`).join("")}
+
+            <div class="team-modal-form">
+              <label>
+                <span>Tu nombre</span>
+                <input id="compliment-author" type="text" value="${esc(senderName)}" placeholder="Nombre de quien envía el elogio">
+              </label>
+              <label>
+                <span>Tu calificación</span>
+                <div class="rating-row" id="rating-row" aria-label="Calificación">
+                  ${[1,2,3,4,5].map(i=>`<span data-star="${i}" title="${i} estrella${i>1?"s":""}">⭐</span>`).join("")}
+                </div>
+              </label>
+              <label>
+                <span>Déjanos un elogio o comentario</span>
+                <textarea id="compliment-text" rows="4" placeholder="Escribe un reconocimiento para este integrante..."></textarea>
+              </label>
+              <div class="actions">
+                <button class="btn" id="send-compliment" type="button">Enviar elogio</button>
+                <button class="btn secondary" id="close-modal" type="button">Cerrar</button>
               </div>
-            </label>
-            <label>
-              <span>Déjanos un elogio o comentario</span>
-              <textarea id="compliment-text" rows="4" placeholder="Escribe un reconocimiento para este integrante..."></textarea>
-            </label>
-            <div class="actions">
-              <button class="btn" id="send-compliment">Enviar</button>
-              <button class="btn secondary" id="close-modal">Cerrar</button>
             </div>
           </section>
         </div>
@@ -481,7 +523,20 @@
     const paint=()=>$$('#rating-row span').forEach(s=>s.classList.toggle("active",Number(s.dataset.star)<=rating));
     $$('#rating-row span').forEach(s=>s.addEventListener("click",()=>{rating=Number(s.dataset.star);paint();}));
     paint();
-    $("#send-compliment").onclick=async()=>{await insertCompliment({team_member_id:member.id,team_member_name:member.name,rating,message:$("#compliment-text").value});modal.hidden=true;};
+    $("#send-compliment").onclick=async()=>{
+      const author = ($("#compliment-author")?.value || "").trim() || currentUserDisplayName();
+      const message = ($("#compliment-text")?.value || "").trim();
+      await insertCompliment({
+        team_member_id:member.id,
+        team_member_name:member.name,
+        rating,
+        message,
+        sender_name:author,
+        sender_email:currentUserEmail(),
+        created_by:state.session?.user?.id || null
+      });
+      modal.hidden=true;
+    };
     $("#close-modal").onclick=()=>modal.hidden=true;
     modal.onclick=(ev)=>{ if(ev.target===modal) modal.hidden=true; };
   }
