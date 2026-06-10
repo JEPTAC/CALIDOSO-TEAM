@@ -497,3 +497,150 @@ button.btn.danger:hover{
     background:transparent;
   }
 }
+
+
+/* V18 - Elogios visibles en el portal */
+.section-head-row{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+.compliments-section{
+  padding-bottom:18px;
+}
+.compliment-card{
+  display:grid;
+  gap:10px;
+  border-left:5px solid var(--accent);
+}
+.compliment-card.compact{
+  padding:16px;
+}
+.compliment-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.compliment-stars{
+  letter-spacing:.03em;
+  white-space:nowrap;
+}
+.compliment-message{
+  font-size:.98rem;
+  line-height:1.55;
+  color:var(--text);
+  margin:0;
+}
+.compliment-meta{
+  display:grid;
+  gap:2px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+.compliment-meta strong{
+  color:var(--primary-dark);
+}
+.team-rating-summary{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0;
+}
+.team-rating-summary article{
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:#f8fbff;
+  padding:12px;
+}
+.team-rating-summary strong{
+  display:block;
+  color:var(--primary-dark);
+  font-size:1.25rem;
+  line-height:1.1;
+}
+.team-rating-summary span{
+  display:block;
+  color:var(--muted);
+  font-size:.82rem;
+  margin-top:4px;
+}
+.member-compliments{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--border);
+}
+.member-compliments h3{
+  margin-bottom:10px;
+}
+.member-compliments-list{
+  display:grid;
+  gap:10px;
+}
+.muted-text{
+  color:var(--muted);
+}
+.compliments-admin-summary{
+  margin:18px 0;
+}
+.compliments-admin-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,340px);
+  gap:18px;
+  align-items:start;
+}
+.compliments-admin-list{
+  display:grid;
+  gap:12px;
+}
+.compliment-admin-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+.compliment-admin-row h3{
+  margin:6px 0;
+}
+.compliment-admin-row p{
+  margin:0 0 10px;
+}
+.compliments-ranking{
+  position:sticky;
+  top:calc(var(--header-h) + 18px);
+}
+.ranking-row{
+  display:grid;
+  gap:2px;
+  padding:10px 0;
+  border-bottom:1px solid var(--border);
+}
+.ranking-row:last-child{
+  border-bottom:0;
+}
+.ranking-row strong{
+  color:var(--primary-dark);
+}
+.ranking-row span{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media (max-width:900px){
+  .compliments-admin-layout{
+    grid-template-columns:1fr;
+  }
+  .compliments-ranking{
+    position:static;
+  }
+  .compliment-admin-row{
+    display:grid;
+  }
+  .team-rating-summary{
+    grid-template-columns:1fr;
+  }
+}

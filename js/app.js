@@ -314,6 +314,73 @@
     return profile.email || user.email || "";
   }
 
+  function formatPortalDate(value){
+    if(!value) return "";
+    try{
+      return new Date(value).toLocaleString("es-CO", {
+        year:"numeric",
+        month:"short",
+        day:"2-digit",
+        hour:"2-digit",
+        minute:"2-digit"
+      });
+    }catch{
+      return String(value);
+    }
+  }
+
+  function ratingStars(value){
+    const n = Math.max(0, Math.min(5, Number(value) || 0));
+    return `${"⭐".repeat(n)}${"☆".repeat(Math.max(0,5-n))}`;
+  }
+
+  async function listCompliments(limit=80){
+    if(!supabaseClient) return [];
+    try{
+      const { data, error } = await supabaseClient
+        .from("compliments")
+        .select("id,team_member_id,team_member_name,rating,message,sender_name,sender_email,created_by,created_at")
+        .order("created_at", { ascending:false })
+        .limit(limit);
+
+      if(!error && Array.isArray(data)) return data;
+      if(error) console.warn("No se pudieron cargar elogios:", error.message || error);
+    }catch(err){
+      console.warn("Error cargando elogios:", err?.message || err);
+    }
+    return [];
+  }
+
+  function complimentCard(c, options={}){
+    const compact = Boolean(options.compact);
+    const message = c.message || "Sin comentario escrito.";
+    const sender = c.sender_name || "Anónimo";
+    const member = c.team_member_name || "Integrante del equipo";
+    return `
+      <article class="card compliment-card ${compact ? "compact" : ""}">
+        <div class="compliment-top">
+          <span class="compliment-stars">${ratingStars(c.rating)}</span>
+          <span class="badge">${esc(formatPortalDate(c.created_at) || "Reciente")}</span>
+        </div>
+        <p class="compliment-message">“${esc(message)}”</p>
+        <div class="compliment-meta">
+          <strong>${esc(sender)}</strong>
+          <span>para ${esc(member)}</span>
+        </div>
+      </article>
+    `;
+  }
+
+  function complimentSummaryFor(member, compliments){
+    const list = (compliments || []).filter(c =>
+      String(c.team_member_id || "") === String(member?.id || "") ||
+      String(c.team_member_name || "").toLowerCase() === String(member?.name || "").toLowerCase()
+    );
+    const total = list.length;
+    const avg = total ? (list.reduce((sum,c)=>sum + (Number(c.rating)||0),0)/total).toFixed(1) : "0.0";
+    return { list, total, avg };
+  }
+
   async function insertCompliment(payload){
     payload.id = payload.id || crypto.randomUUID();
     payload.created_at = payload.created_at || new Date().toISOString();
@@ -466,10 +533,96 @@
   }
 
   async function renderHome(){
-    const [apps,news,audits,docs,pubs]=await Promise.all([list("app_modules"),list("news_posts"),list("audit_reports"),list("documents"),list("publications")]);
+    const [apps,news,audits,docs,pubs,compliments]=await Promise.all([
+      list("app_modules"),
+      list("news_posts"),
+      list("audit_reports"),
+      list("documents"),
+      list("publications"),
+      listCompliments(12)
+    ]);
     const mascot=(state.mascot||[]).filter(x=>x.is_active!==false).slice(0,15);
     const team=state.team||[];
-    $("#app").innerHTML=`<section class="container reveal">${bannerHTML()}<div class="hero"><div class="hero-grid"><div><span class="kicker">Calidad y mejoramiento continuo</span><h1>Dream Team de Calidad</h1><p>Portal institucional para centralizar Apps, noticias, auditorías, documentos, publicaciones, equipo y cultura de mejora continua.</p><div class="actions"><a class="btn" href="#/apps">Entrar a Apps</a><a class="btn secondary" href="#/documentos">Ver documentos</a><a class="btn secondary" href="#/admin">Administrar</a></div></div><div class="featured-box"><h3>Resumen del portal</h3><p>Accesos, documentos vigentes, noticias recientes y comunicaciones internas.</p><div class="summary-grid" style="grid-template-columns:repeat(2,1fr)"><article class="summary-card"><strong>${apps.length}</strong><span>Apps disponibles</span></article><article class="summary-card"><strong>${docs.length}</strong><span>Documentos</span></article><article class="summary-card"><strong>${news.length}</strong><span>Noticias</span></article><article class="summary-card"><strong>${pubs.length}</strong><span>Publicaciones</span></article></div></div></div></div><section class="section"><span class="kicker">Destacado</span><h2>Lo más reciente</h2><div class="featured-strip"><article class="featured-box"><h3>${esc(news[0]?.title||"Noticias de calidad")}</h3><p>${esc(news[0]?.description||"Aún no se ha subido nada.")}</p><a class="btn secondary" href="#/noticias">Ver noticias</a></article><article class="featured-box"><h3>${esc(docs[0]?.title||"Documentos institucionales")}</h3><p>${esc(docs[0]?.description||"Aún no se ha subido nada.")}</p><a class="btn secondary" href="#/documentos">Ver documentos</a></article></div></section><section class="section"><span class="kicker">Identidad del equipo</span><h2>Nuestra mascota</h2><div class="mascot-card"><div><h3>${esc(mascot[0]?.name||"Nuestra mascota")}</h3><p>${esc(mascot[0]?.description||"Carrusel de imágenes, GIFs o videos de la mascota.")}</p></div><div class="mascot-media" id="mascot-carousel">${mascot.map((m,i)=>`<div class="mascot-slide ${i===0?"active":""}">${mediaHTML(m.media_url,m.name)}</div>`).join("")}</div></div></section><section class="section"><span class="kicker">Personas</span><h2>Nuestro equipo</h2><p>Conoce al equipo de Calidad, Mejora Continua y Auditoría. También puedes dejarnos una calificación o elogio.</p><div class="grid cols-3">${team.length?team.map(teamCard).join(""):emptyState("integrantes del equipo")}</div></section></section>`;
+    $("#app").innerHTML=`
+      <section class="container reveal">
+        ${bannerHTML()}
+        <div class="hero">
+          <div class="hero-grid">
+            <div>
+              <span class="kicker">Calidad y mejoramiento continuo</span>
+              <h1>Dream Team de Calidad</h1>
+              <p>Portal institucional para centralizar Apps, noticias, auditorías, documentos, publicaciones, equipo y cultura de mejora continua.</p>
+              <div class="actions">
+                <a class="btn" href="#/apps">Entrar a Apps</a>
+                <a class="btn secondary" href="#/documentos">Ver documentos</a>
+                <a class="btn secondary" href="#/admin">Administrar</a>
+              </div>
+            </div>
+            <div class="featured-box">
+              <h3>Resumen del portal</h3>
+              <p>Accesos, documentos vigentes, noticias recientes, reconocimientos y comunicaciones internas.</p>
+              <div class="summary-grid" style="grid-template-columns:repeat(2,1fr)">
+                <article class="summary-card"><strong>${apps.length}</strong><span>Apps disponibles</span></article>
+                <article class="summary-card"><strong>${docs.length}</strong><span>Documentos</span></article>
+                <article class="summary-card"><strong>${news.length}</strong><span>Noticias</span></article>
+                <article class="summary-card"><strong>${compliments.length}</strong><span>Elogios recientes</span></article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section">
+          <span class="kicker">Destacado</span>
+          <h2>Lo más reciente</h2>
+          <div class="featured-strip">
+            <article class="featured-box">
+              <h3>${esc(news[0]?.title||"Noticias de calidad")}</h3>
+              <p>${esc(news[0]?.description||"Aún no se ha subido nada.")}</p>
+              <a class="btn secondary" href="#/noticias">Ver noticias</a>
+            </article>
+            <article class="featured-box">
+              <h3>${esc(docs[0]?.title||"Documentos institucionales")}</h3>
+              <p>${esc(docs[0]?.description||"Aún no se ha subido nada.")}</p>
+              <a class="btn secondary" href="#/documentos">Ver documentos</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <span class="kicker">Identidad del equipo</span>
+          <h2>Nuestra mascota</h2>
+          <div class="mascot-card">
+            <div>
+              <h3>${esc(mascot[0]?.name||"Nuestra mascota")}</h3>
+              <p>${esc(mascot[0]?.description||"Carrusel de imágenes, GIFs o videos de la mascota.")}</p>
+            </div>
+            <div class="mascot-media" id="mascot-carousel">
+              ${mascot.map((m,i)=>`<div class="mascot-slide ${i===0?"active":""}">${mediaHTML(m.media_url,m.name)}</div>`).join("")}
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <span class="kicker">Personas</span>
+          <h2>Nuestro equipo</h2>
+          <p>Conoce al equipo de Calidad, Mejora Continua y Auditoría. También puedes dejarnos una calificación o elogio.</p>
+          <div class="grid cols-3">${team.length?team.map(teamCard).join(""):emptyState("integrantes del equipo")}</div>
+        </section>
+
+        <section class="section compliments-section">
+          <div class="section-head-row">
+            <div>
+              <span class="kicker">Reconocimientos</span>
+              <h2>Elogios del equipo</h2>
+              <p>Últimas calificaciones y mensajes enviados desde las presentaciones del equipo.</p>
+            </div>
+            ${canManageContent()?'<a class="btn secondary" href="#/admin?tab=compliments">Ver todos</a>':""}
+          </div>
+          <div class="grid cols-3 compliments-grid">
+            ${compliments.length ? compliments.slice(0,6).map(c=>complimentCard(c,{compact:true})).join("") : emptyState("elogios del equipo")}
+          </div>
+        </section>
+      </section>`;
     bindBanner();bindMascot();bindTeamCards();
   }
   function bindMascot(){
@@ -479,10 +632,13 @@
   }
   function teamCard(x){return `<article class="card team-card" data-team-id="${esc(x.id)}"><img class="team-photo" src="${esc(x.photo_url||"assets/team/team-placeholder.svg")}" alt="${esc(x.name||"Integrante")}"><h3>${esc(x.name||"Integrante")}</h3><p><strong>${esc(x.role||"Equipo")}</strong></p><p>${esc(x.bio||"")}</p><button class="btn secondary" type="button">Conocer y calificar</button></article>`;}
   function bindTeamCards(){ $$(".team-card").forEach(c=>c.addEventListener("click",()=>{const m=(state.team||[]).find(x=>x.id===c.dataset.teamId);if(m)openTeamModal(m);}));}
-  function openTeamModal(member){
+  async function openTeamModal(member){
     const modal = $("#modal");
     const photo = member.photo_url || "assets/team/team-placeholder.svg";
     const senderName = currentUserDisplayName();
+    const compliments = await listCompliments(120);
+    const summary = complimentSummaryFor(member, compliments);
+    const recent = summary.list.slice(0,4);
     modal.innerHTML = `
       <div class="modal-card team-modal-card">
         <div class="team-modal-layout">
@@ -494,6 +650,21 @@
             <h2>${esc(member.name || "Integrante")}</h2>
             <p class="team-modal-role"><strong>${esc(member.role || "Equipo")}</strong></p>
             <p class="team-modal-bio">${esc(member.bio || "")}</p>
+
+            <div class="team-rating-summary">
+              <article>
+                <strong>${esc(summary.avg)}</strong>
+                <span>Promedio</span>
+              </article>
+              <article>
+                <strong>${esc(summary.total)}</strong>
+                <span>Elogios</span>
+              </article>
+              <article>
+                <strong>${ratingStars(Math.round(Number(summary.avg)||0))}</strong>
+                <span>Calificación</span>
+              </article>
+            </div>
 
             <div class="team-modal-form">
               <label>
@@ -513,6 +684,13 @@
               <div class="actions">
                 <button class="btn" id="send-compliment" type="button">Enviar elogio</button>
                 <button class="btn secondary" id="close-modal" type="button">Cerrar</button>
+              </div>
+            </div>
+
+            <div class="member-compliments">
+              <h3>Últimos elogios recibidos</h3>
+              <div class="member-compliments-list">
+                ${recent.length ? recent.map(c=>complimentCard(c,{compact:true})).join("") : '<p class="muted-text">Aún no hay elogios para este integrante.</p>'}
               </div>
             </div>
           </section>
@@ -536,6 +714,7 @@
         created_by:state.session?.user?.id || null
       });
       modal.hidden=true;
+      await render();
     };
     $("#close-modal").onclick=()=>modal.hidden=true;
     modal.onclick=(ev)=>{ if(ev.target===modal) modal.hidden=true; };
@@ -562,7 +741,7 @@
 
     let tab=currentAdminTab();
     const superTabs=[["visual","Visual Studio"]];
-    const contentTabs=[["banners","Banners"],["mascot","Mascota"],["team","Equipo"],["app_modules","Apps"],["news_posts","Noticias"],["audit_reports","Auditorías"],["documents","Documentos"],["publications","Publicaciones"]];
+    const contentTabs=[["banners","Banners"],["mascot","Mascota"],["team","Equipo"],["compliments","Elogios"],["app_modules","Apps"],["news_posts","Noticias"],["audit_reports","Auditorías"],["documents","Documentos"],["publications","Publicaciones"]];
     const tabs=isSuperAdmin() ? [...superTabs, ...contentTabs] : contentTabs;
 
     if(!isSuperAdmin() && tab==="visual"){
@@ -579,10 +758,82 @@
       }else{
         renderVisualStudio();
       }
+    }else if(tab==="compliments"){
+      await renderComplimentsAdmin();
     }else{
       renderCrud(tab);
     }
   }
+
+  async function renderComplimentsAdmin(){
+    const rows = await listCompliments(300);
+    const total = rows.length;
+    const avg = total ? (rows.reduce((sum,c)=>sum+(Number(c.rating)||0),0)/total).toFixed(1) : "0.0";
+    const byMember = {};
+    rows.forEach(c=>{
+      const key=c.team_member_name || "Sin integrante";
+      byMember[key]=byMember[key]||{name:key,total:0,sum:0};
+      byMember[key].total++;
+      byMember[key].sum+=Number(c.rating)||0;
+    });
+    const ranking = Object.values(byMember).sort((a,b)=>b.total-a.total).slice(0,8);
+
+    $("#admin-panel").innerHTML=`
+      <span class="kicker">Reconocimientos</span>
+      <h2>Elogios y calificaciones del equipo</h2>
+      <p class="admin-help">Aquí se almacenan los comentarios enviados desde el popup de cada integrante del equipo. Puedes filtrar por nombre, integrante, mensaje o calificación.</p>
+
+      <div class="summary-grid compliments-admin-summary">
+        <article class="summary-card"><strong>${total}</strong><span>Elogios recibidos</span></article>
+        <article class="summary-card"><strong>${avg}</strong><span>Promedio general</span></article>
+        <article class="summary-card"><strong>${ranking.length}</strong><span>Integrantes calificados</span></article>
+        <article class="summary-card"><strong>${rows[0]?.created_at ? esc(formatPortalDate(rows[0].created_at)) : "Sin registros"}</strong><span>Último elogio</span></article>
+      </div>
+
+      <div class="toolbar">
+        <h3>Registros</h3>
+        <div class="filters">
+          <input id="compliments-filter" placeholder="Buscar elogio, integrante o remitente...">
+        </div>
+      </div>
+
+      <div class="compliments-admin-layout">
+        <section>
+          <div id="compliments-admin-list" class="compliments-admin-list">
+            ${rows.length ? rows.map(c=>complimentAdminRow(c)).join("") : emptyState("elogios")}
+          </div>
+        </section>
+        <aside class="card compliments-ranking">
+          <h3>Resumen por integrante</h3>
+          ${ranking.length ? ranking.map(x=>`<div class="ranking-row"><strong>${esc(x.name)}</strong><span>${x.total} elogio${x.total===1?"":"s"} · ${(x.sum/x.total).toFixed(1)} ⭐</span></div>`).join("") : '<p>Aún no hay calificaciones.</p>'}
+        </aside>
+      </div>
+    `;
+
+    $("#compliments-filter")?.addEventListener("input", e=>{
+      const q = e.target.value.toLowerCase();
+      const filtered = rows.filter(c=>JSON.stringify(c).toLowerCase().includes(q));
+      $("#compliments-admin-list").innerHTML = filtered.length ? filtered.map(c=>complimentAdminRow(c)).join("") : emptyState("elogios");
+    });
+  }
+
+  function complimentAdminRow(c){
+    return `
+      <article class="card compliment-admin-row">
+        <div>
+          <span class="compliment-stars">${ratingStars(c.rating)}</span>
+          <h3>${esc(c.team_member_name || "Integrante del equipo")}</h3>
+          <p>“${esc(c.message || "Sin comentario escrito.")}”</p>
+          <div class="compliment-meta">
+            <strong>Enviado por ${esc(c.sender_name || "Anónimo")}</strong>
+            ${c.sender_email ? `<span>${esc(c.sender_email)}</span>` : ""}
+          </div>
+        </div>
+        <span class="badge">${esc(formatPortalDate(c.created_at) || "Sin fecha")}</span>
+      </article>
+    `;
+  }
+
   function assetOptions(selected){return ASSETS.map(a=>`<option value="${esc(a.value)}" ${a.value===selected?"selected":""}>${esc(a.label)}</option>`).join("");}
   function renderVisualStudio(){
     $("#admin-panel").innerHTML=`<span class="kicker">Control visual</span><h2>Visual Studio Global</h2><p>Edita fondo, paneles, assets, tamaños, opacidad y movimiento.</p><div class="form-grid"><label><span>Escala paneles</span><div class="range-line"><input type="range" id="global-panel" min="70" max="115" value="${Math.round((state.visual.panelScale||1)*100)}"><output>${Math.round((state.visual.panelScale||1)*100)}%</output></div></label><label><span>Escala visual</span><div class="range-line"><input type="range" id="global-media" min="0" max="100" value="${Math.round((state.visual.mediaScale||1)*100)}"><output>${Math.round((state.visual.mediaScale||1)*100)}%</output></div></label><label><span>Escala texto</span><div class="range-line"><input type="range" id="global-font" min="88" max="112" value="${Math.round((state.visual.fontScale||1)*100)}"><output>${Math.round((state.visual.fontScale||1)*100)}%</output></div></label><label><span>Opacidad fondo</span><div class="range-line"><input type="range" id="bg-opacity" min="0" max="35" value="${Number(state.visual.backgroundOpacity||8)}"><output>${Number(state.visual.backgroundOpacity||8)}%</output></div></label><label><span>Movimiento reducido</span><select id="reduced-motion"><option value="false">No</option><option value="true" ${state.visual.reducedMotion?"selected":""}>Sí</option></select></label><label><span>Loop fondo</span><select id="bg-loop"><option value="true" ${state.visual.backgroundLoop!==false?"selected":""}>Sí</option><option value="false" ${state.visual.backgroundLoop===false?"selected":""}>No</option></select></label><label class="span-2"><span>Fondo GIF/video/imagen máximo 20 MB</span><input type="file" id="bg-upload" accept="image/*,video/mp4,video/webm"></label></div><hr><div class="grid cols-2">${Object.keys(state.modulePanels).map(panelEditor).join("")}</div><div class="actions"><button class="btn" id="save-visual">Guardar cambios visuales</button><button class="btn secondary" id="reset-visual">Restaurar base limpia</button></div>`;
