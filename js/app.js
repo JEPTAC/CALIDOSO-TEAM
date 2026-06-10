@@ -336,18 +336,35 @@
 
   async function listCompliments(limit=80){
     if(!supabaseClient) return [];
-    try{
-      const { data, error } = await supabaseClient
-        .from("compliments")
-        .select("id,team_member_id,team_member_name,rating,message,sender_name,sender_email,created_by,created_at")
-        .order("created_at", { ascending:false })
-        .limit(limit);
 
-      if(!error && Array.isArray(data)) return data;
-      if(error) console.warn("No se pudieron cargar elogios:", error.message || error);
-    }catch(err){
-      console.warn("Error cargando elogios:", err?.message || err);
+    const queries = [
+      "id,team_member_id,team_member_name,rating,message,sender_name,sender_email,created_by,created_at",
+      "id,team_member_id,team_member_name,rating,message,created_at"
+    ];
+
+    for(const columns of queries){
+      try{
+        const { data, error } = await supabaseClient
+          .from("compliments")
+          .select(columns)
+          .order("created_at", { ascending:false })
+          .limit(limit);
+
+        if(!error && Array.isArray(data)){
+          return data.map(x=>({
+            ...x,
+            sender_name:x.sender_name || "Anónimo",
+            sender_email:x.sender_email || "",
+            created_by:x.created_by || null
+          }));
+        }
+
+        if(error) console.warn("No se pudieron cargar elogios:", error.message || error);
+      }catch(err){
+        console.warn("Error cargando elogios:", err?.message || err);
+      }
     }
+
     return [];
   }
 
@@ -739,12 +756,48 @@
       <img class="card-icon" src="${esc(x.image_url||cfg.gif)}" alt="">
       <h3>${esc(title)}</h3>
       <p>${esc(desc)}</p>
-      ${isApp ? `<div class="app-credit-badge" title="Crédito de creación de la app"><span>Creado por</span><strong>${esc(creatorName)}</strong>${creatorRole?`<small>${esc(creatorRole)}</small>`:""}</div>` : ""}
+      ${isApp ? `<div class="app-credit-badge" title="Crédito de creación de la App"><span>Creado por</span><strong>${esc(creatorName)}</strong>${creatorRole?`<small>${esc(creatorRole)}</small>`:""}</div>` : ""}
       <div class="card-footer">
         <span class="badge">${esc(x.status||x.publication_type||"publicado")}</span>
         <a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir enlace</a>
       </div>
     </article>`;
+  }
+  function bindFilter(rows,renderer){$("#filter")?.addEventListener("input",e=>{const q=e.target.value.toLowerCase();$("#cards").innerHTML=rows.filter(x=>JSON.stringify(x).toLowerCase().includes(q)).map(renderer).join("")||emptyState("Apps");});}
+
+  async function renderProfile(){ $("#app").innerHTML=`<section class="section"><div class="container"><div class="module-hero"><div class="module-hero-content"><span class="kicker">Mi perfil</span><h2>Perfil de usuario</h2><p>Información actual del usuario y rol dentro del portal.</p></div><article class="card"><h3>${esc(state.profile?.full_name||state.session?.user?.email||"Usuario visitante")}</h3><p><strong>Rol:</strong> ${esc(getRole())}</p><p><strong>Estado:</strong> ${state.session?"Sesión activa":"Sin sesión"}</p></article></div></div></section>`;}
+  function currentAdminTab(){return params().get("tab")||"visual";}
+  async function renderAdmin(){
+    if(!canManageContent()){
+      $("#app").innerHTML=`<section class="section"><div class="container"><div class="hero"><h2>Administración</h2><p>Ingresa con un usuario autorizado para administrar el portal.</p><button class="btn" id="open-login">Ingresar</button></div></div></section>`;
+      $("#open-login")?.addEventListener("click",openLogin);
+      return;
+    }
+
+    let tab=currentAdminTab();
+    const superTabs=[["visual","Visual Studio"]];
+    const contentTabs=[["banners","Banners"],["mascot","Mascota"],["team","Equipo"],["compliments","Elogios"],["app_modules","Apps"],["news_posts","Noticias"],["audit_reports","Auditorías"],["documents","Documentos"],["publications","Publicaciones"]];
+    const tabs=isSuperAdmin() ? [...superTabs, ...contentTabs] : contentTabs;
+
+    if(!isSuperAdmin() && tab==="visual"){
+      tab="banners";
+      history.replaceState(null,"", "#/admin?tab=banners");
+    }
+
+    $("#app").innerHTML=`<section class="section"><div class="container"><div class="admin-layout"><aside class="admin-menu">${tabs.map(([k,l])=>`<button class="btn ${tab===k?"active":""}" data-admin-tab="${k}">${l}</button>`).join("")}</aside><section class="admin-panel" id="admin-panel"></section></div></div></section>`;
+    $$(".admin-menu button").forEach(b=>b.addEventListener("click",()=>location.hash=`#/admin?tab=${b.dataset.adminTab}`));
+
+    if(tab==="visual"){
+      if(!isSuperAdmin()){
+        renderCrud("banners");
+      }else{
+        renderVisualStudio();
+      }
+    }else if(tab==="compliments"){
+      await renderComplimentsAdmin();
+    }else{
+      renderCrud(tab);
+    }
   }
 
   async function renderComplimentsAdmin(){
