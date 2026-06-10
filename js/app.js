@@ -739,7 +739,26 @@
 
   function emptyState(label="contenido"){return `<article class="card empty-card"><h3>Aún no se ha subido nada.</h3><p>Cuando se publique ${esc(label)}, aparecerá en este espacio.</p></article>`;}
   async function renderApps(){const rows=await list("app_modules");$("#app").innerHTML=moduleHero("apps","Ecosistema de herramientas","Lanzador de Apps","Accede a las herramientas digitales del sistema de calidad, logística, auditoría, capacitación y mejora continua.",canManageContent()?'<a class="btn" href="#/admin?tab=app_modules">Administrar Apps</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Apps disponibles</h3><div class="filters"><input id="filter" placeholder="Buscar App..."></div></div><div class="grid cols-3" id="cards">${rows.length?rows.map(appCard).join(""):emptyState("Apps")}</div>`;bindFilter(rows,appCard);}
-  function appCard(x){const link=x.url||x.external_url||"#";return `<article class="card"><img class="card-icon" src="${esc(x.image_url||x.icon_url||"assets/notifications/app.gif")}" alt=""><h3>${esc(x.name||x.title||"App")}</h3><p>${esc(x.description||"Sin descripción.")}</p><div class="card-footer"><span class="badge">${esc(x.status||"activa")}</span><a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir App</a></div></article>`;}
+  function appCard(x){
+    const link=x.url||x.external_url||"#";
+    const creatorName=x.creator_name||x.created_by_name||x.author_name||"Juan Esteban Pérez";
+    const creatorRole=x.creator_role||x.creator_position||"Analista de Calidad";
+    return `<article class="card app-credit-card">
+      <div class="app-credit-ribbon">Crédito de creación</div>
+      <img class="card-icon" src="${esc(x.image_url||x.icon_url||"assets/notifications/app.gif")}" alt="">
+      <h3>${esc(x.name||x.title||"App")}</h3>
+      <div class="app-credit-badge app-credit-visible" title="Crédito de creación de la App">
+        <span>Creado por</span>
+        <strong>${esc(creatorName)}</strong>
+        ${creatorRole?`<small>${esc(creatorRole)}</small>`:""}
+      </div>
+      <p>${esc(x.description||"Sin descripción.")}</p>
+      <div class="card-footer">
+        <span class="badge">${esc(x.status||"activa")}</span>
+        <a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir App</a>
+      </div>
+    </article>`;
+  }
   async function renderNews(){const rows=await list("news_posts");$("#app").innerHTML=moduleHero("news","Comunicación institucional","Noticias de calidad","Publicaciones oficiales sobre novedades, mejoras, capacitaciones y actualizaciones.",canManageContent()?'<a class="btn" href="#/admin?tab=news_posts">Crear noticia</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Últimas noticias</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"news_posts")).join(""):emptyState("noticias")}</div>`;}
   async function renderAudits(){const rows=await list("audit_reports");$("#app").innerHTML=moduleHero("audits","Auditoría y seguimiento","Auditorías","Consulta resultados, reportes y acciones de mejora.",canManageContent()?'<a class="btn" href="#/admin?tab=audit_reports">Gestionar auditorías</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Reportes de auditoría</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"audit_reports")).join(""):emptyState("auditorías")}</div>`;}
   async function renderDocuments(){const rows=await list("documents");$("#app").innerHTML=moduleHero("documents","Gestión documental","Documentos","Repositorio institucional para políticas, procedimientos, guías y formatos.",canManageContent()?'<a class="btn" href="#/admin?tab=documents">Gestionar documentos</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Documentos publicados</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"documents")).join(""):emptyState("documentos")}</div>`;}
