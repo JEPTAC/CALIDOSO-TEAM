@@ -727,42 +727,24 @@
   async function renderAudits(){const rows=await list("audit_reports");$("#app").innerHTML=moduleHero("audits","Auditoría y seguimiento","Auditorías","Consulta resultados, reportes y acciones de mejora.",canManageContent()?'<a class="btn" href="#/admin?tab=audit_reports">Gestionar auditorías</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Reportes de auditoría</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"audit_reports")).join(""):emptyState("auditorías")}</div>`;}
   async function renderDocuments(){const rows=await list("documents");$("#app").innerHTML=moduleHero("documents","Gestión documental","Documentos","Repositorio institucional para políticas, procedimientos, guías y formatos.",canManageContent()?'<a class="btn" href="#/admin?tab=documents">Gestionar documentos</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Documentos publicados</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"documents")).join(""):emptyState("documentos")}</div>`;}
   async function renderPublications(){const rows=await list("publications");$("#app").innerHTML=moduleHero("publications","Comunidad interna","Publicaciones","Muro institucional para reconocimientos y comunicaciones internas.",canManageContent()?'<a class="btn" href="#/admin?tab=publications">Crear publicación</a>':"");$("#module-content").innerHTML=`<div class="toolbar"><h3>Muro interno</h3></div><div class="grid cols-2">${rows.length?rows.map(x=>contentCard(x,"publications")).join(""):emptyState("publicaciones")}</div>`;}
-  function contentCard(x,table){const cfg=TYPE_ASSETS[table]||TYPE_ASSETS.general;const title=x.title||x.name||"Registro";const desc=x.description||x.content||"";const link=x.file_url||x.external_url||x.url||"#";return `<article class="card"><img class="card-icon" src="${esc(x.image_url||cfg.gif)}" alt=""><h3>${esc(title)}</h3><p>${esc(desc)}</p><div class="card-footer"><span class="badge">${esc(x.status||x.publication_type||"publicado")}</span><a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir enlace</a></div></article>`;}
-  function bindFilter(rows,renderer){$("#filter")?.addEventListener("input",e=>{const q=e.target.value.toLowerCase();$("#cards").innerHTML=rows.filter(x=>JSON.stringify(x).toLowerCase().includes(q)).map(renderer).join("")||emptyState("Apps");});}
-
-  async function renderProfile(){ $("#app").innerHTML=`<section class="section"><div class="container"><div class="module-hero"><div class="module-hero-content"><span class="kicker">Mi perfil</span><h2>Perfil de usuario</h2><p>Información actual del usuario y rol dentro del portal.</p></div><article class="card"><h3>${esc(state.profile?.full_name||state.session?.user?.email||"Usuario visitante")}</h3><p><strong>Rol:</strong> ${esc(getRole())}</p><p><strong>Estado:</strong> ${state.session?"Sesión activa":"Sin sesión"}</p></article></div></div></section>`;}
-  function currentAdminTab(){return params().get("tab")||"visual";}
-  async function renderAdmin(){
-    if(!canManageContent()){
-      $("#app").innerHTML=`<section class="section"><div class="container"><div class="hero"><h2>Administración</h2><p>Ingresa con un usuario autorizado para administrar el portal.</p><button class="btn" id="open-login">Ingresar</button></div></div></section>`;
-      $("#open-login")?.addEventListener("click",openLogin);
-      return;
-    }
-
-    let tab=currentAdminTab();
-    const superTabs=[["visual","Visual Studio"]];
-    const contentTabs=[["banners","Banners"],["mascot","Mascota"],["team","Equipo"],["compliments","Elogios"],["app_modules","Apps"],["news_posts","Noticias"],["audit_reports","Auditorías"],["documents","Documentos"],["publications","Publicaciones"]];
-    const tabs=isSuperAdmin() ? [...superTabs, ...contentTabs] : contentTabs;
-
-    if(!isSuperAdmin() && tab==="visual"){
-      tab="banners";
-      history.replaceState(null,"", "#/admin?tab=banners");
-    }
-
-    $("#app").innerHTML=`<section class="section"><div class="container"><div class="admin-layout"><aside class="admin-menu">${tabs.map(([k,l])=>`<button class="btn ${tab===k?"active":""}" data-admin-tab="${k}">${l}</button>`).join("")}</aside><section class="admin-panel" id="admin-panel"></section></div></div></section>`;
-    $$(".admin-menu button").forEach(b=>b.addEventListener("click",()=>location.hash=`#/admin?tab=${b.dataset.adminTab}`));
-
-    if(tab==="visual"){
-      if(!isSuperAdmin()){
-        renderCrud("banners");
-      }else{
-        renderVisualStudio();
-      }
-    }else if(tab==="compliments"){
-      await renderComplimentsAdmin();
-    }else{
-      renderCrud(tab);
-    }
+  function contentCard(x,table){
+    const cfg=TYPE_ASSETS[table]||TYPE_ASSETS.general;
+    const title=x.title||x.name||"Registro";
+    const desc=x.description||x.content||"";
+    const link=x.file_url||x.external_url||x.url||"#";
+    const isApp=table==="app_modules";
+    const creatorName=isApp ? (x.creator_name||x.created_by_name||x.author_name||"Juan Esteban Pérez") : "";
+    const creatorRole=isApp ? (x.creator_role||x.creator_position||"Analista de Calidad") : "";
+    return `<article class="card ${isApp?"app-credit-card":""}">
+      <img class="card-icon" src="${esc(x.image_url||cfg.gif)}" alt="">
+      <h3>${esc(title)}</h3>
+      <p>${esc(desc)}</p>
+      ${isApp ? `<div class="app-credit-badge" title="Crédito de creación de la app"><span>Creado por</span><strong>${esc(creatorName)}</strong>${creatorRole?`<small>${esc(creatorRole)}</small>`:""}</div>` : ""}
+      <div class="card-footer">
+        <span class="badge">${esc(x.status||x.publication_type||"publicado")}</span>
+        <a class="btn secondary" href="${esc(link)}" target="_blank" rel="noopener">Abrir enlace</a>
+      </div>
+    </article>`;
   }
 
   async function renderComplimentsAdmin(){
@@ -902,12 +884,16 @@
     const description = x.description || x.content || x.bio || "";
     const asset = x.image_url || x.icon_url || x.media_url || x.photo_url || "";
     const link = x.url || x.external_url || x.file_url || x.link_url || "";
+    const isApp = table === "app_modules";
+    const creatorName = isApp ? (x.creator_name || x.created_by_name || x.author_name || "Juan Esteban Pérez") : "";
+    const creatorRole = isApp ? (x.creator_role || x.creator_position || "Analista de Calidad") : "";
 
     return `
       <article class="card admin-record-card" data-admin-card="${esc(x.id)}">
         ${asset ? `<img class="card-icon" src="${esc(asset)}" alt="">` : ""}
         <h3>${esc(title)}</h3>
         <p>${esc(description || "Sin descripción.")}</p>
+        ${isApp ? `<div class="app-credit-badge admin-credit"><span>Creado por</span><strong>${esc(creatorName)}</strong>${creatorRole?`<small>${esc(creatorRole)}</small>`:""}</div>` : ""}
         ${link ? `<p class="admin-card-link"><small>${esc(link)}</small></p>` : ""}
         <div class="card-footer admin-card-actions">
           <button class="btn secondary" type="button" data-edit-record="${esc(x.id)}">Editar</button>
@@ -957,6 +943,12 @@
     if(form.elements.animation){
       form.elements.animation.value = record.animation || 'fade';
     }
+    if(form.elements.creator_name){
+      form.elements.creator_name.value = record.creator_name || record.created_by_name || record.author_name || 'Juan Esteban Pérez';
+    }
+    if(form.elements.creator_role){
+      form.elements.creator_role.value = record.creator_role || record.creator_position || 'Analista de Calidad';
+    }
 
     const submitBtn = form.querySelector('button[type="submit"]');
     if(submitBtn) submitBtn.textContent = 'Actualizar';
@@ -975,6 +967,7 @@
   function crudForm(tab){
     const banner = tab === 'banners';
     const team = tab === 'team';
+    const apps = tab === 'app_modules';
 
     return `
       <form id="crud-form" class="form-grid">
@@ -999,6 +992,16 @@
               <option value="slide">Slide</option>
               <option value="zoom">Zoom</option>
             </select>
+          </label>
+        ` : ''}
+        ${apps ? `
+          <label>
+            <span>Creador / crédito de la App</span>
+            <input name="creator_name" value="Juan Esteban Pérez" placeholder="Nombre del creador">
+          </label>
+          <label>
+            <span>Cargo / rol del creador</span>
+            <input name="creator_role" value="Analista de Calidad" placeholder="Cargo del creador">
           </label>
         ` : ''}
         <label class="span-2">
@@ -1140,7 +1143,16 @@
       };
 
       if(tab === 'app_modules'){
-        payload = { ...payload, url:fd.get('url') || '#', external_url:fd.get('url') || '#' };
+        const creatorName = fd.get('creator_name') || 'Juan Esteban Pérez';
+        const creatorRole = fd.get('creator_role') || 'Analista de Calidad';
+        payload = {
+          ...payload,
+          url:fd.get('url') || '#',
+          external_url:fd.get('url') || '#',
+          creator_name:creatorName,
+          creator_role:creatorRole,
+          creator_credit:`Creado por ${creatorName}${creatorRole ? ' · ' + creatorRole : ''}`
+        };
         if(media) payload.image_url = media;
       }else if(tab === 'documents'){
         payload = { ...payload, file_url:fd.get('url') || '#', external_url:fd.get('url') || '#' };

@@ -644,3 +644,46 @@ button.btn.danger:hover{
     grid-template-columns:1fr;
   }
 }
+
+
+/* V19 - Créditos de creador en Apps */
+.app-credit-card{
+  border-top:4px solid rgba(245,184,0,.72);
+}
+.app-credit-badge{
+  display:inline-grid;
+  gap:2px;
+  align-items:center;
+  max-width:100%;
+  margin:2px 0 14px;
+  padding:9px 12px;
+  border-radius:16px;
+  background:
+    linear-gradient(135deg,rgba(245,184,0,.18),rgba(255,255,255,.96)),
+    #fff;
+  border:1px solid rgba(245,184,0,.38);
+  box-shadow:0 10px 24px rgba(6,34,82,.08);
+}
+.app-credit-badge span{
+  font-size:.72rem;
+  line-height:1;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-weight:800;
+}
+.app-credit-badge strong{
+  color:var(--primary-dark);
+  font-size:.94rem;
+  line-height:1.15;
+}
+.app-credit-badge small{
+  color:var(--blue);
+  font-size:.8rem;
+  line-height:1.15;
+}
+.app-credit-badge.admin-credit{
+  display:grid;
+  width:max-content;
+  max-width:100%;
+}
