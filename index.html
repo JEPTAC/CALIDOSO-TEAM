@@ -7,10 +7,35 @@
   <meta name="theme-color" content="#0a3d91">
   <meta name="description" content="Portal Dream Team de Calidad y Mejoramiento Continuo">
   <link rel="icon" href="assets/logo/dream-team-logo.png">
-  <link rel="stylesheet" href="css/styles.css?v=v21-etiqueta-creador-apps-visible">
+  <link rel="stylesheet" href="css/styles.css?v=v22-intro-cinematica">
 </head>
 <body>
   <a class="skip-link" href="#app">Saltar al contenido principal</a>
+
+  <section id="intro-cinematic" class="intro-cinematic" aria-label="Intro del Repositorio de Apps Calidad">
+    <video id="intro-video" class="intro-video" src="assets/intro/intro-video.mp4" autoplay muted playsinline preload="auto"></video>
+    <audio id="intro-audio" src="assets/intro/intro-sound.mp3" preload="auto"></audio>
+    <div class="intro-vignette" aria-hidden="true"></div>
+    <div class="intro-grid-lines" aria-hidden="true"></div>
+
+    <div class="intro-content">
+      <div class="intro-logo-wrap">
+        <img class="intro-logo" src="assets/intro/intro-logo.png" alt="Repositorio de Apps Calidad">
+        <span class="intro-logo-glow" aria-hidden="true"></span>
+      </div>
+      <div class="intro-copy">
+        <span>Electroingeniería S.A.S.</span>
+        <strong>Repositorio de Apps Calidad</strong>
+        <small>Desarrollado por Juan E. Perez</small>
+      </div>
+      <div class="intro-progress" aria-hidden="true"><i></i></div>
+    </div>
+
+    <div class="intro-actions">
+      <button id="intro-sound-btn" class="btn secondary intro-sound-btn" type="button" hidden>Activar sonido</button>
+      <button id="intro-skip-btn" class="btn intro-skip-btn" type="button">Omitir intro</button>
+    </div>
+  </section>
 
   <div class="bg-video" aria-hidden="true">
     <video src="assets/backgrounds/portal-bg.mp4" autoplay muted loop playsinline preload="metadata"></video>
@@ -71,6 +96,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/config.js?v=clean-v1"></script>
-  <script src="js/app.js?v=v21-etiqueta-creador-apps-visible"></script>
+  <script src="js/app.js?v=v22-intro-cinematica"></script>
 </body>
 </html>

@@ -1334,7 +1334,82 @@
     modal.onclick=(ev)=>{ if(ev.target===modal) modal.hidden=true; };
   }
 
+
+  function runIntroCinematic(){
+    const overlay = $("#intro-cinematic");
+    if(!overlay) return Promise.resolve();
+
+    const video = $("#intro-video");
+    const audio = $("#intro-audio");
+    const skipBtn = $("#intro-skip-btn");
+    const soundBtn = $("#intro-sound-btn");
+
+    document.body.classList.add("intro-playing");
+
+    return new Promise(resolve => {
+      let closed = false;
+      const finish = () => {
+        if(closed) return;
+        closed = true;
+
+        try{
+          if(audio){
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        }catch{}
+
+        overlay.classList.add("intro-finished");
+        setTimeout(() => {
+          overlay.remove();
+          document.body.classList.remove("intro-playing");
+          resolve();
+        }, 760);
+      };
+
+      skipBtn?.addEventListener("click", finish, { once:true });
+
+      if(video){
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute("playsinline","");
+        video.play?.().catch(()=>{});
+        video.addEventListener("ended", finish, { once:true });
+      }
+
+      if(audio){
+        audio.volume = 0.42;
+        const tryAudio = audio.play?.();
+        if(tryAudio?.catch){
+          tryAudio.catch(() => {
+            if(soundBtn) soundBtn.hidden = false;
+          });
+        }
+
+        soundBtn?.addEventListener("click", () => {
+          audio.currentTime = 0;
+          audio.play?.().then(() => {
+            soundBtn.hidden = true;
+          }).catch(()=>{});
+        });
+      }
+
+      setTimeout(finish, 8500);
+    });
+  }
+
   function bindShell(){$("#menu-btn").addEventListener("click",()=>$("#main-nav").classList.toggle("open"));$("#view-toggle").addEventListener("click",()=>{const p=$("#view-panel");p.hidden=!p.hidden;if(!p.hidden)renderViewPanel();});$("#audio-btn").addEventListener("click",()=>toast("Accesibilidad sonora","Las notificaciones visuales y sonoras están activas.",{gif:"assets/notifications/loading.gif",sound:"assets/notifications/new-notification.mp3"}));$("#creator-cert-btn")?.addEventListener("click",openCreatorCertificate);window.addEventListener("hashchange",render);document.addEventListener("visibilitychange",()=>{if(!document.hidden)playVisibleVideos();});}
-  async function boot(){applyVisual();bindShell();await initSupabase();renderAuth();await render();}
+  async function boot(){
+    applyVisual();
+    bindShell();
+
+    const introPromise = runIntroCinematic();
+    await initSupabase();
+
+    await introPromise;
+
+    renderAuth();
+    await render();
+  }
   document.addEventListener("DOMContentLoaded",boot);
 })();

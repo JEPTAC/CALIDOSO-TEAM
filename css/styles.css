@@ -737,3 +737,204 @@ button.btn.danger:hover{
     margin:0 0 10px auto;
   }
 }
+
+
+/* V22 - Intro cinematográfica del Repositorio de Apps */
+.intro-cinematic{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:#031432;
+  color:#fff;
+  isolation:isolate;
+}
+.intro-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.72;
+  filter:saturate(1.08) contrast(1.08) brightness(.72);
+  transform:scale(1.035);
+}
+.intro-vignette{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    radial-gradient(circle at center,rgba(255,255,255,.06),transparent 24%),
+    radial-gradient(circle at center,rgba(2,14,38,.1),rgba(2,14,38,.88) 78%),
+    linear-gradient(135deg,rgba(2,20,56,.72),rgba(4,49,128,.38),rgba(245,184,0,.12));
+}
+.intro-grid-lines{
+  position:absolute;
+  inset:-20%;
+  z-index:2;
+  opacity:.18;
+  background-image:
+    linear-gradient(rgba(255,255,255,.18) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px);
+  background-size:72px 72px;
+  transform:perspective(700px) rotateX(62deg) translateY(12%);
+  animation:introGridMove 7.5s ease-out both;
+}
+.intro-content{
+  position:relative;
+  z-index:3;
+  width:min(920px,calc(100vw - 34px));
+  display:grid;
+  justify-items:center;
+  gap:22px;
+  text-align:center;
+  padding:28px;
+}
+.intro-logo-wrap{
+  position:relative;
+  width:min(560px,78vw);
+  aspect-ratio:1.55/1;
+  display:grid;
+  place-items:center;
+  animation:introLogoEntry 1.55s cubic-bezier(.16,1,.3,1) both;
+}
+.intro-logo{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-height:48vh;
+  object-fit:contain;
+  filter:
+    drop-shadow(0 30px 58px rgba(0,0,0,.52))
+    drop-shadow(0 0 34px rgba(245,184,0,.24));
+  animation:introLogoFloat 3.8s ease-in-out 1.4s infinite;
+}
+.intro-logo-glow{
+  position:absolute;
+  inset:14%;
+  z-index:1;
+  border-radius:42px;
+  background:
+    radial-gradient(circle,rgba(245,184,0,.32),transparent 55%),
+    radial-gradient(circle,rgba(7,80,190,.46),transparent 72%);
+  filter:blur(26px);
+  animation:introGlowPulse 2.6s ease-in-out infinite;
+}
+.intro-copy{
+  display:grid;
+  gap:6px;
+  animation:introTextEntry 1.1s ease-out .65s both;
+}
+.intro-copy span{
+  font-size:clamp(.78rem,1.5vw,.96rem);
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-weight:800;
+  color:#ffe17a;
+}
+.intro-copy strong{
+  font-size:clamp(1.35rem,4.2vw,3.1rem);
+  line-height:1.02;
+  text-shadow:0 10px 34px rgba(0,0,0,.52);
+}
+.intro-copy small{
+  color:rgba(255,255,255,.82);
+  font-size:clamp(.88rem,1.7vw,1.08rem);
+  letter-spacing:.08em;
+}
+.intro-progress{
+  width:min(520px,68vw);
+  height:6px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  overflow:hidden;
+  box-shadow:0 0 0 1px rgba(255,255,255,.12),0 12px 30px rgba(0,0,0,.26);
+}
+.intro-progress i{
+  display:block;
+  height:100%;
+  width:100%;
+  border-radius:inherit;
+  transform-origin:left center;
+  background:linear-gradient(90deg,#0a3d91,#f5b800,#fff);
+  animation:introProgress 8.2s linear both;
+}
+.intro-actions{
+  position:absolute;
+  right:22px;
+  bottom:22px;
+  z-index:4;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.intro-skip-btn,
+.intro-sound-btn{
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+}
+.intro-finished{
+  pointer-events:none;
+  animation:introExit .72s ease forwards;
+}
+
+@keyframes introLogoEntry{
+  0%{opacity:0;transform:scale(.72) translateY(34px) rotateX(18deg);filter:blur(8px);}
+  58%{opacity:1;transform:scale(1.05) translateY(-6px) rotateX(0);filter:blur(0);}
+  100%{opacity:1;transform:scale(1) translateY(0);}
+}
+@keyframes introTextEntry{
+  from{opacity:0;transform:translateY(18px);filter:blur(6px);}
+  to{opacity:1;transform:translateY(0);filter:blur(0);}
+}
+@keyframes introLogoFloat{
+  0%,100%{transform:translateY(0) scale(1);}
+  50%{transform:translateY(-8px) scale(1.012);}
+}
+@keyframes introGlowPulse{
+  0%,100%{opacity:.72;transform:scale(.96);}
+  50%{opacity:1;transform:scale(1.08);}
+}
+@keyframes introProgress{
+  from{transform:scaleX(0);}
+  to{transform:scaleX(1);}
+}
+@keyframes introGridMove{
+  from{transform:perspective(700px) rotateX(62deg) translateY(28%);opacity:0;}
+  to{transform:perspective(700px) rotateX(62deg) translateY(12%);opacity:.18;}
+}
+@keyframes introExit{
+  to{opacity:0;transform:scale(1.02);filter:blur(10px);}
+}
+
+@media (max-width:720px){
+  .intro-content{
+    padding:18px;
+    gap:18px;
+  }
+  .intro-logo-wrap{
+    width:min(520px,88vw);
+  }
+  .intro-actions{
+    left:14px;
+    right:14px;
+    bottom:14px;
+  }
+  .intro-actions .btn{
+    flex:1;
+    min-width:140px;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .intro-logo-wrap,
+  .intro-logo,
+  .intro-logo-glow,
+  .intro-copy,
+  .intro-progress i,
+  .intro-grid-lines{
+    animation:none !important;
+  }
+}
