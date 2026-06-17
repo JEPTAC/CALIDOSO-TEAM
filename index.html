@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0a3d91">
   <meta name="description" content="Portal Dream Team de Calidad y Mejoramiento Continuo">
   <link rel="icon" href="assets/logo/dream-team-logo.png">
-  <link rel="stylesheet" href="css/styles.css?v=v22-intro-cinematica">
+  <link rel="stylesheet" href="css/styles.css?v=v23-intro-musica-obligatoria">
 </head>
 <body>
   <a class="skip-link" href="#app">Saltar al contenido principal</a>
@@ -31,9 +31,14 @@
       <div class="intro-progress" aria-hidden="true"><i></i></div>
     </div>
 
+    <div class="intro-sound-gate" id="intro-sound-gate">
+      <button id="intro-start-sound-btn" class="btn intro-start-sound-btn" type="button">Iniciar experiencia con sonido</button>
+      <p>La música es parte de la presentación. Haz clic para activar la intro cinematográfica.</p>
+    </div>
+
     <div class="intro-actions">
-      <button id="intro-sound-btn" class="btn secondary intro-sound-btn" type="button" hidden>Activar sonido</button>
-      <button id="intro-skip-btn" class="btn intro-skip-btn" type="button">Omitir intro</button>
+      <button id="intro-retry-sound-btn" class="btn secondary intro-sound-btn" type="button" hidden>Reintentar sonido</button>
+      <button id="intro-skip-btn" class="btn intro-skip-btn" type="button" hidden>Entrar al portal</button>
     </div>
   </section>
 
@@ -96,6 +101,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/config.js?v=clean-v1"></script>
-  <script src="js/app.js?v=v22-intro-cinematica"></script>
+  <script src="js/app.js?v=v23-intro-musica-obligatoria"></script>
 </body>
 </html>

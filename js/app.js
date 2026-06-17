@@ -1341,16 +1341,37 @@
 
     const video = $("#intro-video");
     const audio = $("#intro-audio");
-    const skipBtn = $("#intro-skip-btn");
-    const soundBtn = $("#intro-sound-btn");
+    const startBtn = $("#intro-start-sound-btn");
+    const retryBtn = $("#intro-retry-sound-btn");
+    const enterBtn = $("#intro-skip-btn");
+    const gate = $("#intro-sound-gate");
 
     document.body.classList.add("intro-playing");
+    overlay.classList.add("intro-waiting-sound");
+
+    if(video){
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute("playsinline","");
+      video.pause?.();
+      video.currentTime = 0;
+    }
+
+    if(audio){
+      audio.volume = 0.56;
+      audio.pause?.();
+      audio.currentTime = 0;
+    }
 
     return new Promise(resolve => {
       let closed = false;
+      let started = false;
+      let finishTimer = null;
+
       const finish = () => {
         if(closed) return;
         closed = true;
+        clearTimeout(finishTimer);
 
         try{
           if(audio){
@@ -1367,34 +1388,45 @@
         }, 760);
       };
 
-      skipBtn?.addEventListener("click", finish, { once:true });
+      const startWithSound = async () => {
+        if(started) return;
+        started = true;
 
-      if(video){
-        video.muted = true;
-        video.playsInline = true;
-        video.setAttribute("playsinline","");
-        video.play?.().catch(()=>{});
-        video.addEventListener("ended", finish, { once:true });
-      }
+        overlay.classList.remove("intro-waiting-sound");
+        overlay.classList.add("intro-started");
+        if(gate) gate.hidden = true;
+        if(retryBtn) retryBtn.hidden = true;
 
-      if(audio){
-        audio.volume = 0.42;
-        const tryAudio = audio.play?.();
-        if(tryAudio?.catch){
-          tryAudio.catch(() => {
-            if(soundBtn) soundBtn.hidden = false;
-          });
+        try{
+          if(video){
+            video.currentTime = 0;
+            video.muted = true;
+            await video.play?.();
+          }
+
+          if(audio){
+            audio.currentTime = 0;
+            audio.volume = 0.56;
+            await audio.play?.();
+          }
+
+          finishTimer = setTimeout(finish, 8500);
+          if(video) video.addEventListener("ended", finish, { once:true });
+          if(audio) audio.addEventListener("ended", finish, { once:true });
+          setTimeout(() => { if(enterBtn && !closed) enterBtn.hidden = false; }, 5200);
+        }catch(err){
+          console.warn("El navegador bloqueó el sonido de la intro:", err?.message || err);
+          started = false;
+          overlay.classList.add("intro-waiting-sound");
+          overlay.classList.remove("intro-started");
+          if(gate) gate.hidden = false;
+          if(retryBtn) retryBtn.hidden = false;
         }
+      };
 
-        soundBtn?.addEventListener("click", () => {
-          audio.currentTime = 0;
-          audio.play?.().then(() => {
-            soundBtn.hidden = true;
-          }).catch(()=>{});
-        });
-      }
-
-      setTimeout(finish, 8500);
+      startBtn?.addEventListener("click", startWithSound);
+      retryBtn?.addEventListener("click", startWithSound);
+      enterBtn?.addEventListener("click", finish);
     });
   }
 
