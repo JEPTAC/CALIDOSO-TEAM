@@ -1,31 +1,52 @@
 {
-  "name": "Mesa de Ayuda de Calidad",
-  "short_name": "Mesa Ayuda",
-  "description": "Mesa de Ayuda de Calidad y Mejoramiento Continuo",
-  "start_url": "./",
-  "scope": "./",
+  "name": "Repositorio de Apps Calidad",
+  "short_name": "Apps Calidad",
+  "start_url": "./index.html#/inicio",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#0b3b82",
+  "background_color": "#031432",
+  "theme_color": "#0a3d91",
   "icons": [
     {
-      "src": "assets/app-icon-192.png",
+      "src": "assets/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/app-icon-512.png",
+      "src": "assets/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/app-icon.png",
-      "sizes": "1024x1024",
+      "src": "assets/icons/maskable-icon-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
+  ],
+  "description": "Repositorio de Apps del equipo de Calidad y Mejoramiento Continuo.",
+  "scope": "./",
+  "orientation": "portrait-primary",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
   ]
 }
