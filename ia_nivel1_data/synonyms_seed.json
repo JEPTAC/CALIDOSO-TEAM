@@ -1,0 +1,249 @@
+{
+  "crear_ticket": [
+    "radicar",
+    "crear solicitud",
+    "abrir caso",
+    "registrar caso",
+    "montar ticket",
+    "generar radicado",
+    "nuevo ticket",
+    "nueva solicitud",
+    "solicitar ayuda"
+  ],
+  "consultar_ticket": [
+    "buscar ticket",
+    "ver ticket",
+    "mirar solicitud",
+    "consultar radicado",
+    "revisar caso",
+    "encontrar caso",
+    "ver detalle"
+  ],
+  "consultar_estado": [
+    "estado",
+    "en qué va",
+    "cómo va",
+    "avance",
+    "situación",
+    "fase",
+    "progreso"
+  ],
+  "consultar_mis_tickets": [
+    "mis tickets",
+    "lo mío",
+    "asignados a mí",
+    "pendientes míos",
+    "mis casos",
+    "mi bandeja",
+    "mi trabajo"
+  ],
+  "consultar_tickets_abiertos": [
+    "abiertos",
+    "activos",
+    "sin cerrar",
+    "pendientes",
+    "en proceso",
+    "por resolver"
+  ],
+  "consultar_tickets_vencidos": [
+    "vencidos",
+    "demorados",
+    "atrasados",
+    "se pasó",
+    "fuera de tiempo",
+    "retrasados",
+    "quietos"
+  ],
+  "consultar_responsable": [
+    "responsable",
+    "asignado",
+    "quién lo tiene",
+    "encargado",
+    "analista",
+    "quién responde"
+  ],
+  "asignar_ticket": [
+    "asignar",
+    "reasignar",
+    "pasar a",
+    "delegar",
+    "cambiar responsable",
+    "enviar a analista"
+  ],
+  "cambiar_estado": [
+    "cambiar estado",
+    "pasar estado",
+    "actualizar estado",
+    "marcar como",
+    "dejar en estado"
+  ],
+  "agregar_evidencia": [
+    "evidencia",
+    "soporte",
+    "adjunto",
+    "foto",
+    "documento",
+    "archivo",
+    "anexo",
+    "captura",
+    "prueba"
+  ],
+  "responder_solicitante": [
+    "responder",
+    "contestar",
+    "dar respuesta",
+    "mensaje al solicitante",
+    "respuesta final",
+    "comunicar"
+  ],
+  "cerrar_ticket": [
+    "cerrar",
+    "finalizar",
+    "dar por terminado",
+    "terminar caso",
+    "cerrar solicitud",
+    "finalizar ticket"
+  ],
+  "reabrir_ticket": [
+    "reabrir",
+    "volver a abrir",
+    "activar de nuevo",
+    "abrir de nuevo",
+    "revisión posterior"
+  ],
+  "ampliar_espera": [
+    "ampliar espera",
+    "más tiempo",
+    "prórroga",
+    "espera",
+    "extender plazo",
+    "aplazar",
+    "no alcanza el tiempo"
+  ],
+  "escalar_ticket": [
+    "escalar",
+    "subir al jefe",
+    "pasar a jefe",
+    "elevar caso",
+    "superior",
+    "gerencia",
+    "super admin"
+  ],
+  "consultar_permiso": [
+    "permiso",
+    "puedo",
+    "no me deja",
+    "autorizado",
+    "tengo acceso",
+    "rol puede",
+    "habilitado"
+  ],
+  "explicar_rol": [
+    "rol",
+    "perfil",
+    "cargo en la app",
+    "permisos",
+    "super admin",
+    "analista",
+    "jefe general"
+  ],
+  "consultar_kpi": [
+    "kpi",
+    "indicador",
+    "gráfica",
+    "estadística",
+    "métrica",
+    "productividad",
+    "dashboard",
+    "promedio"
+  ],
+  "generar_reporte": [
+    "reporte",
+    "informe",
+    "exportar",
+    "excel",
+    "descargar",
+    "resumen ejecutivo"
+  ],
+  "resumir_ticket": [
+    "resumen",
+    "resumir",
+    "síntesis",
+    "explicame el caso",
+    "qué pasó en este ticket"
+  ],
+  "detectar_reincidencia": [
+    "reincidencia",
+    "repetido",
+    "frecuente",
+    "se repite",
+    "otra vez",
+    "mismo problema"
+  ],
+  "sugerir_mejora": [
+    "mejora",
+    "acción de mejora",
+    "proponer",
+    "recomendación",
+    "solución de fondo"
+  ],
+  "explicar_procedimiento": [
+    "procedimiento",
+    "manual",
+    "cómo se hace",
+    "paso a paso",
+    "regla",
+    "política"
+  ],
+  "auditar_ticket": [
+    "auditar",
+    "trazabilidad",
+    "quién hizo",
+    "historial",
+    "registro",
+    "bitácora"
+  ],
+  "registrar_aprendizaje": [
+    "aprende que",
+    "recuerda que",
+    "guarda que",
+    "ten en cuenta que",
+    "desde ahora",
+    "la regla es"
+  ],
+  "ayuda": [
+    "ayuda",
+    "qué puedes hacer",
+    "opciones",
+    "menú",
+    "cómo funcionas"
+  ],
+  "error_sistema": [
+    "error",
+    "falla",
+    "no carga",
+    "no guarda",
+    "no aparece",
+    "pantalla",
+    "bug",
+    "problema técnico"
+  ],
+  "notificacion": [
+    "notificar",
+    "aviso",
+    "alerta",
+    "campana",
+    "correo",
+    "sonido",
+    "recordatorio"
+  ],
+  "seguridad_datos": [
+    "contraseña",
+    "pin",
+    "clave",
+    "datos sensibles",
+    "seguridad",
+    "privado",
+    "confidencial"
+  ]
+}

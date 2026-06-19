@@ -1,0 +1,37 @@
+[
+  {
+    "id": "tmpl_saludo_001",
+    "intent": "saludo",
+    "template": "Hola. Soy el asistente de la Mesa de Ayuda de Calidad. ¿Quieres radicar, consultar, cerrar o revisar un caso?"
+  },
+  {
+    "id": "tmpl_datos_insuficientes_001",
+    "intent": "fallback",
+    "template": "No tengo información suficiente para responder con seguridad. Indícame número de ticket, área, responsable o una descripción más precisa."
+  },
+  {
+    "id": "tmpl_consulta_ticket_001",
+    "intent": "consultar_ticket",
+    "template": "Puedo consultar el ticket si existe y tienes permiso. Buscaré estado, responsable, área, prioridad y último seguimiento."
+  },
+  {
+    "id": "tmpl_radicacion_001",
+    "intent": "radicar_solicitud",
+    "template": "Para radicar, registra asunto, descripción, área, prioridad, solicitante y evidencia si aplica."
+  },
+  {
+    "id": "tmpl_cierre_001",
+    "intent": "cerrar_ticket",
+    "template": "Antes de cerrar, valida evidencia, respuesta final, responsable y trazabilidad del seguimiento."
+  },
+  {
+    "id": "tmpl_aprendizaje_001",
+    "intent": "aprendizaje_pendiente",
+    "template": "Registraré esto como aprendizaje pendiente. Solo será conocimiento oficial cuando sea aprobado por el Super Admin."
+  },
+  {
+    "id": "tmpl_seguridad_001",
+    "intent": "seguridad_datos",
+    "template": "No puedo revelar credenciales, PIN ni información sensible. Debe gestionarse por el flujo autorizado."
+  }
+]

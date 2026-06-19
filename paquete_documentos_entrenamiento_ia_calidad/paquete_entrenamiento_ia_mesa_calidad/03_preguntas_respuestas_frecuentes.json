@@ -1,0 +1,115 @@
+[
+  {
+    "question": "Es un documento, pero no sé quién lo debe resolver",
+    "answer": "Debes identificar qué tipo de documento es y qué acción necesita: crear, actualizar, revisar, codificar, aprobar o publicar. Inicialmente lo revisa un Analista de calidad. Si es documento oficial o transversal, se escala a Yessica Castro. Si está asociado a auditoría o hallazgos, se deriva a Luis Grisales. Si requiere app, repositorio o automatización, puede apoyar Juan Esteban Pérez.",
+    "intent": "documento_responsable",
+    "keywords": [
+      "documento",
+      "responsable",
+      "resolver",
+      "calidad"
+    ]
+  },
+  {
+    "question": "¿Quién creó esta aplicación?",
+    "answer": "La Mesa de Ayuda de Calidad y Mejoramiento Continuo fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador.",
+    "intent": "creador_app",
+    "keywords": [
+      "creador",
+      "desarrollador",
+      "Juan Esteban Pérez",
+      "app"
+    ]
+  },
+  {
+    "question": "¿Cómo hago una radicación?",
+    "answer": "Para radicar, ingresa a Nueva solicitud y diligencia solicitante, área, responsable, categoría, prioridad, modalidad, asunto, descripción y evidencia. También puedes contarle la necesidad a la IA para que organice el borrador.",
+    "intent": "radicacion",
+    "keywords": [
+      "radicar",
+      "solicitud",
+      "crear",
+      "ticket"
+    ]
+  },
+  {
+    "question": "No sé qué categoría escoger",
+    "answer": "Describe la necesidad en lenguaje normal. Si habla de documentos, usar Documento; si habla de procesos, Procedimiento; si habla de auditoría, Auditoría; si habla de indicadores, Indicador/KPI; si habla de riesgos o hallazgos, Riesgo/Hallazgo; si habla de formación, Capacitación; si habla de optimizar, Mejora continua.",
+    "intent": "clasificacion",
+    "keywords": [
+      "categoria",
+      "clasificar",
+      "solicitud"
+    ]
+  },
+  {
+    "question": "Necesito ayuda con un procedimiento",
+    "answer": "Indica si el procedimiento debe crearse, actualizarse, revisarse, aprobarse o publicarse. Normalmente lo atiende un Analista de calidad. Si está relacionado con auditoría, puede escalarse a Luis Grisales; si requiere aprobación general, a Yessica Castro.",
+    "intent": "procedimiento",
+    "keywords": [
+      "procedimiento",
+      "proceso",
+      "manual"
+    ]
+  },
+  {
+    "question": "Tengo un hallazgo de auditoría",
+    "answer": "Si es hallazgo de auditoría, se debe describir condición, criterio, evidencia, impacto y acción requerida. El responsable sugerido es Luis Grisales, con escalamiento a Yessica Castro si requiere priorización.",
+    "intent": "auditoria",
+    "keywords": [
+      "hallazgo",
+      "auditoría",
+      "evidencia"
+    ]
+  },
+  {
+    "question": "Qué cargo tiene Juan Esteban Pérez",
+    "answer": "Juan Esteban Pérez tiene el cargo de Super Admin / Desarrollador. Creador, desarrollador y administrador principal de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. Parametriza, mejora, administra y acompaña la evolución técnica y funcional de la app.",
+    "intent": "equipo_cargos",
+    "keywords": [
+      "Juan Esteban Pérez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ]
+  },
+  {
+    "question": "Qué cargo tiene Juan Camilo Montoya",
+    "answer": "Juan Camilo Montoya tiene el cargo de Analista de calidad. Atiende solicitudes relacionadas con revisión documental, procesos, gestión de calidad, seguimiento, respuestas operativas y apoyo a usuarios.",
+    "intent": "equipo_cargos",
+    "keywords": [
+      "Juan Camilo Montoya",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ]
+  },
+  {
+    "question": "Qué cargo tiene María Fernanda Zamudio",
+    "answer": "María Fernanda Zamudio tiene el cargo de Analista de calidad. Apoya gestión documental, procedimientos, formatos, indicadores, seguimiento de solicitudes y organización de evidencias del proceso.",
+    "intent": "equipo_cargos",
+    "keywords": [
+      "María Fernanda Zamudio",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ]
+  },
+  {
+    "question": "Qué cargo tiene Luis Grisales",
+    "answer": "Luis Grisales tiene el cargo de Jefe de auditoría interna. Atiende temas asociados con auditoría, hallazgos, trazabilidad, evidencias, control interno, revisión de cumplimiento y cierre de acciones.",
+    "intent": "equipo_cargos",
+    "keywords": [
+      "Luis Grisales",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ]
+  },
+  {
+    "question": "Qué cargo tiene Yessica Castro",
+    "answer": "Yessica Castro tiene el cargo de Jefe general. Orienta asuntos generales de calidad, auditoría, priorización, seguimiento, escalamiento y mejora continua.",
+    "intent": "equipo_cargos",
+    "keywords": [
+      "Yessica Castro",
+      "Jefe general",
+      "Auditoría y calidad"
+    ]
+  }
+]

@@ -1,0 +1,4245 @@
+[
+  {
+    "input": "hola, necesito soporte para radicarr una solicitud en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "soy de ventas y se requiere capacitar al personal, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "se requiere capacitar al personal",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "necesito soporte para radikar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber quién es Yesica Castro en la mesa de ayuda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yesica Castro",
+      "Jefe general",
+      "Auditoría y calidad",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Yessica Castro es Jefe general dentro de la Mesa de Ayuda de Calidad. Puede orientar asuntos generales de calidad, audit"
+  },
+  {
+    "input": "qué hace Maria Fernanda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "necesito saber necesito ayudaa para mradicar una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radicar una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye qué es Portal Dream Team de Calidad urgente",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Portal Dream Team de Calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Portal Dream Team de Calidad es un entorno institucional administrable para centralizar apps, noticias, auditorías, d"
+  },
+  {
+    "input": "me puedes decir quien es juan esteban perez urgente",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "tengo una duda: no sé cómo registrar un caso urgente",
+    "expected_intent": "radicacion_guia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ticket",
+      "caso",
+      "crear",
+      "registrar"
+    ],
+    "expected_answer_contains": "No hay problema. Para registrar un caso necesito cuatro datos: proceso o área, problema o necesidad, evidencia disponibl"
+  },
+  {
+    "input": "necesito alluda para crear una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con explícame auditoría",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "auditoría",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "En auditoría se revisan criterios, evidencias, cumplimiento, hallazgos, responsables, acciones y cierre. Una solicitud d"
+  },
+  {
+    "input": "quién creó app de calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "app de calidad",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Mesa de Ayuda Calidad y Mejoramiento Continuo fue desarrollado por Juan Esteban Pérez. La Mesa de Ayuda de Calidad y Mej"
+  },
+  {
+    "input": "necesito ayudaa para registar una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito alluda para mradicar una ticket en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir necesito ayuda con mejora continua urgente",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "mejora continua",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una mejora continua debe explicar oportunidad, proceso afectado, beneficio esperado, recursos requeridos y evidencia del"
+  },
+  {
+    "input": "por favor qué es mesa calidad gracias",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "mesa calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La Mesa de Ayuda de Calidad y Mejoramiento Continuo es una app creada y desarrollada por Juan Esteban Pérez para radicar"
+  },
+  {
+    "input": "me puedes decir necesito soporte para radicarr una requerimiento para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para registrar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué cargo tiene Luis Grisalez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grisalez",
+      "cargo",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales tiene el cargo de Jefe de auditoría interna en el área de Auditoría interna. Luis Grisales es Jefe de audi"
+  },
+  {
+    "input": "me ayudas con qué hace Juan Camilo Montoya en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo Montoya",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "buenas, necesito ayuda para crear una ticket gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito ayuda para radicar una una solisitud urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "soy de calidad y necesito adjuntar una captura como evidencia, necesito radicar gracias",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "calidad",
+      "necesito adjuntar una captura como evidencia",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de calidad. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "que debe llevar kpi",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "kpi",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un KPI mide desempeño clave. Para pedir soporte sobre KPIs indica qué indicador, fuente de datos, corte, problema y resu"
+  },
+  {
+    "input": "oye soy de compras y hay una no conformidad y no sé cómo registrarla, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "compras",
+      "hay una no conformidad y no sé cómo registrarla",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de compras. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "hola, necesito soporte para radicar una una ticket para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, necesito alluda para registar una solisitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, qué hace Juan Esteban en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban",
+      "funciones",
+      "hace",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "qué cargo tiene Maria Fernanda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda",
+      "cargo",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio tiene el cargo de Analista de calidad en el área de Calidad y mejora continua. María Fernanda Zam"
+  },
+  {
+    "input": "quién es el desarrollador principal",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "hola, soy de cartera y cartera no puede subir el PDF de una factura, necesito radicar en la mesa de ayuda",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "cartera",
+      "cartera no puede subir el PDF de una factura",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de cartera. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "necesito soporte para registar una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién creó plataforma de capacitación",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "plataforma de capacitación",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Aula EI fue desarrollado por Juan Esteban Pérez. Aula EI es una plataforma interna de capacitación con módulos, recursos"
+  },
+  {
+    "input": "me ayudas con qué cargo tiene María Fernanda Zamudio gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "María Fernanda Zamudio",
+      "cargo",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio tiene el cargo de Analista de calidad en el área de Calidad y mejora continua. María Fernanda Zam"
+  },
+  {
+    "input": "tengo una duda: necesito ayudaa para radicarr una solicitu en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber soy de logística y cartera no puede subir el PDF de una factura, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "logística",
+      "cartera no puede subir el PDF de una factura",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de logística. La IA debe organizar el caso con asu"
+  },
+  {
+    "input": "necesito ayuda para radicarr una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito ayudaa para radikar una solicitu gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayudaa para crear una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito alluda para registrar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber soy de cartera y hay que crear un procedimiento nuevo, necesito radicar en la app",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "cartera",
+      "hay que crear un procedimiento nuevo",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de cartera. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "necesito saber cómo hago un indicador porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "indicador",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un indicador debe tener nombre, objetivo, fórmula, fuente de datos, periodicidad, responsable, meta, interpretación y pl"
+  },
+  {
+    "input": "necesito alluda para crear una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radicarr una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: qué hace Juan E Perez gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan E Perez",
+      "funciones",
+      "hace",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "por favor necesito soporte con un archivo en la mesa de ayuda",
+    "expected_intent": "documental_ortografia",
+    "expected_keywords": [
+      "documento",
+      "formato",
+      "archivo",
+      "pdf",
+      "acta",
+      "matriz"
+    ],
+    "expected_answer_contains": "Si necesitas soporte documental, indica el tipo de documento, código o nombre, versión, proceso afectado y qué ajuste ne"
+  },
+  {
+    "input": "necesito alluda para registar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber necesito ayuda para mradicar una solicitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir necesito soporte para registar una solicitud gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién es Juanes Pérez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juanes Pérez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "quién es María Fernanda Zamudio",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "María Fernanda Zamudio",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "oye qué es Repositorio de Calidad urgente",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Repositorio de Calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Repositorio de Calidad está pensado para centralizar documentos, procedimientos, formatos, instructivos y recursos de"
+  },
+  {
+    "input": "buenas, qué hace María Fernanda en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "María Fernanda",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "soy de ventas y cartera no puede subir el PDF de una factura, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "cartera no puede subir el PDF de una factura",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "necesito alluda para crear una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "explícame kpi",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "kpi",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un KPI mide desempeño clave. Para pedir soporte sobre KPIs indica qué indicador, fuente de datos, corte, problema y resu"
+  },
+  {
+    "input": "hola, necesito ayuda para mradicar una ticket en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito ayudaa para mradicar una ticket en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: cómo hago un mejora continua urgente",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "mejora continua",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una mejora continua debe explicar oportunidad, proceso afectado, beneficio esperado, recursos requeridos y evidencia del"
+  },
+  {
+    "input": "buenas, necesito soporte para registrar una solicitudd para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "que debe llevar instructivo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "instructivo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un instructivo describe una actividad específica con pasos concretos, responsables, evidencias, controles y criterios pa"
+  },
+  {
+    "input": "por favor cómo radico algo de mejora continua porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "mejora continua",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una mejora continua debe explicar oportunidad, proceso afectado, beneficio esperado, recursos requeridos y evidencia del"
+  },
+  {
+    "input": "tengo una duda: explícame instructivo para calidad",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "instructivo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un instructivo describe una actividad específica con pasos concretos, responsables, evidencias, controles y criterios pa"
+  },
+  {
+    "input": "necesito ayuda para radicar una una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para mradicar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito soporte para radicar una una requerimiento porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién creó aula ei",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "aula ei",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Aula EI fue desarrollado por Juan Esteban Pérez. Aula EI es una plataforma interna de capacitación con módulos, recursos"
+  },
+  {
+    "input": "buenas, necesito soporte para radicarr una requerimiento en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito soporte para radicar una requerimiento en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito alluda para crear una solisitud gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radikar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: soy de producción y necesito actualizar un formato, necesito radicar porfa",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "producción",
+      "necesito actualizar un formato",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de producción. La IA debe organizar el caso con as"
+  },
+  {
+    "input": "tengo una duda: necesito ayudaa para radicar una una solicitudd en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, qué cargo tiene Luis Grizales en la mesa de ayuda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grizales",
+      "cargo",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales tiene el cargo de Jefe de auditoría interna en el área de Auditoría interna. Luis Grisales es Jefe de audi"
+  },
+  {
+    "input": "tengo una duda: quién creó Aula EI en la app",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Aula EI",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Aula EI fue desarrollado por Juan Esteban Pérez. Aula EI es una plataforma interna de capacitación con módulos, recursos"
+  },
+  {
+    "input": "necesito saber quién creó corte de cable",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "corte de cable",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "App de Logística, Despachos y Lead Time fue desarrollado por Juan Esteban Pérez. La app de Logística, Despachos y Lead T"
+  },
+  {
+    "input": "necesito saber necesito ayuda para radicarr una caso en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "que debe llevar hallazgo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "hallazgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un hallazgo debe describir condición, criterio, evidencia, impacto y acción requerida. La IA puede ayudarte a convertirl"
+  },
+  {
+    "input": "necesito ayuda para radicar una una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito soporte para registar una solicitudd en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para mradicar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: quiero radicar una solicitud en la app",
+    "expected_intent": "radicacion_guia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ticket",
+      "caso",
+      "crear",
+      "registrar"
+    ],
+    "expected_answer_contains": "Listo. Cuéntame la necesidad en una frase completa. Yo la convierto en radicación con asunto claro, categoría, prioridad"
+  },
+  {
+    "input": "qué hace Luis",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis",
+      "funciones",
+      "hace",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "soy de compras y se requiere capacitar al personal, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "compras",
+      "se requiere capacitar al personal",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de compras. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "tengo una duda: necesito alluda para registrar una ticket urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir necesito ayudaa para registrar una solisitud para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayudaa para mradicar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayuda para crear una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién creó Mesa de Ayuda Calidad y Mejoramiento Continuo",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Mesa de Ayuda Calidad y Mejoramiento Continuo",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Mesa de Ayuda Calidad y Mejoramiento Continuo fue desarrollado por Juan Esteban Pérez. La Mesa de Ayuda de Calidad y Mej"
+  },
+  {
+    "input": "tengo una duda: qué es lead time gracias",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "lead time",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La app de Logística, Despachos y Lead Time permite controlar pedidos, caja, logística, corte de cable, alistamiento, fac"
+  },
+  {
+    "input": "qué cargo tiene Jessica Castro",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Jessica Castro",
+      "cargo",
+      "Jefe general",
+      "Auditoría y calidad"
+    ],
+    "expected_answer_contains": "Yessica Castro tiene el cargo de Jefe general en el área de Auditoría y calidad. Yessica Castro es Jefe general dentro d"
+  },
+  {
+    "input": "por favor quién creó alistamiento en la app",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "alistamiento",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "App de Logística, Despachos y Lead Time fue desarrollado por Juan Esteban Pérez. La app de Logística, Despachos y Lead T"
+  },
+  {
+    "input": "necesito ayuda para registar una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "cómo radico algo de riesgo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "riesgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un riesgo debe analizar causa, evento, consecuencia, controles, probabilidad, impacto y tratamiento. En la app puede rad"
+  },
+  {
+    "input": "me puedes decir quién creó lead time en la mesa de ayuda",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "lead time",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "App de Logística, Despachos y Lead Time fue desarrollado por Juan Esteban Pérez. La app de Logística, Despachos y Lead T"
+  },
+  {
+    "input": "necesito soporte con un acta",
+    "expected_intent": "documental_ortografia",
+    "expected_keywords": [
+      "documento",
+      "formato",
+      "archivo",
+      "pdf",
+      "acta",
+      "matriz"
+    ],
+    "expected_answer_contains": "Si necesitas soporte documental, indica el tipo de documento, código o nombre, versión, proceso afectado y qué ajuste ne"
+  },
+  {
+    "input": "necesito saber qué es instructivo porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "instructivo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un instructivo describe una actividad específica con pasos concretos, responsables, evidencias, controles y criterios pa"
+  },
+  {
+    "input": "necesito ayuda para crear una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir quién creó repositorio de calidad para calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "repositorio de calidad",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Repositorio de Calidad fue desarrollado por Juan Esteban Pérez. El Repositorio de Calidad está pensado para centralizar "
+  },
+  {
+    "input": "me ayudas con quién creó mesa de ayuda calidad en la mesa de ayuda",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "mesa de ayuda calidad",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Mesa de Ayuda Calidad y Mejoramiento Continuo fue desarrollado por Juan Esteban Pérez. La Mesa de Ayuda de Calidad y Mej"
+  },
+  {
+    "input": "tengo una duda: qué hace Juan Camilo en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "quién es Juan E. Perez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan E. Perez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "tengo una duda: soy de producción y se requiere capacitar al personal, necesito radicar en la app",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "producción",
+      "se requiere capacitar al personal",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de producción. La IA debe organizar el caso con as"
+  },
+  {
+    "input": "me puedes decir qué hace Juanes Pérez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juanes Pérez",
+      "funciones",
+      "hace",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "tengo una duda: qué es dream team de calidad en la mesa de ayuda",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "dream team de calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Portal Dream Team de Calidad es un entorno institucional administrable para centralizar apps, noticias, auditorías, d"
+  },
+  {
+    "input": "necesito alluda para radikar una requerimiento urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para radicar una una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito ayudaa para mradicar una solisitud en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para mradicar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, necesito ayudaa para registrar una solicitudd urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito soporte con un docuemnto urgente",
+    "expected_intent": "documental_ortografia",
+    "expected_keywords": [
+      "documento",
+      "formato",
+      "archivo",
+      "pdf",
+      "acta",
+      "matriz"
+    ],
+    "expected_answer_contains": "Si necesitas soporte documental, indica el tipo de documento, código o nombre, versión, proceso afectado y qué ajuste ne"
+  },
+  {
+    "input": "necesito ayudaa para radikar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye qué cargo tiene Luis Grisalez en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grisalez",
+      "cargo",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales tiene el cargo de Jefe de auditoría interna en el área de Auditoría interna. Luis Grisales es Jefe de audi"
+  },
+  {
+    "input": "buenas, necesito soporte para registrar una solisitud gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: necesito alluda para registrar una caso urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para registar una solicitud urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, necesito ayudaa para registrar una caso porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor soy de ventas y quiero mejorar un flujo de trabajo, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "quiero mejorar un flujo de trabajo",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "necesito ayuda para registrar una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: quién es Juanes Pérez gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juanes Pérez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "quién es Juan Esteban Perez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban Perez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "me puedes decir necesito ayudaa para radikar una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, necesito soporte para registrar una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, necesito ayuda para crear una solicitu gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién es Luis Grisales",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grisales",
+      "Jefe de auditoría interna",
+      "Auditoría interna",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "oye soy de ventas y auditoría pidió evidencia de un procedimiento, necesito radicar en la app",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "auditoría pidió evidencia de un procedimiento",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "necesito ayuda para registrar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué hace Luis Grisalez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grisalez",
+      "funciones",
+      "hace",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "necesito ayuda para registar una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, necesito ayudaa para registrar una requerimiento urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué es mesa de ayuda",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "mesa de ayuda",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La Mesa de Ayuda de Calidad y Mejoramiento Continuo es una app creada y desarrollada por Juan Esteban Pérez para radicar"
+  },
+  {
+    "input": "por favor necesito ayuda con capacitación porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "capacitación",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una solicitud de capacitación debe indicar tema, público objetivo, necesidad, modalidad, fecha esperada y evidencia requ"
+  },
+  {
+    "input": "qué es repositorio de calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "repositorio de calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Repositorio de Calidad está pensado para centralizar documentos, procedimientos, formatos, instructivos y recursos de"
+  },
+  {
+    "input": "hola, quién creó esta aplicación gracias",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "me ayudas con qué es plataforma de capacitación en la app",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "plataforma de capacitación",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "Aula EI es una plataforma interna de capacitación con módulos, recursos, evaluaciones, juegos y certificación. Está orie"
+  },
+  {
+    "input": "buenas, necesito soporte para mradicar una caso gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "cómo radico algo de mejora continua",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "mejora continua",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una mejora continua debe explicar oportunidad, proceso afectado, beneficio esperado, recursos requeridos y evidencia del"
+  },
+  {
+    "input": "tengo una duda: necesito ayudaa para radicar una solicitu porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué es logistica",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "logistica",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La app de Logística, Despachos y Lead Time permite controlar pedidos, caja, logística, corte de cable, alistamiento, fac"
+  },
+  {
+    "input": "quién creó lead time",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "lead time",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "App de Logística, Despachos y Lead Time fue desarrollado por Juan Esteban Pérez. La app de Logística, Despachos y Lead T"
+  },
+  {
+    "input": "tengo una duda: que debe llevar procedimiento en la mesa de ayuda",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "procedimiento",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un procedimiento debe indicar objetivo, alcance, responsables, definiciones, desarrollo paso a paso, controles, registro"
+  },
+  {
+    "input": "qué es kpi",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "kpi",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un KPI mide desempeño clave. Para pedir soporte sobre KPIs indica qué indicador, fuente de datos, corte, problema y resu"
+  },
+  {
+    "input": "tengo una duda: que debe llevar capacitación porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "capacitación",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una solicitud de capacitación debe indicar tema, público objetivo, necesidad, modalidad, fecha esperada y evidencia requ"
+  },
+  {
+    "input": "necesito alluda para registar una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor cómo hago una radicación",
+    "expected_intent": "radicacion_guia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ticket",
+      "caso",
+      "crear",
+      "registrar"
+    ],
+    "expected_answer_contains": "Para radicar, ingresa a Nueva solicitud, diligencia solicitante, correo, área, responsable, categoría, prioridad, modali"
+  },
+  {
+    "input": "por favor necesito soporte para crear una solicitu urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para mradicar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito ayuda para registar una solisitud gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué hace María Fernanda Zamudio",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "María Fernanda Zamudio",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "me puedes decir explícame capacitación en la app",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "capacitación",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una solicitud de capacitación debe indicar tema, público objetivo, necesidad, modalidad, fecha esperada y evidencia requ"
+  },
+  {
+    "input": "quién es Jessica Castro",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Jessica Castro",
+      "Jefe general",
+      "Auditoría y calidad",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Yessica Castro es Jefe general dentro de la Mesa de Ayuda de Calidad. Puede orientar asuntos generales de calidad, audit"
+  },
+  {
+    "input": "necesito saber quién es Juan Camilo porfa",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "por favor necesito ayuda para crear una caso para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radicar una una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir soy de calidad y auditoría pidió evidencia de un procedimiento, necesito radicar porfa",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "calidad",
+      "auditoría pidió evidencia de un procedimiento",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de calidad. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "tengo una duda: quién es Luis en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis",
+      "Jefe de auditoría interna",
+      "Auditoría interna",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "necesito alluda para radikar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayudaa para radicarr una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, qué es portal dream team porfa",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "portal dream team",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Portal Dream Team de Calidad es un entorno institucional administrable para centralizar apps, noticias, auditorías, d"
+  },
+  {
+    "input": "me ayudas con necesito alluda para radicarr una solisitud para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor soy de ventas y auditoría pidió evidencia de un procedimiento, necesito radicar gracias",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "auditoría pidió evidencia de un procedimiento",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "hola, necesito ayuda para mradicar una requerimiento urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "cómo radico algo de auditoría",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "auditoría",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "En auditoría se revisan criterios, evidencias, cumplimiento, hallazgos, responsables, acciones y cierre. Una solicitud d"
+  },
+  {
+    "input": "tengo una duda: necesito alluda para radikar una solicitudd porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber necesito ayudaa para mradicar una requerimiento urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para mradicar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito ayudaa para registrar una requerimiento porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién es Juan Camilo gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "necesito alluda para radicar una una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte con un docuemnto",
+    "expected_intent": "documental_ortografia",
+    "expected_keywords": [
+      "documento",
+      "formato",
+      "archivo",
+      "pdf",
+      "acta",
+      "matriz"
+    ],
+    "expected_answer_contains": "Si necesitas soporte documental, indica el tipo de documento, código o nombre, versión, proceso afectado y qué ajuste ne"
+  },
+  {
+    "input": "hola, soy de logística y auditoría pidió evidencia de un procedimiento, necesito radicar para calidad",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "logística",
+      "auditoría pidió evidencia de un procedimiento",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de logística. La IA debe organizar el caso con asu"
+  },
+  {
+    "input": "necesito soporte para registrar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién es Juan Camilo Montoya porfa",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo Montoya",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "qué cargo tiene Yessica",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yessica",
+      "cargo",
+      "Jefe general",
+      "Auditoría y calidad"
+    ],
+    "expected_answer_contains": "Yessica Castro tiene el cargo de Jefe general en el área de Auditoría y calidad. Yessica Castro es Jefe general dentro d"
+  },
+  {
+    "input": "oye necesito ayudaa para registar una requerimiento para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayuda para radicar una una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "soy de ventas y necesito actualizar un formato, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "necesito actualizar un formato",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "hola, necesito ayuda para crear una caso urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para radicar una una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quién creó esta aplicación",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "por favor necesito soporte con un documento para calidad",
+    "expected_intent": "documental_ortografia",
+    "expected_keywords": [
+      "documento",
+      "formato",
+      "archivo",
+      "pdf",
+      "acta",
+      "matriz"
+    ],
+    "expected_answer_contains": "Si necesitas soporte documental, indica el tipo de documento, código o nombre, versión, proceso afectado y qué ajuste ne"
+  },
+  {
+    "input": "por favor qué es procedimiento gracias",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "procedimiento",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un procedimiento debe indicar objetivo, alcance, responsables, definiciones, desarrollo paso a paso, controles, registro"
+  },
+  {
+    "input": "hola, necesito alluda para radicar una solicitudd gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: necesito ayuda para radicar una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor quién creó plataforma de capacitación para calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "plataforma de capacitación",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Aula EI fue desarrollado por Juan Esteban Pérez. Aula EI es una plataforma interna de capacitación con módulos, recursos"
+  },
+  {
+    "input": "soy de calidad y quiero mejorar un flujo de trabajo, necesito radicar gracias",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "calidad",
+      "quiero mejorar un flujo de trabajo",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de calidad. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "necesito saber necesito alluda para mradicar una solicitud porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "quien es el creador de la app",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "necesito alluda para radicar una una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito alluda para radicar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber necesito soporte para mradicar una solicitud para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito soporte para crear una ticket en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con qué cargo tiene María Fernanda Zamudio en la mesa de ayuda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "María Fernanda Zamudio",
+      "cargo",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio tiene el cargo de Analista de calidad en el área de Calidad y mejora continua. María Fernanda Zam"
+  },
+  {
+    "input": "cómo radico algo de hallazgo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "hallazgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un hallazgo debe describir condición, criterio, evidencia, impacto y acción requerida. La IA puede ayudarte a convertirl"
+  },
+  {
+    "input": "tengo una duda: necesito alluda para radicar una una solisitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye qué es riesgo en la mesa de ayuda",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "riesgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un riesgo debe analizar causa, evento, consecuencia, controles, probabilidad, impacto y tratamiento. En la app puede rad"
+  },
+  {
+    "input": "cómo hago un formato",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "formato",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un formato es un documento estructurado para capturar información. Debe tener nombre, código, versión, fecha, campos cla"
+  },
+  {
+    "input": "necesito alluda para radicarr una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor qué hace Yesica Castro urgente",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yesica Castro",
+      "funciones",
+      "hace",
+      "Jefe general",
+      "Auditoría y calidad"
+    ],
+    "expected_answer_contains": "Yessica Castro es Jefe general dentro de la Mesa de Ayuda de Calidad. Puede orientar asuntos generales de calidad, audit"
+  },
+  {
+    "input": "me puedes decir necesito ayuda para registrar una solicitu en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: que debe llevar mejora continua urgente",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "mejora continua",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Una mejora continua debe explicar oportunidad, proceso afectado, beneficio esperado, recursos requeridos y evidencia del"
+  },
+  {
+    "input": "me ayudas con necesito ayudaa para crear una ticket gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber soy de ventas y cartera no puede subir el PDF de una factura, necesito radicar para calidad",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "cartera no puede subir el PDF de una factura",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "necesito saber necesito alluda para mradicar una caso porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayuda para radikar una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para registar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, quién es el super admin porfa",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "quién es Juanes",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juanes",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "qué hace Camilo Montoya",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Camilo Montoya",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "por favor necesito ayuda para mradicar una solisitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: quién creó portal calidad gracias",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "portal calidad",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Portal Dream Team de Calidad fue desarrollado por Juan Esteban Pérez. El Portal Dream Team de Calidad es un entorno inst"
+  },
+  {
+    "input": "oye soy de ventas y hay una no conformidad y no sé cómo registrarla, necesito radicar urgente",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "hay una no conformidad y no sé cómo registrarla",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "oye necesito alluda para mradicar una solisitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "soy de calidad y auditoría pidió evidencia de un procedimiento, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "calidad",
+      "auditoría pidió evidencia de un procedimiento",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de calidad. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "necesito saber quién creó lead time gracias",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "lead time",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "App de Logística, Despachos y Lead Time fue desarrollado por Juan Esteban Pérez. La app de Logística, Despachos y Lead T"
+  },
+  {
+    "input": "me puedes decir qué cargo tiene Yesica Castro en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yesica Castro",
+      "cargo",
+      "Jefe general",
+      "Auditoría y calidad"
+    ],
+    "expected_answer_contains": "Yessica Castro tiene el cargo de Jefe general en el área de Auditoría y calidad. Yessica Castro es Jefe general dentro d"
+  },
+  {
+    "input": "necesito soporte para registar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: qué hace Mafe urgente",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Mafe",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "me puedes decir necesito ayuda con auditoría urgente",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "auditoría",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "En auditoría se revisan criterios, evidencias, cumplimiento, hallazgos, responsables, acciones y cierre. Una solicitud d"
+  },
+  {
+    "input": "me ayudas con necesito ayuda para radicar una solicitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito ayudaa para radicar una una solicitud urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito soporte para registrar una solicitud porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito soporte para registar una solicitud en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, explícame riesgo porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "riesgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un riesgo debe analizar causa, evento, consecuencia, controles, probabilidad, impacto y tratamiento. En la app puede rad"
+  },
+  {
+    "input": "hola, quién es María Fernanda Zamudio gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "María Fernanda Zamudio",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "qué cargo tiene Juan Camilo",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo",
+      "cargo",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya tiene el cargo de Analista de calidad en el área de Calidad y mejora continua. Juan Camilo Montoya h"
+  },
+  {
+    "input": "necesito saber necesito alluda para radikar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber explícame formato en la app",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "formato",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un formato es un documento estructurado para capturar información. Debe tener nombre, código, versión, fecha, campos cla"
+  },
+  {
+    "input": "hola, quién desarrolló la mesa de ayuda urgente",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "por favor qué es dream team de calidad urgente",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "dream team de calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Portal Dream Team de Calidad es un entorno institucional administrable para centralizar apps, noticias, auditorías, d"
+  },
+  {
+    "input": "no entiendo cómo usar la app",
+    "expected_intent": "conversacion_abierta",
+    "expected_keywords": [
+      "conversar",
+      "ayuda",
+      "app",
+      "ia",
+      "radicado",
+      "solicitud"
+    ],
+    "expected_answer_contains": "Te guío. Puedes radicar una solicitud, consultar un radicado, hablar con la IA, revisar juegos o ingresar como usuario i"
+  },
+  {
+    "input": "por favor soy de producción y hay una no conformidad y no sé cómo registrarla, necesito radicar urgente",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "producción",
+      "hay una no conformidad y no sé cómo registrarla",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de producción. La IA debe organizar el caso con as"
+  },
+  {
+    "input": "por favor soy de cartera y se requiere capacitar al personal, necesito radicar para calidad",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "cartera",
+      "se requiere capacitar al personal",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de cartera. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "quién es Juan Camilo",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "qué hace Luis Grizales urgente",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grizales",
+      "funciones",
+      "hace",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "qué hace Yessica Castro",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yessica Castro",
+      "funciones",
+      "hace",
+      "Jefe general",
+      "Auditoría y calidad"
+    ],
+    "expected_answer_contains": "Yessica Castro es Jefe general dentro de la Mesa de Ayuda de Calidad. Puede orientar asuntos generales de calidad, audit"
+  },
+  {
+    "input": "buenas, soy de cartera y necesito revisar un indicador, necesito radicar gracias",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "cartera",
+      "necesito revisar un indicador",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de cartera. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "explícame riesgo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "riesgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un riesgo debe analizar causa, evento, consecuencia, controles, probabilidad, impacto y tratamiento. En la app puede rad"
+  },
+  {
+    "input": "buenas, qué hace Juan Esteban Perez en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban Perez",
+      "funciones",
+      "hace",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "necesito alluda para radicar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir necesito ayudaa para registar una solicitud para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para registrar una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir qué es hallazgo para calidad",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "hallazgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un hallazgo debe describir condición, criterio, evidencia, impacto y acción requerida. La IA puede ayudarte a convertirl"
+  },
+  {
+    "input": "oye necesito ayudaa para radicar una requerimiento para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "cómo radico algo de riesgo gracias",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "riesgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un riesgo debe analizar causa, evento, consecuencia, controles, probabilidad, impacto y tratamiento. En la app puede rad"
+  },
+  {
+    "input": "buenas, soy de cartera y se requiere capacitar al personal, necesito radicar en la mesa de ayuda",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "cartera",
+      "se requiere capacitar al personal",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de cartera. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "buenas, ayúdame a crear un ticket porfa",
+    "expected_intent": "radicacion_guia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ticket",
+      "caso",
+      "crear",
+      "registrar"
+    ],
+    "expected_answer_contains": "Te ayudo. Describe el problema en lenguaje normal. Si detecto que es una solicitud, la organizaré automáticamente en for"
+  },
+  {
+    "input": "me ayudas con necesito ayuda para registar una ticket en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, necesito alluda para mradicar una caso porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye quién es Yessica Castro",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yessica Castro",
+      "Jefe general",
+      "Auditoría y calidad",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Yessica Castro es Jefe general dentro de la Mesa de Ayuda de Calidad. Puede orientar asuntos generales de calidad, audit"
+  },
+  {
+    "input": "buenas, qué hace Juan Esteban gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban",
+      "funciones",
+      "hace",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "buenas, qué es mesa de ayuda calidad urgente",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "mesa de ayuda calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La Mesa de Ayuda de Calidad y Mejoramiento Continuo es una app creada y desarrollada por Juan Esteban Pérez para radicar"
+  },
+  {
+    "input": "necesito alluda para registrar una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayudaa para radicarr una requerimiento",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor quién creó esta aplicación gracias",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "oye cómo radico algo de instructivo porfa",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "instructivo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un instructivo describe una actividad específica con pasos concretos, responsables, evidencias, controles y criterios pa"
+  },
+  {
+    "input": "necesito ayudaa para crear una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, explícame kpi para calidad",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "kpi",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un KPI mide desempeño clave. Para pedir soporte sobre KPIs indica qué indicador, fuente de datos, corte, problema y resu"
+  },
+  {
+    "input": "buenas, qué cargo tiene Juan Camilo Montoya en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo Montoya",
+      "cargo",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya tiene el cargo de Analista de calidad en el área de Calidad y mejora continua. Juan Camilo Montoya h"
+  },
+  {
+    "input": "oye quién es Juan E Perez urgente",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan E Perez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "por favor necesito soporte para mradicar una ticket para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito soporte para registar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, necesito ayuda con hallazgo gracias",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "hallazgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un hallazgo debe describir condición, criterio, evidencia, impacto y acción requerida. La IA puede ayudarte a convertirl"
+  },
+  {
+    "input": "tengo una duda: necesito ayudaa para radikar una ticket gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, necesito alluda para mradicar una solicitudd urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radikar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radicarr una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: qué es Aula EI en la app",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Aula EI",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "Aula EI es una plataforma interna de capacitación con módulos, recursos, evaluaciones, juegos y certificación. Está orie"
+  },
+  {
+    "input": "soy de compras y quiero mejorar un flujo de trabajo, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "compras",
+      "quiero mejorar un flujo de trabajo",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de compras. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "necesito ayudaa para radicar una una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "soy de producción y se requiere capacitar al personal, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "producción",
+      "se requiere capacitar al personal",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de producción. La IA debe organizar el caso con as"
+  },
+  {
+    "input": "oye necesito ayudaa para radikar una solicitu en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para radicarr una caso",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito soporte para mradicar una ticket gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayuda para crear una solicitudd",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué es corte de cable",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "corte de cable",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La app de Logística, Despachos y Lead Time permite controlar pedidos, caja, logística, corte de cable, alistamiento, fac"
+  },
+  {
+    "input": "soy de logística y hay una no conformidad y no sé cómo registrarla, necesito radicar porfa",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "logística",
+      "hay una no conformidad y no sé cómo registrarla",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de logística. La IA debe organizar el caso con asu"
+  },
+  {
+    "input": "oye cómo hago un instructivo en la mesa de ayuda",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "instructivo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un instructivo describe una actividad específica con pasos concretos, responsables, evidencias, controles y criterios pa"
+  },
+  {
+    "input": "buenas, qué cargo tiene Luis Grizales porfa",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grizales",
+      "cargo",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales tiene el cargo de Jefe de auditoría interna en el área de Auditoría interna. Luis Grisales es Jefe de audi"
+  },
+  {
+    "input": "tengo una duda: qué hace Maria Fernanda Zamudio para calidad",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda Zamudio",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "quién creó documentos calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "documentos calidad",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Repositorio de Calidad fue desarrollado por Juan Esteban Pérez. El Repositorio de Calidad está pensado para centralizar "
+  },
+  {
+    "input": "tengo una duda: necesito ayuda para radikar una solisitud urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué cargo tiene Yessica Castro",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Yessica Castro",
+      "cargo",
+      "Jefe general",
+      "Auditoría y calidad"
+    ],
+    "expected_answer_contains": "Yessica Castro tiene el cargo de Jefe general en el área de Auditoría y calidad. Yessica Castro es Jefe general dentro d"
+  },
+  {
+    "input": "necesito saber quién creó repositorio de calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "repositorio de calidad",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "Repositorio de Calidad fue desarrollado por Juan Esteban Pérez. El Repositorio de Calidad está pensado para centralizar "
+  },
+  {
+    "input": "necesito ayudaa para registrar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "cómo hago un riesgo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "riesgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un riesgo debe analizar causa, evento, consecuencia, controles, probabilidad, impacto y tratamiento. En la app puede rad"
+  },
+  {
+    "input": "necesito alluda para radicar una solicitud porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para radicarr una ticket para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué es alistamiento",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "alistamiento",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La app de Logística, Despachos y Lead Time permite controlar pedidos, caja, logística, corte de cable, alistamiento, fac"
+  },
+  {
+    "input": "quién es Juan Camilo Montoya",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Camilo Montoya",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Camilo Montoya hace parte del equipo como Analista de calidad. Puede atender solicitudes, apoyar revisión de proces"
+  },
+  {
+    "input": "necesito saber necesito ayudaa para radicar una solicitudd para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me puedes decir necesito ayuda para crear una requerimiento en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, qué hace Juan Esteban Perez en la mesa de ayuda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban Perez",
+      "funciones",
+      "hace",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "me puedes decir necesito alluda para radicar una ticket urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber necesito soporte para radicar una una solisitud urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "cómo radico algo de kpi en la app",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "kpi",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un KPI mide desempeño clave. Para pedir soporte sobre KPIs indica qué indicador, fuente de datos, corte, problema y resu"
+  },
+  {
+    "input": "necesito alluda para radikar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "por favor necesito alluda para radicarr una ticket urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito soporte para radikar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber qué hace Maria Fernanda para calidad",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda",
+      "funciones",
+      "hace",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "oye quién es Maria Fernanda Zamudio urgente",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda Zamudio",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "tengo una duda: necesito alluda para mradicar una solicitu urgente",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para radicar una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "ayúdame a crear un ticket",
+    "expected_intent": "radicacion_guia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ticket",
+      "caso",
+      "crear",
+      "registrar"
+    ],
+    "expected_answer_contains": "Te ayudo. Describe el problema en lenguaje normal. Si detecto que es una solicitud, la organizaré automáticamente en for"
+  },
+  {
+    "input": "me puedes decir necesito alluda para registrar una solisitud en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para registar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con soy de logística y hay que crear un procedimiento nuevo, necesito radicar gracias",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "logística",
+      "hay que crear un procedimiento nuevo",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de logística. La IA debe organizar el caso con asu"
+  },
+  {
+    "input": "me puedes decir necesito ayuda para radicar una una solicitud gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para radicar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito soporte para registrar una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito alluda para crear una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "hola, necesito ayuda para radicar una una solicitu en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "tengo una duda: necesito ayudaa para radicar una solicitu en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, necesito ayuda para radicarr una requerimiento en la app",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué hace Luis Grisalez en la app",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grisalez",
+      "funciones",
+      "hace",
+      "Jefe de auditoría interna",
+      "Auditoría interna"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "hola, soy de calidad y necesito revisar un indicador, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "calidad",
+      "necesito revisar un indicador",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de calidad. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "necesito soporte para radikar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "oye necesito ayuda para registar una caso gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber necesito alluda para crear una ticket gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayudaa para registar una solicitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "buenas, quién es Maria Fernanda Zamudio en la mesa de ayuda",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda Zamudio",
+      "Analista de calidad",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio hace parte del equipo como Analista de calidad. Apoya gestión documental, procedimientos, indicad"
+  },
+  {
+    "input": "necesito ayuda para registar una solicitu",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con necesito ayudaa para registar una solicitu en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué es indicador",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "indicador",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un indicador debe tener nombre, objetivo, fórmula, fuente de datos, periodicidad, responsable, meta, interpretación y pl"
+  },
+  {
+    "input": "me puedes decir qué cargo tiene Juan Esteban para calidad",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban",
+      "cargo",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez tiene el cargo de Super Admin / Desarrollador en el área de Calidad y mejora continua. Juan Esteban P"
+  },
+  {
+    "input": "necesito saber quién creó despachos en la mesa de ayuda",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "despachos",
+      "creador",
+      "Juan Esteban Pérez",
+      "desarrollador"
+    ],
+    "expected_answer_contains": "App de Logística, Despachos y Lead Time fue desarrollado por Juan Esteban Pérez. La app de Logística, Despachos y Lead T"
+  },
+  {
+    "input": "soy de cartera y el proceso de logística requiere soporte documental, necesito radicar",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "cartera",
+      "el proceso de logística requiere soporte documental",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de cartera. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "por favor necesito ayudaa para registar una solicitud gracias",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué cargo tiene Juan Esteban Perez",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan Esteban Perez",
+      "cargo",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez tiene el cargo de Super Admin / Desarrollador en el área de Calidad y mejora continua. Juan Esteban P"
+  },
+  {
+    "input": "necesito saber soy de ventas y necesito adjuntar una captura como evidencia, necesito radicar en la app",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "ventas",
+      "necesito adjuntar una captura como evidencia",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de ventas. La IA debe organizar el caso con asunto"
+  },
+  {
+    "input": "tengo una duda: qué es Repositorio de Calidad porfa",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Repositorio de Calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Repositorio de Calidad está pensado para centralizar documentos, procedimientos, formatos, instructivos y recursos de"
+  },
+  {
+    "input": "oye qué cargo tiene Maria Fernanda gracias",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Maria Fernanda",
+      "cargo",
+      "Analista de calidad",
+      "Calidad y mejora continua"
+    ],
+    "expected_answer_contains": "María Fernanda Zamudio tiene el cargo de Analista de calidad en el área de Calidad y mejora continua. María Fernanda Zam"
+  },
+  {
+    "input": "necesito alluda para registrar una solisitud",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "qué es Portal Dream Team de Calidad",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "Portal Dream Team de Calidad",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "El Portal Dream Team de Calidad es un entorno institucional administrable para centralizar apps, noticias, auditorías, d"
+  },
+  {
+    "input": "buenas, necesito ayuda para mradicar una solicitudd en la mesa de ayuda",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "me ayudas con soy de logística y el proceso de logística requiere soporte documental, necesito radicar urgente",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "logística",
+      "el proceso de logística requiere soporte documental",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de logística. La IA debe organizar el caso con asu"
+  },
+  {
+    "input": "necesito alluda para registar una ticket",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber qué es hallazgo en la app",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "hallazgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un hallazgo debe describir condición, criterio, evidencia, impacto y acción requerida. La IA puede ayudarte a convertirl"
+  },
+  {
+    "input": "necesito saber soy de compras y el proceso de logística requiere soporte documental, necesito radicar en la app",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "compras",
+      "el proceso de logística requiere soporte documental",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de compras. La IA debe organizar el caso con asunt"
+  },
+  {
+    "input": "oye explícame hallazgo en la mesa de ayuda",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "hallazgo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un hallazgo debe describir condición, criterio, evidencia, impacto y acción requerida. La IA puede ayudarte a convertirl"
+  },
+  {
+    "input": "buenas, necesito soporte para radicarr una solicitu para calidad",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito saber soy de logística y necesito adjuntar una captura como evidencia, necesito radicar para calidad",
+    "expected_intent": "radicacion_casos",
+    "expected_keywords": [
+      "radicar",
+      "logística",
+      "necesito adjuntar una captura como evidencia",
+      "solicitud",
+      "evidencia",
+      "responsable"
+    ],
+    "expected_answer_contains": "Claro. Con esa información la solicitud puede radicarse desde el área de logística. La IA debe organizar el caso con asu"
+  },
+  {
+    "input": "buenas, qué es formato para calidad",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "formato",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un formato es un documento estructurado para capturar información. Debe tener nombre, código, versión, fecha, campos cla"
+  },
+  {
+    "input": "necesito saber quién es Juan E. Perez urgente",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Juan E. Perez",
+      "Super Admin / Desarrollador",
+      "Calidad y mejora continua",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Juan Esteban Pérez es el creador, desarrollador y Super Admin de la Mesa de Ayuda de Calidad y Mejoramiento Continuo. En"
+  },
+  {
+    "input": "me puedes decir quién es Luis Grizales porfa",
+    "expected_intent": "equipo_roles",
+    "expected_keywords": [
+      "Luis Grizales",
+      "Jefe de auditoría interna",
+      "Auditoría interna",
+      "equipo",
+      "cargo",
+      "quien es"
+    ],
+    "expected_answer_contains": "Luis Grisales es Jefe de auditoría interna. Su enfoque está relacionado con auditoría, hallazgos, trazabilidad, evidenci"
+  },
+  {
+    "input": "qué es despachos",
+    "expected_intent": "proyectos_apps",
+    "expected_keywords": [
+      "despachos",
+      "app",
+      "proyecto",
+      "desarrollo",
+      "Juan Esteban Pérez"
+    ],
+    "expected_answer_contains": "La app de Logística, Despachos y Lead Time permite controlar pedidos, caja, logística, corte de cable, alistamiento, fac"
+  },
+  {
+    "input": "quién desarrolló la mesa de ayuda",
+    "expected_intent": "identidad_creador",
+    "expected_keywords": [
+      "creador",
+      "desarrollador",
+      "juan esteban",
+      "juanes",
+      "super admin",
+      "app"
+    ],
+    "expected_answer_contains": "Esta aplicación fue creada y desarrollada por Juan Esteban Pérez, quien figura como Super Admin / Desarrollador de la Me"
+  },
+  {
+    "input": "tengo una duda: necesito ayudaa para radicar una caso porfa",
+    "expected_intent": "radicacion_ortografia",
+    "expected_keywords": [
+      "radicar",
+      "solicitud",
+      "ayuda",
+      "ortografia",
+      "ticket"
+    ],
+    "expected_answer_contains": "Te puedo ayudar. Aunque el texto tenga errores de ortografía, entiendo que quieres radicar una solicitud. Dime área, nec"
+  },
+  {
+    "input": "necesito ayuda con instructivo",
+    "expected_intent": "calidad_conocimiento",
+    "expected_keywords": [
+      "instructivo",
+      "calidad",
+      "soporte",
+      "radicar",
+      "ayuda"
+    ],
+    "expected_answer_contains": "Un instructivo describe una actividad específica con pasos concretos, responsables, evidencias, controles y criterios pa"
+  }
+]

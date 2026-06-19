@@ -1,0 +1,1848 @@
+[
+  {
+    "intent": "saludo",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Hola",
+      "Buenos días, necesito ayuda"
+    ],
+    "keywords": [
+      "ayuda",
+      "buenos días",
+      "consulta",
+      "hola",
+      "mesa",
+      "saludo"
+    ]
+  },
+  {
+    "intent": "presentacion_ia",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "¿Quién eres?"
+    ],
+    "keywords": [
+      "asistente",
+      "mesa ayuda",
+      "quién eres"
+    ]
+  },
+  {
+    "intent": "alcance_ia",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "¿Qué puedes hacer?"
+    ],
+    "keywords": [
+      "capacidad",
+      "funciones",
+      "puedes hacer"
+    ]
+  },
+  {
+    "intent": "limite_ia",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "¿Puedes tomar decisiones por mí?"
+    ],
+    "keywords": [
+      "autorizar",
+      "decisiones",
+      "límites"
+    ]
+  },
+  {
+    "intent": "agradecimiento",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Gracias"
+    ],
+    "keywords": [
+      "gracias",
+      "seguimiento"
+    ]
+  },
+  {
+    "intent": "despedida",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Listo, eso era todo"
+    ],
+    "keywords": [
+      "despedida",
+      "trazabilidad"
+    ]
+  },
+  {
+    "intent": "aclaracion",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "No entendí",
+      "Explícame paso a paso",
+      "Necesito una respuesta corta"
+    ],
+    "keywords": [
+      "asigna",
+      "corta",
+      "evidencia",
+      "existe",
+      "explicar",
+      "explícame",
+      "identifica",
+      "necesito",
+      "no entendí",
+      "paso",
+      "pasos",
+      "respuesta",
+      "resumo",
+      "revisa",
+      "simple",
+      "valida"
+    ]
+  },
+  {
+    "intent": "orientacion",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Estoy perdido, no sé qué hacer",
+      "Qué hago ahora",
+      "Me puedes guiar",
+      "Ayúdame con un caso"
+    ],
+    "keywords": [
+      "ahora",
+      "ayúdame",
+      "caso",
+      "claro",
+      "describe",
+      "está",
+      "existe",
+      "guiar",
+      "hago",
+      "identifiquemos",
+      "involucrada",
+      "ocurre",
+      "orientación",
+      "perdido",
+      "primero",
+      "puedes",
+      "resultado"
+    ]
+  },
+  {
+    "intent": "confianza",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "¿Lo que me dices es oficial?"
+    ],
+    "keywords": [
+      "datos",
+      "oficial",
+      "soporte"
+    ]
+  },
+  {
+    "intent": "clasificar_area",
+    "categories": [
+      "Conversaciones del área",
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "No sé si esto es de calidad",
+      "¿Esto lo debe revisar Calidad?",
+      "¿Esto lo debe revisar Talento Humano?",
+      "¿Esto lo debe revisar Sistemas?",
+      "¿Esto lo debe revisar Logística?",
+      "¿Esto lo debe revisar Administrativa?",
+      "¿Esto lo debe revisar Financiera?",
+      "¿Esto lo debe revisar Comercial?"
+    ],
+    "keywords": [
+      "administrativa",
+      "afecta",
+      "auditoría",
+      "ayudarte",
+      "calidad",
+      "clasificar",
+      "clasificarlo",
+      "comercial",
+      "continua",
+      "cumplimiento",
+      "evidencias",
+      "financiera",
+      "gerencia",
+      "logística",
+      "mejora",
+      "procesos",
+      "responsable",
+      "sistemas",
+      "talento humano",
+      "trazabilidad",
+      "área"
+    ]
+  },
+  {
+    "intent": "escalamiento_humano",
+    "categories": [
+      "Conversaciones difíciles",
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Quiero hablar con alguien",
+      "Quiero hablar con el jefe ya"
+    ],
+    "keywords": [
+      "alguien",
+      "asociado",
+      "autorización",
+      "correctamente",
+      "debes",
+      "decisión",
+      "escalamiento",
+      "escalarlo",
+      "hablar",
+      "hacerlo",
+      "jefe",
+      "orientar",
+      "orientarte",
+      "pero",
+      "quiero",
+      "razón",
+      "registrar",
+      "requiere"
+    ]
+  },
+  {
+    "intent": "prioridad",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Esto es urgente"
+    ],
+    "keywords": [
+      "afectación",
+      "alto",
+      "existir",
+      "impacto",
+      "incumplimiento",
+      "marcarlo",
+      "próximo",
+      "riesgo",
+      "urgente",
+      "vencimiento"
+    ]
+  },
+  {
+    "intent": "corregir_solicitud",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Me equivoqué en la solicitud"
+    ],
+    "keywords": [
+      "aclaratorio",
+      "agregar",
+      "ajuste",
+      "cerrada",
+      "comentario",
+      "equivoqué",
+      "está",
+      "pedir",
+      "puedes",
+      "responsable"
+    ]
+  },
+  {
+    "intent": "confirmar_registro",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Quiero saber si quedó registrado"
+    ],
+    "keywords": [
+      "confirmarlo",
+      "dato",
+      "existe",
+      "necesito",
+      "número",
+      "quedó",
+      "quiero",
+      "radicado",
+      "registrado",
+      "saber"
+    ]
+  },
+  {
+    "intent": "sugerir_accion",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Dame una recomendación"
+    ],
+    "keywords": [
+      "acción",
+      "adjuntar",
+      "dame",
+      "definir",
+      "dejar",
+      "documentar",
+      "evidencia",
+      "hecho",
+      "recomendación",
+      "responsable"
+    ]
+  },
+  {
+    "intent": "resumir_conversacion",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Resume lo que hablamos"
+    ],
+    "keywords": [
+      "actual",
+      "conversación",
+      "estado",
+      "hablamos",
+      "partes",
+      "reportada",
+      "resume",
+      "resumir",
+      "situación",
+      "tres"
+    ]
+  },
+  {
+    "intent": "consultar_responsable_area",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "¿Quién responde los casos de Calidad?",
+      "¿Quién responde los casos de Talento Humano?",
+      "¿Quién responde los casos de Sistemas?",
+      "¿Quién responde los casos de Logística?",
+      "¿Quién responde los casos de Administrativa?",
+      "¿Quién responde los casos de Financiera?",
+      "¿Quién responde los casos de Comercial?",
+      "¿Quién responde los casos de Gerencia?"
+    ],
+    "keywords": [
+      "administrativa",
+      "asignado",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "responsable",
+      "sistemas",
+      "talento humano",
+      "usuarios"
+    ]
+  },
+  {
+    "intent": "crear_ticket_area",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "Necesito radicar una solicitud para Calidad",
+      "Necesito radicar una solicitud para Talento Humano",
+      "Necesito radicar una solicitud para Sistemas",
+      "Necesito radicar una solicitud para Logística",
+      "Necesito radicar una solicitud para Administrativa",
+      "Necesito radicar una solicitud para Financiera",
+      "Necesito radicar una solicitud para Comercial",
+      "Necesito radicar una solicitud para Gerencia"
+    ],
+    "keywords": [
+      "administrativa",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "prioridad",
+      "radicar",
+      "sistemas",
+      "solicitud",
+      "talento humano"
+    ]
+  },
+  {
+    "intent": "resumen_area",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "Dame un resumen de lo pendiente de Calidad",
+      "Dame un resumen de lo pendiente de Talento Humano",
+      "Dame un resumen de lo pendiente de Sistemas",
+      "Dame un resumen de lo pendiente de Logística",
+      "Dame un resumen de lo pendiente de Administrativa",
+      "Dame un resumen de lo pendiente de Financiera",
+      "Dame un resumen de lo pendiente de Comercial",
+      "Dame un resumen de lo pendiente de Gerencia"
+    ],
+    "keywords": [
+      "administrativa",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "pendiente",
+      "resumen",
+      "sistemas",
+      "talento humano",
+      "tickets"
+    ]
+  },
+  {
+    "intent": "registrar_no_conformidad",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de no conformidad?",
+      "Tengo un problema de no conformidad",
+      "¿Qué evidencia sirve para no conformidad?",
+      "Redáctame una respuesta para un caso de no conformidad"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "no conformidad",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "accion_correctiva",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de acción correctiva?",
+      "Tengo un problema de acción correctiva",
+      "¿Qué evidencia sirve para acción correctiva?",
+      "Redáctame una respuesta para un caso de acción correctiva"
+    ],
+    "keywords": [
+      "acción correctiva",
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "accion_preventiva",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de acción preventiva?",
+      "Tengo un problema de acción preventiva",
+      "¿Qué evidencia sirve para acción preventiva?",
+      "Redáctame una respuesta para un caso de acción preventiva"
+    ],
+    "keywords": [
+      "acción preventiva",
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "mejora_continua",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de mejora continua?",
+      "Tengo un problema de mejora continua",
+      "¿Qué evidencia sirve para mejora continua?",
+      "Redáctame una respuesta para un caso de mejora continua"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "mejora continua",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "validar_evidencia",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de evidencia?",
+      "Tengo un problema de evidencia",
+      "¿Qué evidencia sirve para evidencia?",
+      "Redáctame una respuesta para un caso de evidencia"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "analisis_causa_raiz",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de causa raíz?",
+      "Tengo un problema de causa raíz",
+      "¿Qué evidencia sirve para causa raíz?",
+      "Redáctame una respuesta para un caso de causa raíz"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "causa raíz",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "trazabilidad",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de trazabilidad?",
+      "Tengo un problema de trazabilidad",
+      "¿Qué evidencia sirve para trazabilidad?",
+      "Redáctame una respuesta para un caso de trazabilidad"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "trazabilidad",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "auditoria",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de auditoría?",
+      "Tengo un problema de auditoría",
+      "¿Qué evidencia sirve para auditoría?",
+      "Redáctame una respuesta para un caso de auditoría"
+    ],
+    "keywords": [
+      "auditoría",
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "indicador_calidad",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de indicador?",
+      "Tengo un problema de indicador",
+      "¿Qué evidencia sirve para indicador?",
+      "Redáctame una respuesta para un caso de indicador"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "indicador",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "gestion_riesgo",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Cómo manejo un caso de riesgo?",
+      "Tengo un problema de riesgo",
+      "¿Qué evidencia sirve para riesgo?",
+      "Redáctame una respuesta para un caso de riesgo"
+    ],
+    "keywords": [
+      "calidad",
+      "caso",
+      "evidencia",
+      "impacto",
+      "problema",
+      "proceso",
+      "redactar",
+      "registrar",
+      "respuesta",
+      "riesgo",
+      "soporte",
+      "verificable"
+    ]
+  },
+  {
+    "intent": "explicar_campo_radicacion",
+    "categories": [
+      "Radicación"
+    ],
+    "examples": [
+      "¿Qué pongo en el campo asunto?",
+      "¿Qué pongo en el campo descripción?",
+      "¿Qué pongo en el campo área?",
+      "¿Qué pongo en el campo prioridad?",
+      "¿Qué pongo en el campo evidencia?",
+      "¿Qué pongo en el campo responsable?",
+      "¿Qué pongo en el campo fecha límite?"
+    ],
+    "keywords": [
+      "asunto",
+      "campo",
+      "descripción",
+      "evidencia",
+      "fecha límite",
+      "prioridad",
+      "radicación",
+      "responsable",
+      "solicitud",
+      "área"
+    ]
+  },
+  {
+    "intent": "radicar_solicitud",
+    "categories": [
+      "Radicación"
+    ],
+    "examples": [
+      "Necesito crear un ticket",
+      "No tengo evidencia, ¿puedo radicar?",
+      "Me equivoqué al radicar",
+      "Quiero radicar algo anónimo",
+      "El caso afecta a varias áreas",
+      "No sé qué prioridad usar",
+      "¿Puedo adjuntar varios archivos?",
+      "¿Qué pasa después de radicar?"
+    ],
+    "keywords": [
+      "aclaratorio",
+      "adjuntar",
+      "afecta",
+      "afectación",
+      "agrega",
+      "algo",
+      "alta",
+      "anónimo",
+      "aplica",
+      "archivos",
+      "asigna",
+      "asunto",
+      "ayuda",
+      "borres",
+      "cercano",
+      "clara",
+      "comentario",
+      "conservar",
+      "consultar",
+      "corrección",
+      "crear",
+      "crítico",
+      "debes",
+      "descripción",
+      "después"
+    ]
+  },
+  {
+    "intent": "consultar_estado",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "¿En qué estado está mi ticket?",
+      "Estado de mi solicitud",
+      "Cómo va el caso",
+      "Qué pasó con el ticket",
+      "En qué va mi requerimiento"
+    ],
+    "keywords": [
+      "consultar",
+      "cómo",
+      "encuentra",
+      "encuentro",
+      "estado",
+      "está",
+      "identificar",
+      "indicaré",
+      "mostraré",
+      "necesito",
+      "número",
+      "pasó",
+      "permiso",
+      "prioridad",
+      "registro",
+      "requerimiento",
+      "responsable",
+      "sistema",
+      "último"
+    ]
+  },
+  {
+    "intent": "consultar_ticket",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "Busca el ticket DT-0001"
+    ],
+    "keywords": [
+      "0001",
+      "base",
+      "busca",
+      "buscar",
+      "datos",
+      "estado",
+      "existe",
+      "mostrar",
+      "permiso",
+      "verlo"
+    ]
+  },
+  {
+    "intent": "agregar_comentario",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "Quiero agregar un comentario"
+    ],
+    "keywords": [
+      "agregar",
+      "agregarlo",
+      "claro",
+      "comentario",
+      "conservar",
+      "puedes",
+      "quiero",
+      "relacionado",
+      "seguimiento",
+      "trazabilidad"
+    ]
+  },
+  {
+    "intent": "agregar_evidencia",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "Quiero subir una evidencia",
+      "Subir soporte",
+      "Adjuntar archivo",
+      "Agregar captura",
+      "Montar evidencia"
+    ],
+    "keywords": [
+      "adjunta",
+      "adjuntar",
+      "agregar",
+      "archivo",
+      "captura",
+      "demuestra",
+      "describe",
+      "estar",
+      "evidencia",
+      "explica",
+      "montar",
+      "posterior",
+      "prueba",
+      "quedar",
+      "quiero",
+      "relacionada",
+      "revisión",
+      "soporte",
+      "subir",
+      "verificable",
+      "vinculada"
+    ]
+  },
+  {
+    "intent": "cerrar_ticket",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "¿Cómo cierro un ticket?",
+      "Finalizar el caso",
+      "Dar por terminado el ticket",
+      "Marcar como cerrado",
+      "Cerrar la solicitud"
+    ],
+    "keywords": [
+      "antes",
+      "aplica",
+      "cerrado",
+      "cerrar",
+      "cierro",
+      "comentario",
+      "cómo",
+      "evidencia",
+      "exista",
+      "final",
+      "finalizar",
+      "finalizarlo",
+      "marcar",
+      "respuesta",
+      "solicitante",
+      "suficiente",
+      "terminado",
+      "valida",
+      "validación",
+      "verifica"
+    ]
+  },
+  {
+    "intent": "reabrir_ticket",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "Necesito reabrir un ticket cerrado",
+      "Volver a abrir",
+      "El cierre no sirvió",
+      "El problema sigue",
+      "Necesito reactivar el caso"
+    ],
+    "keywords": [
+      "abrir",
+      "cerrado",
+      "cierre",
+      "concreta",
+      "evidencia",
+      "explicación",
+      "indica",
+      "justificación",
+      "justificarse",
+      "necesito",
+      "nueva",
+      "posible",
+      "problema",
+      "reabrir",
+      "reactivar",
+      "reapertura",
+      "requiere",
+      "resolvió",
+      "sigue",
+      "sirvió",
+      "volver"
+    ]
+  },
+  {
+    "intent": "escalar_ticket",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "Este ticket no avanza",
+      "Pasarlo al jefe",
+      "Subir el caso",
+      "Pedir revisión superior",
+      "Esto está bloqueado"
+    ],
+    "keywords": [
+      "avanza",
+      "bloqueado",
+      "bloqueo",
+      "causa",
+      "conserva",
+      "decisión",
+      "detenido",
+      "escalarlo",
+      "está",
+      "evidencia",
+      "fecha",
+      "gestión",
+      "jefe",
+      "justificación",
+      "pasarlo",
+      "pedir",
+      "pendiente",
+      "puedes",
+      "registra",
+      "responsable",
+      "revisa",
+      "revisión",
+      "subir",
+      "superior",
+      "vencimiento"
+    ]
+  },
+  {
+    "intent": "ampliar_espera",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "Necesito más tiempo para resolver"
+    ],
+    "keywords": [
+      "ampliación",
+      "causa",
+      "clara",
+      "espera",
+      "necesito",
+      "nueva",
+      "puedes",
+      "resolver",
+      "solicitar",
+      "tiempo"
+    ]
+  },
+  {
+    "intent": "vencimiento",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "¿Qué significa ticket vencido?"
+    ],
+    "keywords": [
+      "acción",
+      "aquel",
+      "cierre",
+      "definido",
+      "esperada",
+      "revisarse",
+      "significa",
+      "superó",
+      "tiempo",
+      "vencido"
+    ]
+  },
+  {
+    "intent": "satisfaccion",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "El usuario no quedó satisfecho"
+    ],
+    "keywords": [
+      "acción",
+      "adecuado",
+      "cierre",
+      "comentario",
+      "evalúa",
+      "quedó",
+      "reapertura",
+      "registra",
+      "revisa",
+      "satisfecho"
+    ]
+  },
+  {
+    "intent": "consultar_tickets_abiertos",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso tickets abiertos?",
+      "Dame un reporte de tickets abiertos"
+    ],
+    "keywords": [
+      "indicador",
+      "kpi",
+      "periodo",
+      "reporte",
+      "tickets abiertos",
+      "área"
+    ]
+  },
+  {
+    "intent": "consultar_tickets_vencidos",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso tickets vencidos?",
+      "Dame un reporte de tickets vencidos"
+    ],
+    "keywords": [
+      "indicador",
+      "kpi",
+      "periodo",
+      "reporte",
+      "tickets vencidos",
+      "área"
+    ]
+  },
+  {
+    "intent": "kpi_tiempo_cierre",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso tiempo promedio de cierre?",
+      "Dame un reporte de tiempo promedio de cierre"
+    ],
+    "keywords": [
+      "indicador",
+      "kpi",
+      "periodo",
+      "reporte",
+      "tiempo promedio de cierre",
+      "área"
+    ]
+  },
+  {
+    "intent": "kpi_area",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso casos por área?",
+      "Dame un reporte de casos por área"
+    ],
+    "keywords": [
+      "casos por área",
+      "indicador",
+      "kpi",
+      "periodo",
+      "reporte",
+      "área"
+    ]
+  },
+  {
+    "intent": "kpi_reincidencia",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso reincidencias?",
+      "Dame un reporte de reincidencias"
+    ],
+    "keywords": [
+      "indicador",
+      "kpi",
+      "periodo",
+      "reincidencias",
+      "reporte",
+      "área"
+    ]
+  },
+  {
+    "intent": "kpi_satisfaccion",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso satisfacción?",
+      "Dame un reporte de satisfacción"
+    ],
+    "keywords": [
+      "indicador",
+      "kpi",
+      "periodo",
+      "reporte",
+      "satisfacción",
+      "área"
+    ]
+  },
+  {
+    "intent": "kpi_mejoras",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso mejoras generadas?",
+      "Dame un reporte de mejoras generadas"
+    ],
+    "keywords": [
+      "indicador",
+      "kpi",
+      "mejoras generadas",
+      "periodo",
+      "reporte",
+      "área"
+    ]
+  },
+  {
+    "intent": "kpi_responsable",
+    "categories": [
+      "Reportes e indicadores"
+    ],
+    "examples": [
+      "¿Cómo reviso carga por responsable?",
+      "Dame un reporte de carga por responsable"
+    ],
+    "keywords": [
+      "carga por responsable",
+      "indicador",
+      "kpi",
+      "periodo",
+      "reporte",
+      "área"
+    ]
+  },
+  {
+    "intent": "aprendizaje_pendiente",
+    "categories": [
+      "Aprendizaje controlado"
+    ],
+    "examples": [
+      "Aprende que los tickets sin evidencia no deben cerrarse",
+      "Recuerda que Calidad revisa las solicitudes de auditoría",
+      "Guarda esta instrucción"
+    ],
+    "keywords": [
+      "activa",
+      "administrador",
+      "aprende",
+      "aprendizaje",
+      "aprobación",
+      "auditoría",
+      "cerrarse",
+      "conocimiento",
+      "convertirlo",
+      "evidencia",
+      "guarda",
+      "guardarlo",
+      "guardaré",
+      "hasta",
+      "instrucción",
+      "oficial",
+      "pendiente",
+      "quedará",
+      "recuerda",
+      "registrado",
+      "regla",
+      "revisa",
+      "revisarse",
+      "usaré",
+      "validada"
+    ]
+  },
+  {
+    "intent": "feedback_respuesta",
+    "categories": [
+      "Aprendizaje controlado"
+    ],
+    "examples": [
+      "Esto no era así, corrige esa respuesta",
+      "No respondas eso así"
+    ],
+    "keywords": [
+      "comentario",
+      "corrección",
+      "corregida",
+      "corrige",
+      "deseas",
+      "diferente",
+      "entendido",
+      "gracias",
+      "mejorar",
+      "observación",
+      "oficial",
+      "proponer",
+      "registraré",
+      "regla",
+      "respondas",
+      "respuesta",
+      "revisión",
+      "versión"
+    ]
+  },
+  {
+    "intent": "conocimiento_obsoleto",
+    "categories": [
+      "Aprendizaje controlado"
+    ],
+    "examples": [
+      "Esa información ya no aplica"
+    ],
+    "keywords": [
+      "antes",
+      "aplica",
+      "conocimiento",
+      "desactivar",
+      "información",
+      "marcaré",
+      "observación",
+      "obsoleto",
+      "posible",
+      "revisarse"
+    ]
+  },
+  {
+    "intent": "resumir_aprendizaje",
+    "categories": [
+      "Aprendizaje controlado"
+    ],
+    "examples": [
+      "¿Qué aprendiste de esta conversación?"
+    ],
+    "keywords": [
+      "aprendiste",
+      "aprendizajes",
+      "atención",
+      "conversación",
+      "criterios",
+      "detecté",
+      "enviarlos",
+      "evidencia",
+      "posibles",
+      "seguimiento"
+    ]
+  },
+  {
+    "intent": "manejo_inconformidad",
+    "categories": [
+      "Conversaciones difíciles"
+    ],
+    "examples": [
+      "Estoy molesto porque nadie responde",
+      "Eso no sirve para nada"
+    ],
+    "keywords": [
+      "actualización",
+      "asignado",
+      "corregirlo",
+      "entiendo",
+      "haya",
+      "identificar",
+      "lamento",
+      "molestia",
+      "molesto",
+      "nada",
+      "nadie",
+      "necesito",
+      "responde",
+      "responsable",
+      "respuesta",
+      "revisemos",
+      "sido",
+      "sirve",
+      "última",
+      "útil"
+    ]
+  },
+  {
+    "intent": "queja_responsable",
+    "categories": [
+      "Conversaciones difíciles"
+    ],
+    "examples": [
+      "El responsable nunca contesta"
+    ],
+    "keywords": [
+      "contesta",
+      "fecha",
+      "movimiento",
+      "nunca",
+      "observación",
+      "registra",
+      "responsable",
+      "revisa",
+      "supera",
+      "último"
+    ]
+  },
+  {
+    "intent": "trazabilidad_seguridad",
+    "categories": [
+      "Conversaciones difíciles"
+    ],
+    "examples": [
+      "Borremos este comentario"
+    ],
+    "keywords": [
+      "aclaratorio",
+      "agregar",
+      "borrar",
+      "borremos",
+      "comentario",
+      "error",
+      "hubo",
+      "mejor",
+      "recomiendo",
+      "trazabilidad"
+    ]
+  },
+  {
+    "intent": "seguridad_datos",
+    "categories": [
+      "Conversaciones difíciles"
+    ],
+    "examples": [
+      "Dime el PIN de ese usuario"
+    ],
+    "keywords": [
+      "acceso",
+      "administración",
+      "autorizado",
+      "contraseñas",
+      "credenciales",
+      "dime",
+      "flujo",
+      "gestionarse",
+      "problema",
+      "revelar"
+    ]
+  },
+  {
+    "intent": "seguridad_roles",
+    "categories": [
+      "Conversaciones difíciles"
+    ],
+    "examples": [
+      "Cambia el rol de ese usuario"
+    ],
+    "keywords": [
+      "acción",
+      "admin",
+      "administrador",
+      "autorizado",
+      "cambia",
+      "cambiar",
+      "conversación",
+      "corresponde",
+      "roles",
+      "super"
+    ]
+  },
+  {
+    "intent": "limite_acciones_masivas",
+    "categories": [
+      "Conversaciones difíciles"
+    ],
+    "examples": [
+      "Cierra todos los tickets de esa área"
+    ],
+    "keywords": [
+      "ayudarte",
+      "casos",
+      "cerrar",
+      "cierra",
+      "cuáles",
+      "listar",
+      "masivamente",
+      "revisar",
+      "todos",
+      "validación"
+    ]
+  },
+  {
+    "intent": "ticket_area_vencido",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "El área de Calidad tiene un ticket vencido",
+      "El área de Talento Humano tiene un ticket vencido",
+      "El área de Sistemas tiene un ticket vencido",
+      "El área de Logística tiene un ticket vencido",
+      "El área de Administrativa tiene un ticket vencido",
+      "El área de Financiera tiene un ticket vencido",
+      "El área de Comercial tiene un ticket vencido",
+      "El área de Gerencia tiene un ticket vencido"
+    ],
+    "keywords": [
+      "administrativa",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "sistemas",
+      "talento humano",
+      "ticket",
+      "tiene",
+      "área"
+    ]
+  },
+  {
+    "intent": "ticket_area_sin_responsable",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "El área de Calidad no tiene responsable asignado",
+      "El área de Talento Humano no tiene responsable asignado",
+      "El área de Sistemas no tiene responsable asignado",
+      "El área de Logística no tiene responsable asignado",
+      "El área de Administrativa no tiene responsable asignado",
+      "El área de Financiera no tiene responsable asignado",
+      "El área de Comercial no tiene responsable asignado",
+      "El área de Gerencia no tiene responsable asignado"
+    ],
+    "keywords": [
+      "administrativa",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "no",
+      "sistemas",
+      "talento humano",
+      "ticket",
+      "área"
+    ]
+  },
+  {
+    "intent": "ticket_area_evidencia",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "El área de Calidad necesita adjuntar evidencia",
+      "El área de Talento Humano necesita adjuntar evidencia",
+      "El área de Sistemas necesita adjuntar evidencia",
+      "El área de Logística necesita adjuntar evidencia",
+      "El área de Administrativa necesita adjuntar evidencia",
+      "El área de Financiera necesita adjuntar evidencia",
+      "El área de Comercial necesita adjuntar evidencia",
+      "El área de Gerencia necesita adjuntar evidencia"
+    ],
+    "keywords": [
+      "administrativa",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "necesita",
+      "sistemas",
+      "talento humano",
+      "ticket",
+      "área"
+    ]
+  },
+  {
+    "intent": "ticket_area_resumen",
+    "categories": [
+      "Conversaciones del área"
+    ],
+    "examples": [
+      "El área de Calidad necesita resumen semanal",
+      "El área de Talento Humano necesita resumen semanal",
+      "El área de Sistemas necesita resumen semanal",
+      "El área de Logística necesita resumen semanal",
+      "El área de Administrativa necesita resumen semanal",
+      "El área de Financiera necesita resumen semanal",
+      "El área de Comercial necesita resumen semanal",
+      "El área de Gerencia necesita resumen semanal"
+    ],
+    "keywords": [
+      "administrativa",
+      "calidad",
+      "comercial",
+      "financiera",
+      "gerencia",
+      "logística",
+      "necesita",
+      "sistemas",
+      "talento humano",
+      "ticket",
+      "área"
+    ]
+  },
+  {
+    "intent": "etapa_proceso_calidad",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "Explícame la etapa de identificación del problema",
+      "¿Qué reviso en identificación del problema?",
+      "Explícame la etapa de análisis inicial",
+      "¿Qué reviso en análisis inicial?",
+      "Explícame la etapa de asignación de responsable",
+      "¿Qué reviso en asignación de responsable?",
+      "Explícame la etapa de plan de acción",
+      "¿Qué reviso en plan de acción?"
+    ],
+    "keywords": [
+      "análisis inicial",
+      "asignación de responsable",
+      "calidad",
+      "cierre documental",
+      "etapa",
+      "identificación del problema",
+      "plan de acción",
+      "proceso",
+      "revisar",
+      "verificación de eficacia"
+    ]
+  },
+  {
+    "intent": "radicar_solicitud_especifica",
+    "categories": [
+      "Radicación"
+    ],
+    "examples": [
+      "Necesito radicar una queja interna",
+      "¿Cómo hago para radicar una queja interna?",
+      "Necesito radicar una oportunidad de mejora",
+      "¿Cómo hago para radicar una oportunidad de mejora?",
+      "Necesito radicar una falla repetitiva",
+      "¿Cómo hago para radicar una falla repetitiva?",
+      "Necesito radicar un requerimiento documental",
+      "¿Cómo hago para radicar un requerimiento documental?"
+    ],
+    "keywords": [
+      "afectada",
+      "afectado",
+      "ajuste",
+      "auditado",
+      "auditoría",
+      "beneficiado",
+      "beneficio",
+      "cantidad",
+      "capacitación",
+      "criterio",
+      "cuándo",
+      "cuántas",
+      "datos",
+      "define",
+      "describe",
+      "descripción",
+      "documental",
+      "documento",
+      "equipo",
+      "error",
+      "evidencia",
+      "existe",
+      "falla",
+      "fuente",
+      "fórmula"
+    ]
+  },
+  {
+    "intent": "detectar_error_radicacion",
+    "categories": [
+      "Radicación"
+    ],
+    "examples": [
+      "El ticket tiene descripción muy corta",
+      "El ticket tiene sin área responsable",
+      "El ticket tiene prioridad inflada",
+      "El ticket tiene sin evidencia",
+      "El ticket tiene ticket duplicado",
+      "El ticket tiene cierre sin respuesta final",
+      "El ticket tiene comentarios desordenados"
+    ],
+    "keywords": [
+      "cierre sin respuesta final",
+      "comentarios desordenados",
+      "descripción muy corta",
+      "error",
+      "prioridad inflada",
+      "radicación",
+      "sin evidencia",
+      "sin área responsable",
+      "ticket",
+      "ticket duplicado"
+    ]
+  },
+  {
+    "intent": "corregir_ticket",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "¿Qué hago si hay descripción muy corta?",
+      "¿Qué hago si hay sin área responsable?",
+      "¿Qué hago si hay prioridad inflada?",
+      "¿Qué hago si hay sin evidencia?",
+      "¿Qué hago si hay ticket duplicado?",
+      "¿Qué hago si hay cierre sin respuesta final?",
+      "¿Qué hago si hay comentarios desordenados?"
+    ],
+    "keywords": [
+      "cierre sin respuesta final",
+      "comentarios desordenados",
+      "corregir",
+      "descripción muy corta",
+      "prioridad inflada",
+      "seguimiento",
+      "sin evidencia",
+      "sin área responsable",
+      "ticket duplicado"
+    ]
+  },
+  {
+    "intent": "explicar_estado_ticket",
+    "categories": [
+      "Seguimiento y cierre"
+    ],
+    "examples": [
+      "¿Qué significa estado abierto?",
+      "Mi solicitud aparece como abierto",
+      "¿Qué significa estado asignado?",
+      "Mi solicitud aparece como asignado",
+      "¿Qué significa estado en revisión?",
+      "Mi solicitud aparece como en revisión",
+      "¿Qué significa estado en espera?",
+      "Mi solicitud aparece como en espera"
+    ],
+    "keywords": [
+      "abierto",
+      "asignado",
+      "cerrado",
+      "en espera",
+      "en revisión",
+      "estado",
+      "reabierto",
+      "solicitud",
+      "ticket",
+      "vencido"
+    ]
+  },
+  {
+    "intent": "diferenciar_acciones_calidad",
+    "categories": [
+      "Proceso de calidad"
+    ],
+    "examples": [
+      "¿Qué diferencia hay entre corrección y otras acciones?",
+      "¿Qué diferencia hay entre acción correctiva y otras acciones?",
+      "¿Qué diferencia hay entre acción preventiva y otras acciones?",
+      "¿Qué diferencia hay entre plan de mejora y otras acciones?",
+      "¿Qué diferencia hay entre contención y otras acciones?"
+    ],
+    "keywords": [
+      "acción",
+      "acción correctiva",
+      "acción preventiva",
+      "calidad",
+      "contención",
+      "corrección",
+      "diferencia",
+      "plan de mejora"
+    ]
+  },
+  {
+    "intent": "tono_humano",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "Necesito una respuesta más humana",
+      "Háblame menos técnico",
+      "Dame una respuesta para copiar y pegar",
+      "Dime la mejor opción",
+      "No quiero llenar tantos campos",
+      "Esto me parece muy lento",
+      "Explícame como si fuera nuevo"
+    ],
+    "keywords": [
+      "antes",
+      "asigna",
+      "ayuda",
+      "ayudan",
+      "base",
+      "bloqueo",
+      "campos",
+      "cercana",
+      "claro",
+      "concretos",
+      "copiar",
+      "dame",
+      "datos",
+      "debes",
+      "decisión",
+      "depende",
+      "dime",
+      "entendido",
+      "entiendo",
+      "evitan",
+      "explico",
+      "explícame",
+      "final",
+      "forma",
+      "fuera"
+    ]
+  },
+  {
+    "intent": "explicar_rol",
+    "categories": [
+      "Roles y permisos"
+    ],
+    "examples": [
+      "¿Qué puede hacer el solicitante?",
+      "¿Qué puede hacer el analista de calidad?",
+      "¿Qué puede hacer el jefe general?",
+      "¿Qué puede hacer el super admin?",
+      "¿Qué puede hacer el auditoría?"
+    ],
+    "keywords": [
+      "analista de calidad",
+      "auditoría",
+      "jefe general",
+      "permiso",
+      "rol",
+      "solicitante",
+      "super admin"
+    ]
+  },
+  {
+    "intent": "validar_permiso",
+    "categories": [
+      "Roles y permisos"
+    ],
+    "examples": [
+      "Soy solicitante, ¿puedo cerrar un ticket?",
+      "Soy analista de calidad, ¿puedo cerrar un ticket?",
+      "Soy jefe general, ¿puedo cerrar un ticket?",
+      "Soy super admin, ¿puedo cerrar un ticket?",
+      "Soy auditoría, ¿puedo cerrar un ticket?"
+    ],
+    "keywords": [
+      "analista de calidad",
+      "auditoría",
+      "cerrar",
+      "jefe general",
+      "permiso",
+      "solicitante",
+      "super admin"
+    ]
+  },
+  {
+    "intent": "fallback_controlado",
+    "categories": [
+      "Conversaciones normales"
+    ],
+    "examples": [
+      "No encuentro ese ticket",
+      "No tengo permiso para ver ese caso",
+      "La información está incompleta",
+      "Hay varias coincidencias",
+      "No existe regla oficial"
+    ],
+    "keywords": [
+      "acceso",
+      "admin",
+      "administrador",
+      "asunto",
+      "autorizado",
+      "coincidencias",
+      "confirmes",
+      "código",
+      "dame",
+      "dato",
+      "disponible",
+      "encontré",
+      "encuentro",
+      "está",
+      "evitar",
+      "existe",
+      "falta",
+      "fecha",
+      "incompleta",
+      "información",
+      "menos",
+      "mostrar",
+      "necesito",
+      "número",
+      "oficial"
+    ]
+  }
+]

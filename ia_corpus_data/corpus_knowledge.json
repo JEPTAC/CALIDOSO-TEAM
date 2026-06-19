@@ -1,0 +1,3825 @@
+[
+  {
+    "id": "kb_0001",
+    "intent": "saludo",
+    "category": "Conversaciones normales",
+    "title": "Saludo",
+    "question": "Saludo: Hola",
+    "keywords": [
+      "hola",
+      "saludo",
+      "ayuda",
+      "mesa"
+    ],
+    "answer": "Hola. Soy el asistente de la Mesa de Ayuda de Calidad. Puedo ayudarte a radicar solicitudes, consultar estados, entender el proceso de calidad y revisar información de tickets según tus permisos.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0002",
+    "intent": "saludo",
+    "category": "Conversaciones normales",
+    "title": "Saludo",
+    "question": "Buenos días, necesito ayuda",
+    "keywords": [
+      "buenos días",
+      "ayuda",
+      "consulta"
+    ],
+    "answer": "Buenos días. Cuéntame qué necesitas: radicar una solicitud, consultar un ticket, revisar un estado o entender un paso del proceso de calidad.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0003",
+    "intent": "presentacion_ia",
+    "category": "Conversaciones normales",
+    "title": "Presentacion ia",
+    "question": "¿Quién eres?",
+    "keywords": [
+      "quién eres",
+      "asistente",
+      "mesa ayuda"
+    ],
+    "answer": "Soy el asistente interno de la Mesa de Ayuda de Calidad. Mi función es orientar a los usuarios, consultar información permitida de la app y apoyar el seguimiento del mejoramiento continuo.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0004",
+    "intent": "alcance_ia",
+    "category": "Conversaciones normales",
+    "title": "Alcance ia",
+    "question": "¿Qué puedes hacer?",
+    "keywords": [
+      "puedes hacer",
+      "funciones",
+      "capacidad"
+    ],
+    "answer": "Puedo responder preguntas sobre la mesa de ayuda, orientar radicaciones, explicar estados, consultar tickets permitidos, sugerir acciones y guardar aprendizajes pendientes para revisión del Super Admin.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0005",
+    "intent": "limite_ia",
+    "category": "Conversaciones normales",
+    "title": "Limite ia",
+    "question": "¿Puedes tomar decisiones por mí?",
+    "keywords": [
+      "decisiones",
+      "límites",
+      "autorizar"
+    ],
+    "answer": "No. Puedo orientar y sugerir, pero no debo tomar decisiones críticas, cambiar roles, cerrar tickets o aprobar aprendizajes sin autorización del usuario responsable o del Super Admin.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0006",
+    "intent": "agradecimiento",
+    "category": "Conversaciones normales",
+    "title": "Agradecimiento",
+    "question": "Agradecimiento: Gracias",
+    "keywords": [
+      "gracias",
+      "seguimiento"
+    ],
+    "answer": "Con gusto. Si necesitas, también puedo ayudarte a revisar el siguiente paso del ticket o a redactar una respuesta de seguimiento.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0007",
+    "intent": "despedida",
+    "category": "Conversaciones normales",
+    "title": "Despedida",
+    "question": "Listo, eso era todo",
+    "keywords": [
+      "despedida",
+      "trazabilidad"
+    ],
+    "answer": "Perfecto. Dejo la conversación registrada para trazabilidad. Cuando necesites continuar, puedes preguntarme por el ticket, el área o el proceso.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0008",
+    "intent": "aclaracion",
+    "category": "Conversaciones normales",
+    "title": "Aclaracion",
+    "question": "No entendí",
+    "keywords": [
+      "no entendí",
+      "explicar",
+      "simple"
+    ],
+    "answer": "Te lo explico más simple: dime si quieres crear una solicitud, consultar un ticket, responder un caso, cerrar una actividad o revisar indicadores.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0009",
+    "intent": "orientacion",
+    "category": "Conversaciones normales",
+    "title": "Orientacion",
+    "question": "Estoy perdido, no sé qué hacer",
+    "keywords": [
+      "perdido",
+      "orientación",
+      "caso"
+    ],
+    "answer": "Empecemos por identificar el caso. Dime si tienes número de ticket, área involucrada, responsable o una descripción breve del problema.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0010",
+    "intent": "confianza",
+    "category": "Conversaciones normales",
+    "title": "Confianza",
+    "question": "¿Lo que me dices es oficial?",
+    "keywords": [
+      "oficial",
+      "soporte",
+      "datos"
+    ],
+    "answer": "Uso la base de conocimiento oficial y los datos permitidos de la aplicación. Si no encuentro soporte suficiente, te lo indicaré y no inventaré información.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0011",
+    "intent": "orientacion",
+    "category": "Conversaciones normales",
+    "title": "Orientacion",
+    "question": "Qué hago ahora",
+    "keywords": [
+      "hago",
+      "ahora",
+      "claro",
+      "primero",
+      "identifiquemos",
+      "describe",
+      "ocurre",
+      "está",
+      "involucrada",
+      "existe"
+    ],
+    "answer": "Claro. Primero identifiquemos el caso: describe qué ocurre, qué área está involucrada, si existe un ticket y qué resultado esperas. Con eso puedo orientarte sin perder trazabilidad.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0012",
+    "intent": "aclaracion",
+    "category": "Conversaciones normales",
+    "title": "Aclaracion",
+    "question": "Explícame paso a paso",
+    "keywords": [
+      "explícame",
+      "paso",
+      "resumo",
+      "pasos",
+      "identifica",
+      "revisa",
+      "existe",
+      "valida",
+      "evidencia",
+      "asigna"
+    ],
+    "answer": "Lo resumo en pasos: identifica el caso, revisa si ya existe ticket, valida evidencia, asigna responsable y registra el seguimiento en la Mesa de Ayuda.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0013",
+    "intent": "clasificar_area",
+    "category": "Conversaciones normales",
+    "title": "Clasificar area",
+    "question": "No sé si esto es de calidad",
+    "keywords": [
+      "ayudarte",
+      "clasificarlo",
+      "afecta",
+      "cumplimiento",
+      "procesos",
+      "evidencias",
+      "trazabilidad",
+      "auditoría",
+      "mejora",
+      "continua"
+    ],
+    "answer": "Puedo ayudarte a clasificarlo. Si afecta cumplimiento, procesos, evidencias, trazabilidad, auditoría o mejora continua, probablemente corresponde al proceso de calidad.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0014",
+    "intent": "escalamiento_humano",
+    "category": "Conversaciones normales",
+    "title": "Escalamiento humano",
+    "question": "Quiero hablar con alguien",
+    "keywords": [
+      "quiero",
+      "hablar",
+      "alguien",
+      "orientarte",
+      "pero",
+      "requiere",
+      "decisión",
+      "autorización",
+      "debes",
+      "escalarlo"
+    ],
+    "answer": "Puedo orientarte, pero si el caso requiere decisión o autorización, debes escalarlo al responsable del área o al jefe general según el flujo definido.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0015",
+    "intent": "prioridad",
+    "category": "Conversaciones normales",
+    "title": "Prioridad",
+    "question": "Esto es urgente",
+    "keywords": [
+      "urgente",
+      "marcarlo",
+      "existir",
+      "impacto",
+      "alto",
+      "vencimiento",
+      "próximo",
+      "riesgo",
+      "incumplimiento",
+      "afectación"
+    ],
+    "answer": "Para marcarlo como urgente deben existir impacto alto, vencimiento próximo, riesgo de incumplimiento o afectación a varios usuarios. Registra la justificación en el ticket.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0016",
+    "intent": "corregir_solicitud",
+    "category": "Conversaciones normales",
+    "title": "Corregir solicitud",
+    "question": "Me equivoqué en la solicitud",
+    "keywords": [
+      "equivoqué",
+      "está",
+      "cerrada",
+      "puedes",
+      "agregar",
+      "comentario",
+      "aclaratorio",
+      "pedir",
+      "ajuste",
+      "responsable"
+    ],
+    "answer": "Si la solicitud aún no está cerrada, puedes agregar un comentario aclaratorio o pedir ajuste al responsable. No se recomienda borrar trazabilidad.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0017",
+    "intent": "confirmar_registro",
+    "category": "Conversaciones normales",
+    "title": "Confirmar registro",
+    "question": "Quiero saber si quedó registrado",
+    "keywords": [
+      "quiero",
+      "saber",
+      "quedó",
+      "registrado",
+      "confirmarlo",
+      "necesito",
+      "número",
+      "dato",
+      "radicado",
+      "existe"
+    ],
+    "answer": "Para confirmarlo necesito el número de ticket o el dato con el que fue radicado. Si existe, te puedo indicar estado, responsable y última actualización permitida.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0018",
+    "intent": "sugerir_accion",
+    "category": "Conversaciones normales",
+    "title": "Sugerir accion",
+    "question": "Dame una recomendación",
+    "keywords": [
+      "dame",
+      "recomendación",
+      "documentar",
+      "hecho",
+      "adjuntar",
+      "evidencia",
+      "definir",
+      "responsable",
+      "dejar",
+      "acción"
+    ],
+    "answer": "Mi recomendación es documentar el hecho, adjuntar evidencia, definir responsable y dejar una acción concreta con fecha de seguimiento.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0019",
+    "intent": "resumir_conversacion",
+    "category": "Conversaciones normales",
+    "title": "Resumir conversacion",
+    "question": "Resume lo que hablamos",
+    "keywords": [
+      "resume",
+      "hablamos",
+      "resumir",
+      "conversación",
+      "tres",
+      "partes",
+      "situación",
+      "reportada",
+      "estado",
+      "actual"
+    ],
+    "answer": "Puedo resumir la conversación en tres partes: situación reportada, estado actual y próximo paso sugerido. Si hay ticket asociado, lo usaré como referencia.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0020",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Calidad?",
+    "keywords": [
+      "calidad",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con procedimientos, evidencias, auditoría, acciones de mejora y seguimiento del sistema de gestión, puede clasificarse para el área de Calidad. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0021",
+    "intent": "consultar_responsable_area",
+    "category": "Conversaciones del área",
+    "title": "Consultar responsable area",
+    "question": "¿Quién responde los casos de Calidad?",
+    "keywords": [
+      "calidad",
+      "responsable",
+      "asignado",
+      "usuarios"
+    ],
+    "answer": "La respuesta depende de los usuarios configurados en la aplicación. Puedo consultar el responsable si existe en la base de datos. Si no hay responsable asignado, el caso debe escalarse al jefe general o al Super Admin para configuración.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0022",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Calidad",
+    "keywords": [
+      "calidad",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Calidad, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0023",
+    "intent": "resumen_area",
+    "category": "Conversaciones del área",
+    "title": "Resumen area",
+    "question": "Dame un resumen de lo pendiente de Calidad",
+    "keywords": [
+      "calidad",
+      "resumen",
+      "pendiente",
+      "tickets"
+    ],
+    "answer": "Puedo generar el resumen consultando los tickets abiertos, vencidos, en espera y cerrados del área de Calidad. Para hacerlo correctamente necesito acceso a los datos o filtros de fecha definidos.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0024",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Talento Humano?",
+    "keywords": [
+      "talento humano",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con inducción, capacitación, novedades de personal, soportes y solicitudes administrativas, puede clasificarse para el área de Talento Humano. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0025",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Talento Humano",
+    "keywords": [
+      "talento humano",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Talento Humano, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0026",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Sistemas?",
+    "keywords": [
+      "sistemas",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con soporte tecnológico, accesos, usuarios, plataformas, equipos y fallas de conectividad, puede clasificarse para el área de Sistemas. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0027",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Sistemas",
+    "keywords": [
+      "sistemas",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Sistemas, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0028",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Logística?",
+    "keywords": [
+      "logística",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con entregas, alistamientos, inventarios, despachos, tiempos operativos y novedades de bodega, puede clasificarse para el área de Logística. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0029",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Logística",
+    "keywords": [
+      "logística",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Logística, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0030",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Administrativa?",
+    "keywords": [
+      "administrativa",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con documentos, compras, archivo, comunicaciones internas y gestión de recursos, puede clasificarse para el área de Administrativa. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0031",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Administrativa",
+    "keywords": [
+      "administrativa",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Administrativa, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0032",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Financiera?",
+    "keywords": [
+      "financiera",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con pagos, facturación, soportes contables, cartera y validaciones económicas, puede clasificarse para el área de Financiera. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0033",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Financiera",
+    "keywords": [
+      "financiera",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Financiera, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0034",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Comercial?",
+    "keywords": [
+      "comercial",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con clientes, solicitudes comerciales, cotizaciones, proyectos y seguimiento a requerimientos externos, puede clasificarse para el área de Comercial. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0035",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Comercial",
+    "keywords": [
+      "comercial",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Comercial, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0036",
+    "intent": "clasificar_area",
+    "category": "Conversaciones del área",
+    "title": "Clasificar area",
+    "question": "¿Esto lo debe revisar Gerencia?",
+    "keywords": [
+      "gerencia",
+      "área",
+      "clasificar",
+      "responsable"
+    ],
+    "answer": "Si el caso está relacionado con decisiones, aprobaciones, escalamiento final y prioridades estratégicas, puede clasificarse para el área de Gerencia. Si el impacto cruza varias áreas, conviene radicarlo con área principal y mencionar las áreas relacionadas.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0037",
+    "intent": "crear_ticket_area",
+    "category": "Conversaciones del área",
+    "title": "Crear ticket area",
+    "question": "Necesito radicar una solicitud para Gerencia",
+    "keywords": [
+      "gerencia",
+      "radicar",
+      "solicitud",
+      "prioridad"
+    ],
+    "answer": "Para radicarla en Gerencia, registra una descripción clara, selecciona el área correspondiente, define prioridad, adjunta evidencia si aplica y confirma el solicitante. Si el caso afecta calidad, incluye el impacto o riesgo observado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0038",
+    "intent": "registrar_no_conformidad",
+    "category": "Proceso de calidad",
+    "title": "Registrar no conformidad",
+    "question": "¿Cómo manejo un caso de no conformidad?",
+    "keywords": [
+      "no conformidad",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de no conformidad debe describirse el incumplimiento, evidencia, proceso afectado, impacto y responsable inicial. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0039",
+    "intent": "registrar_no_conformidad",
+    "category": "Proceso de calidad",
+    "title": "Registrar no conformidad",
+    "question": "Tengo un problema de no conformidad",
+    "keywords": [
+      "no conformidad",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0040",
+    "intent": "registrar_no_conformidad",
+    "category": "Proceso de calidad",
+    "title": "Registrar no conformidad",
+    "question": "¿Qué evidencia sirve para no conformidad?",
+    "keywords": [
+      "no conformidad",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0041",
+    "intent": "registrar_no_conformidad",
+    "category": "Proceso de calidad",
+    "title": "Registrar no conformidad",
+    "question": "Redáctame una respuesta para un caso de no conformidad",
+    "keywords": [
+      "no conformidad",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con no conformidad. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0042",
+    "intent": "accion_correctiva",
+    "category": "Proceso de calidad",
+    "title": "Accion correctiva",
+    "question": "¿Cómo manejo un caso de acción correctiva?",
+    "keywords": [
+      "acción correctiva",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de acción correctiva debe orientarse a eliminar la causa raíz y no solo a corregir el efecto inmediato. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0043",
+    "intent": "accion_correctiva",
+    "category": "Proceso de calidad",
+    "title": "Accion correctiva",
+    "question": "Tengo un problema de acción correctiva",
+    "keywords": [
+      "acción correctiva",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0044",
+    "intent": "accion_correctiva",
+    "category": "Proceso de calidad",
+    "title": "Accion correctiva",
+    "question": "¿Qué evidencia sirve para acción correctiva?",
+    "keywords": [
+      "acción correctiva",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0045",
+    "intent": "accion_correctiva",
+    "category": "Proceso de calidad",
+    "title": "Accion correctiva",
+    "question": "Redáctame una respuesta para un caso de acción correctiva",
+    "keywords": [
+      "acción correctiva",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con acción correctiva. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0046",
+    "intent": "accion_preventiva",
+    "category": "Proceso de calidad",
+    "title": "Accion preventiva",
+    "question": "¿Cómo manejo un caso de acción preventiva?",
+    "keywords": [
+      "acción preventiva",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de acción preventiva busca reducir la probabilidad de ocurrencia antes de que el problema se materialice. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0047",
+    "intent": "accion_preventiva",
+    "category": "Proceso de calidad",
+    "title": "Accion preventiva",
+    "question": "Tengo un problema de acción preventiva",
+    "keywords": [
+      "acción preventiva",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0048",
+    "intent": "accion_preventiva",
+    "category": "Proceso de calidad",
+    "title": "Accion preventiva",
+    "question": "¿Qué evidencia sirve para acción preventiva?",
+    "keywords": [
+      "acción preventiva",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0049",
+    "intent": "accion_preventiva",
+    "category": "Proceso de calidad",
+    "title": "Accion preventiva",
+    "question": "Redáctame una respuesta para un caso de acción preventiva",
+    "keywords": [
+      "acción preventiva",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con acción preventiva. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0050",
+    "intent": "mejora_continua",
+    "category": "Proceso de calidad",
+    "title": "Mejora continua",
+    "question": "¿Cómo manejo un caso de mejora continua?",
+    "keywords": [
+      "mejora continua",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de mejora continua requiere identificar oportunidad, beneficio esperado, responsable y seguimiento. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0051",
+    "intent": "mejora_continua",
+    "category": "Proceso de calidad",
+    "title": "Mejora continua",
+    "question": "Tengo un problema de mejora continua",
+    "keywords": [
+      "mejora continua",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0052",
+    "intent": "mejora_continua",
+    "category": "Proceso de calidad",
+    "title": "Mejora continua",
+    "question": "¿Qué evidencia sirve para mejora continua?",
+    "keywords": [
+      "mejora continua",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0053",
+    "intent": "mejora_continua",
+    "category": "Proceso de calidad",
+    "title": "Mejora continua",
+    "question": "Redáctame una respuesta para un caso de mejora continua",
+    "keywords": [
+      "mejora continua",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con mejora continua. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0054",
+    "intent": "validar_evidencia",
+    "category": "Proceso de calidad",
+    "title": "Validar evidencia",
+    "question": "¿Cómo manejo un caso de evidencia?",
+    "keywords": [
+      "evidencia",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de evidencia debe ser clara, verificable, fechada y relacionada con el caso. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0055",
+    "intent": "validar_evidencia",
+    "category": "Proceso de calidad",
+    "title": "Validar evidencia",
+    "question": "Tengo un problema de evidencia",
+    "keywords": [
+      "evidencia",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0056",
+    "intent": "validar_evidencia",
+    "category": "Proceso de calidad",
+    "title": "Validar evidencia",
+    "question": "¿Qué evidencia sirve para evidencia?",
+    "keywords": [
+      "evidencia",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0057",
+    "intent": "validar_evidencia",
+    "category": "Proceso de calidad",
+    "title": "Validar evidencia",
+    "question": "Redáctame una respuesta para un caso de evidencia",
+    "keywords": [
+      "evidencia",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con evidencia. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0058",
+    "intent": "analisis_causa_raiz",
+    "category": "Proceso de calidad",
+    "title": "Analisis causa raiz",
+    "question": "¿Cómo manejo un caso de causa raíz?",
+    "keywords": [
+      "causa raíz",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de causa raíz puede analizarse con 5 porqués, Ishikawa o revisión de factores del proceso. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0059",
+    "intent": "analisis_causa_raiz",
+    "category": "Proceso de calidad",
+    "title": "Analisis causa raiz",
+    "question": "Tengo un problema de causa raíz",
+    "keywords": [
+      "causa raíz",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0060",
+    "intent": "analisis_causa_raiz",
+    "category": "Proceso de calidad",
+    "title": "Analisis causa raiz",
+    "question": "¿Qué evidencia sirve para causa raíz?",
+    "keywords": [
+      "causa raíz",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0061",
+    "intent": "analisis_causa_raiz",
+    "category": "Proceso de calidad",
+    "title": "Analisis causa raiz",
+    "question": "Redáctame una respuesta para un caso de causa raíz",
+    "keywords": [
+      "causa raíz",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con causa raíz. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0062",
+    "intent": "trazabilidad",
+    "category": "Proceso de calidad",
+    "title": "Trazabilidad",
+    "question": "¿Cómo manejo un caso de trazabilidad?",
+    "keywords": [
+      "trazabilidad",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de trazabilidad debe quedar registro de fecha, usuario, acción, comentario y soporte. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0063",
+    "intent": "trazabilidad",
+    "category": "Proceso de calidad",
+    "title": "Trazabilidad",
+    "question": "Tengo un problema de trazabilidad",
+    "keywords": [
+      "trazabilidad",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0064",
+    "intent": "trazabilidad",
+    "category": "Proceso de calidad",
+    "title": "Trazabilidad",
+    "question": "¿Qué evidencia sirve para trazabilidad?",
+    "keywords": [
+      "trazabilidad",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0065",
+    "intent": "trazabilidad",
+    "category": "Proceso de calidad",
+    "title": "Trazabilidad",
+    "question": "Redáctame una respuesta para un caso de trazabilidad",
+    "keywords": [
+      "trazabilidad",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con trazabilidad. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0066",
+    "intent": "auditoria",
+    "category": "Proceso de calidad",
+    "title": "Auditoria",
+    "question": "¿Cómo manejo un caso de auditoría?",
+    "keywords": [
+      "auditoría",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de auditoría requiere hallazgo, criterio, evidencia, responsable y plan de acción. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0067",
+    "intent": "auditoria",
+    "category": "Proceso de calidad",
+    "title": "Auditoria",
+    "question": "Tengo un problema de auditoría",
+    "keywords": [
+      "auditoría",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0068",
+    "intent": "auditoria",
+    "category": "Proceso de calidad",
+    "title": "Auditoria",
+    "question": "¿Qué evidencia sirve para auditoría?",
+    "keywords": [
+      "auditoría",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0069",
+    "intent": "auditoria",
+    "category": "Proceso de calidad",
+    "title": "Auditoria",
+    "question": "Redáctame una respuesta para un caso de auditoría",
+    "keywords": [
+      "auditoría",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con auditoría. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0070",
+    "intent": "indicador_calidad",
+    "category": "Proceso de calidad",
+    "title": "Indicador calidad",
+    "question": "¿Cómo manejo un caso de indicador?",
+    "keywords": [
+      "indicador",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de indicador debe tener fórmula, periodicidad, fuente de datos, meta y responsable. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0071",
+    "intent": "indicador_calidad",
+    "category": "Proceso de calidad",
+    "title": "Indicador calidad",
+    "question": "Tengo un problema de indicador",
+    "keywords": [
+      "indicador",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0072",
+    "intent": "indicador_calidad",
+    "category": "Proceso de calidad",
+    "title": "Indicador calidad",
+    "question": "¿Qué evidencia sirve para indicador?",
+    "keywords": [
+      "indicador",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0073",
+    "intent": "indicador_calidad",
+    "category": "Proceso de calidad",
+    "title": "Indicador calidad",
+    "question": "Redáctame una respuesta para un caso de indicador",
+    "keywords": [
+      "indicador",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con indicador. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0074",
+    "intent": "gestion_riesgo",
+    "category": "Proceso de calidad",
+    "title": "Gestion riesgo",
+    "question": "¿Cómo manejo un caso de riesgo?",
+    "keywords": [
+      "riesgo",
+      "calidad",
+      "proceso",
+      "evidencia"
+    ],
+    "answer": "Un caso de riesgo debe evaluar probabilidad, impacto, control existente y acción de tratamiento. En la Mesa de Ayuda debe quedar documentado como ticket, con comentarios de seguimiento y evidencia asociada para mantener la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0075",
+    "intent": "gestion_riesgo",
+    "category": "Proceso de calidad",
+    "title": "Gestion riesgo",
+    "question": "Tengo un problema de riesgo",
+    "keywords": [
+      "riesgo",
+      "problema",
+      "registrar",
+      "impacto"
+    ],
+    "answer": "Regístralo con una descripción concreta, indica proceso afectado, adjunta soporte y define el impacto. Si requiere análisis, deja el ticket en revisión hasta completar la validación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0076",
+    "intent": "gestion_riesgo",
+    "category": "Proceso de calidad",
+    "title": "Gestion riesgo",
+    "question": "¿Qué evidencia sirve para riesgo?",
+    "keywords": [
+      "riesgo",
+      "evidencia",
+      "soporte",
+      "verificable"
+    ],
+    "answer": "Sirve cualquier soporte verificable: documento, captura, acta, correo, foto, formato diligenciado, historial del sistema o comentario técnico. Lo importante es que pruebe el hecho reportado y permita seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0077",
+    "intent": "gestion_riesgo",
+    "category": "Proceso de calidad",
+    "title": "Gestion riesgo",
+    "question": "Redáctame una respuesta para un caso de riesgo",
+    "keywords": [
+      "riesgo",
+      "redactar",
+      "respuesta",
+      "caso"
+    ],
+    "answer": "Puedes responder así: Se registra el caso relacionado con riesgo. Se revisará la evidencia aportada, se validará el impacto en el proceso y se definirá la acción correspondiente con responsable y fecha de seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0078",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo asunto?",
+    "keywords": [
+      "asunto",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "El asunto debe resumir el caso en pocas palabras, por ejemplo: Retraso en respuesta de calidad o Solicitud de ajuste documental.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0079",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo descripción?",
+    "keywords": [
+      "descripción",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "La descripción debe explicar qué ocurrió, dónde ocurrió, desde cuándo, qué impacto tiene y qué resultado se espera.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0080",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo área?",
+    "keywords": [
+      "área",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "El área debe ser la principal responsable del análisis o atención del caso.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0081",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo prioridad?",
+    "keywords": [
+      "prioridad",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "La prioridad debe definirse según impacto, urgencia, vencimiento, riesgo y afectación del servicio.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0082",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo evidencia?",
+    "keywords": [
+      "evidencia",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "La evidencia puede ser un archivo, foto, documento, captura o comentario verificable asociado al hecho.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0083",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo responsable?",
+    "keywords": [
+      "responsable",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "El responsable se asigna según área, flujo de trabajo, carga y permisos configurados.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0084",
+    "intent": "explicar_campo_radicacion",
+    "category": "Radicación",
+    "title": "Explicar campo radicacion",
+    "question": "¿Qué pongo en el campo fecha límite?",
+    "keywords": [
+      "fecha límite",
+      "campo",
+      "radicación",
+      "solicitud"
+    ],
+    "answer": "La fecha límite debe responder a la urgencia y a los acuerdos de servicio definidos.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0085",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "Necesito crear un ticket",
+    "keywords": [
+      "necesito",
+      "crear",
+      "debes",
+      "registrar",
+      "asunto",
+      "descripción",
+      "prioridad",
+      "solicitante",
+      "evidencia",
+      "aplica"
+    ],
+    "answer": "Para crear un ticket debes registrar asunto, descripción, área, prioridad, solicitante y evidencia si aplica. Después confirma la radicación para que el sistema genere trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0086",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "No tengo evidencia, ¿puedo radicar?",
+    "keywords": [
+      "evidencia",
+      "radicar",
+      "puedes",
+      "requiere",
+      "revisión",
+      "pero",
+      "debes",
+      "indicar",
+      "está",
+      "pendiente"
+    ],
+    "answer": "Sí puedes radicar si el caso requiere revisión, pero debes indicar que la evidencia está pendiente o explicar por qué no existe. El cierre no debería realizarse sin soporte suficiente cuando el proceso lo exige.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0087",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "Me equivoqué al radicar",
+    "keywords": [
+      "equivoqué",
+      "radicar",
+      "borres",
+      "trazabilidad",
+      "agrega",
+      "comentario",
+      "aclaratorio",
+      "solicita",
+      "corrección",
+      "responsable"
+    ],
+    "answer": "No borres la trazabilidad. Agrega un comentario aclaratorio o solicita corrección al responsable autorizado. Si el error cambia el sentido del caso, puede requerirse reclasificación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0088",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "Quiero radicar algo anónimo",
+    "keywords": [
+      "quiero",
+      "radicar",
+      "algo",
+      "anónimo",
+      "mesa",
+      "ayuda",
+      "conservar",
+      "trazabilidad",
+      "permite",
+      "reporte"
+    ],
+    "answer": "La Mesa de Ayuda debe conservar trazabilidad. Si se permite reporte reservado, debe configurarse como política del sistema; de lo contrario, el solicitante debe quedar identificado.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0089",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "El caso afecta a varias áreas",
+    "keywords": [
+      "afecta",
+      "varias",
+      "áreas",
+      "radícalo",
+      "principal",
+      "responsable",
+      "menciona",
+      "relacionadas",
+      "descripción",
+      "flujo"
+    ],
+    "answer": "Radícalo con el área principal responsable y menciona las áreas relacionadas en la descripción. Si el flujo lo permite, se pueden agregar responsables de apoyo.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0090",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "No sé qué prioridad usar",
+    "keywords": [
+      "prioridad",
+      "usar",
+      "alta",
+      "riesgo",
+      "crítico",
+      "vencimiento",
+      "cercano",
+      "afectación",
+      "varios",
+      "media"
+    ],
+    "answer": "Usa prioridad alta si hay riesgo crítico, vencimiento cercano o afectación a varios usuarios. Usa media si requiere atención programada y baja si es mejora o consulta sin urgencia.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0091",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "¿Puedo adjuntar varios archivos?",
+    "keywords": [
+      "adjuntar",
+      "varios",
+      "archivos",
+      "sistema",
+      "permita",
+      "recomendable",
+      "nombrar",
+      "forma",
+      "clara",
+      "facilitar"
+    ],
+    "answer": "Sí, cuando el sistema lo permita. Es recomendable nombrar los archivos de forma clara para facilitar revisión y auditoría.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0092",
+    "intent": "radicar_solicitud",
+    "category": "Radicación",
+    "title": "Radicar solicitud",
+    "question": "¿Qué pasa después de radicar?",
+    "keywords": [
+      "pasa",
+      "después",
+      "radicar",
+      "queda",
+      "registrado",
+      "asigna",
+      "responsable",
+      "genera",
+      "seguimiento",
+      "consultar"
+    ],
+    "answer": "El ticket queda registrado, se asigna responsable o área, se genera seguimiento y el usuario puede consultar el estado según sus permisos.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0093",
+    "intent": "consultar_estado",
+    "category": "Seguimiento y cierre",
+    "title": "Consultar estado",
+    "question": "¿En qué estado está mi ticket?",
+    "keywords": [
+      "estado",
+      "está",
+      "consultar",
+      "necesito",
+      "número",
+      "identificar",
+      "sistema",
+      "encuentra",
+      "registro",
+      "indicaré"
+    ],
+    "answer": "Para consultar el estado necesito el número de ticket o identificar la solicitud. Si el sistema encuentra el registro, te indicaré estado actual, responsable y última actualización permitida.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0094",
+    "intent": "consultar_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Consultar ticket",
+    "question": "Busca el ticket DT-0001",
+    "keywords": [
+      "busca",
+      "0001",
+      "buscar",
+      "base",
+      "datos",
+      "existe",
+      "permiso",
+      "verlo",
+      "mostrar",
+      "estado"
+    ],
+    "answer": "Voy a buscar el ticket en la base de datos. Si existe y tienes permiso para verlo, puedo mostrar estado, responsable, prioridad, área y último seguimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0095",
+    "intent": "agregar_comentario",
+    "category": "Seguimiento y cierre",
+    "title": "Agregar comentario",
+    "question": "Quiero agregar un comentario",
+    "keywords": [
+      "quiero",
+      "agregar",
+      "comentario",
+      "puedes",
+      "agregarlo",
+      "seguimiento",
+      "claro",
+      "relacionado",
+      "conservar",
+      "trazabilidad"
+    ],
+    "answer": "Puedes agregarlo como seguimiento del ticket. El comentario debe ser claro, relacionado con el caso y conservar trazabilidad. No reemplaza la evidencia cuando esta es obligatoria.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0096",
+    "intent": "agregar_evidencia",
+    "category": "Seguimiento y cierre",
+    "title": "Agregar evidencia",
+    "question": "Quiero subir una evidencia",
+    "keywords": [
+      "quiero",
+      "subir",
+      "evidencia",
+      "adjunta",
+      "soporte",
+      "describe",
+      "demuestra",
+      "estar",
+      "relacionada",
+      "verificable"
+    ],
+    "answer": "Adjunta el soporte al ticket y describe qué demuestra. La evidencia debe estar relacionada con la solicitud y ser verificable para auditoría.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0097",
+    "intent": "cerrar_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Cerrar ticket",
+    "question": "¿Cómo cierro un ticket?",
+    "keywords": [
+      "cómo",
+      "cierro",
+      "antes",
+      "cerrar",
+      "valida",
+      "exista",
+      "respuesta",
+      "final",
+      "evidencia",
+      "suficiente"
+    ],
+    "answer": "Antes de cerrar, valida que exista respuesta final, evidencia suficiente, responsable definido y que el solicitante haya sido informado si aplica. El cierre debe quedar registrado con comentario final.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0098",
+    "intent": "reabrir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Reabrir ticket",
+    "question": "Necesito reabrir un ticket cerrado",
+    "keywords": [
+      "necesito",
+      "reabrir",
+      "cerrado",
+      "reapertura",
+      "justificarse",
+      "indica",
+      "cierre",
+      "resolvió",
+      "evidencia",
+      "nueva"
+    ],
+    "answer": "La reapertura debe justificarse. Indica por qué el cierre no resolvió el caso, qué evidencia nueva existe o qué actividad quedó pendiente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0099",
+    "intent": "escalar_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Escalar ticket",
+    "question": "Este ticket no avanza",
+    "keywords": [
+      "avanza",
+      "está",
+      "detenido",
+      "revisa",
+      "responsable",
+      "fecha",
+      "última",
+      "gestión",
+      "evidencia",
+      "causa"
+    ],
+    "answer": "Si el ticket está detenido, revisa responsable, fecha de última gestión, evidencia y causa de espera. Si supera el tiempo permitido, puede escalarse al jefe general con justificación.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0100",
+    "intent": "ampliar_espera",
+    "category": "Seguimiento y cierre",
+    "title": "Ampliar espera",
+    "question": "Necesito más tiempo para resolver",
+    "keywords": [
+      "necesito",
+      "tiempo",
+      "resolver",
+      "puedes",
+      "solicitar",
+      "ampliación",
+      "espera",
+      "causa",
+      "clara",
+      "nueva"
+    ],
+    "answer": "Puedes solicitar ampliación de espera con una causa clara, nueva fecha estimada y comentario de seguimiento. No debe usarse para ocultar inactividad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0101",
+    "intent": "vencimiento",
+    "category": "Seguimiento y cierre",
+    "title": "Vencimiento",
+    "question": "¿Qué significa ticket vencido?",
+    "keywords": [
+      "significa",
+      "vencido",
+      "aquel",
+      "superó",
+      "tiempo",
+      "definido",
+      "cierre",
+      "acción",
+      "esperada",
+      "revisarse"
+    ],
+    "answer": "Un ticket vencido es aquel que superó el tiempo definido sin cierre o sin la acción esperada. Debe revisarse prioridad, responsable y causa del incumplimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0102",
+    "intent": "satisfaccion",
+    "category": "Seguimiento y cierre",
+    "title": "Satisfaccion",
+    "question": "El usuario no quedó satisfecho",
+    "keywords": [
+      "quedó",
+      "satisfecho",
+      "registra",
+      "comentario",
+      "revisa",
+      "cierre",
+      "adecuado",
+      "evalúa",
+      "reapertura",
+      "acción"
+    ],
+    "answer": "Registra el comentario del usuario, revisa si el cierre fue adecuado y evalúa reapertura, acción correctiva o mejora si el caso revela falla del proceso.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0103",
+    "intent": "consultar_estado",
+    "category": "Seguimiento y cierre",
+    "title": "Consultar estado",
+    "question": "Estado de mi solicitud",
+    "keywords": [
+      "estado",
+      "consultar",
+      "necesito",
+      "identificar",
+      "encuentro",
+      "permiso",
+      "mostraré",
+      "responsable",
+      "prioridad",
+      "último"
+    ],
+    "answer": "Para consultar eso necesito identificar el ticket. Si lo encuentro y tienes permiso, te mostraré estado, responsable, prioridad y último movimiento.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0104",
+    "intent": "cerrar_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Cerrar ticket",
+    "question": "Finalizar el caso",
+    "keywords": [
+      "finalizar",
+      "finalizarlo",
+      "verifica",
+      "evidencia",
+      "respuesta",
+      "final",
+      "validación",
+      "solicitante",
+      "aplica",
+      "comentario"
+    ],
+    "answer": "Para finalizarlo, verifica evidencia, respuesta final, validación del solicitante si aplica y comentario de cierre. El sistema debe conservar la trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0105",
+    "intent": "escalar_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Escalar ticket",
+    "question": "Pasarlo al jefe",
+    "keywords": [
+      "pasarlo",
+      "jefe",
+      "puedes",
+      "escalarlo",
+      "bloqueo",
+      "vencimiento",
+      "decisión",
+      "pendiente",
+      "registra",
+      "justificación"
+    ],
+    "answer": "Puedes escalarlo si hay bloqueo, vencimiento o decisión pendiente. Registra la justificación y conserva los comentarios previos del responsable.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0106",
+    "intent": "agregar_evidencia",
+    "category": "Seguimiento y cierre",
+    "title": "Agregar evidencia",
+    "question": "Subir soporte",
+    "keywords": [
+      "subir",
+      "soporte",
+      "adjunta",
+      "explica",
+      "prueba",
+      "evidencia",
+      "quedar",
+      "vinculada",
+      "revisión",
+      "posterior"
+    ],
+    "answer": "Adjunta el soporte al ticket y explica qué prueba. La evidencia debe quedar vinculada al caso para revisión posterior.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0107",
+    "intent": "reabrir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Reabrir ticket",
+    "question": "Volver a abrir",
+    "keywords": [
+      "volver",
+      "abrir",
+      "reapertura",
+      "requiere",
+      "justificación",
+      "concreta",
+      "posible",
+      "evidencia",
+      "nueva",
+      "explicación"
+    ],
+    "answer": "La reapertura requiere una justificación concreta y, de ser posible, evidencia nueva o explicación de lo que quedó sin resolver.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0108",
+    "intent": "consultar_tickets_abiertos",
+    "category": "Reportes e indicadores",
+    "title": "Consultar tickets abiertos",
+    "question": "¿Cómo reviso tickets abiertos?",
+    "keywords": [
+      "tickets abiertos",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de tickets abiertos muestra cantidad de casos activos que aún requieren gestión. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0109",
+    "intent": "consultar_tickets_abiertos",
+    "category": "Reportes e indicadores",
+    "title": "Consultar tickets abiertos",
+    "question": "Dame un reporte de tickets abiertos",
+    "keywords": [
+      "tickets abiertos",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de tickets abiertos, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0110",
+    "intent": "consultar_tickets_vencidos",
+    "category": "Reportes e indicadores",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Cómo reviso tickets vencidos?",
+    "keywords": [
+      "tickets vencidos",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de tickets vencidos muestra casos que superaron el tiempo definido de atención. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0111",
+    "intent": "consultar_tickets_vencidos",
+    "category": "Reportes e indicadores",
+    "title": "Consultar tickets vencidos",
+    "question": "Dame un reporte de tickets vencidos",
+    "keywords": [
+      "tickets vencidos",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de tickets vencidos, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0112",
+    "intent": "kpi_tiempo_cierre",
+    "category": "Reportes e indicadores",
+    "title": "Kpi tiempo cierre",
+    "question": "¿Cómo reviso tiempo promedio de cierre?",
+    "keywords": [
+      "tiempo promedio de cierre",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de tiempo promedio de cierre muestra promedio entre radicación y cierre de tickets. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0113",
+    "intent": "kpi_tiempo_cierre",
+    "category": "Reportes e indicadores",
+    "title": "Kpi tiempo cierre",
+    "question": "Dame un reporte de tiempo promedio de cierre",
+    "keywords": [
+      "tiempo promedio de cierre",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de tiempo promedio de cierre, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0114",
+    "intent": "kpi_area",
+    "category": "Reportes e indicadores",
+    "title": "Kpi area",
+    "question": "¿Cómo reviso casos por área?",
+    "keywords": [
+      "casos por área",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de casos por área muestra distribución de solicitudes según área responsable. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0115",
+    "intent": "kpi_area",
+    "category": "Reportes e indicadores",
+    "title": "Kpi area",
+    "question": "Dame un reporte de casos por área",
+    "keywords": [
+      "casos por área",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de casos por área, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0116",
+    "intent": "kpi_reincidencia",
+    "category": "Reportes e indicadores",
+    "title": "Kpi reincidencia",
+    "question": "¿Cómo reviso reincidencias?",
+    "keywords": [
+      "reincidencias",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de reincidencias muestra temas o problemas repetidos en un periodo. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0117",
+    "intent": "kpi_reincidencia",
+    "category": "Reportes e indicadores",
+    "title": "Kpi reincidencia",
+    "question": "Dame un reporte de reincidencias",
+    "keywords": [
+      "reincidencias",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de reincidencias, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0118",
+    "intent": "kpi_satisfaccion",
+    "category": "Reportes e indicadores",
+    "title": "Kpi satisfaccion",
+    "question": "¿Cómo reviso satisfacción?",
+    "keywords": [
+      "satisfacción",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de satisfacción muestra percepción del solicitante después del cierre. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0119",
+    "intent": "kpi_satisfaccion",
+    "category": "Reportes e indicadores",
+    "title": "Kpi satisfaccion",
+    "question": "Dame un reporte de satisfacción",
+    "keywords": [
+      "satisfacción",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de satisfacción, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0120",
+    "intent": "kpi_mejoras",
+    "category": "Reportes e indicadores",
+    "title": "Kpi mejoras",
+    "question": "¿Cómo reviso mejoras generadas?",
+    "keywords": [
+      "mejoras generadas",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de mejoras generadas muestra acciones de mejora derivadas de tickets. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0121",
+    "intent": "kpi_mejoras",
+    "category": "Reportes e indicadores",
+    "title": "Kpi mejoras",
+    "question": "Dame un reporte de mejoras generadas",
+    "keywords": [
+      "mejoras generadas",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de mejoras generadas, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0122",
+    "intent": "kpi_responsable",
+    "category": "Reportes e indicadores",
+    "title": "Kpi responsable",
+    "question": "¿Cómo reviso carga por responsable?",
+    "keywords": [
+      "carga por responsable",
+      "indicador",
+      "kpi",
+      "reporte"
+    ],
+    "answer": "El indicador de carga por responsable muestra cantidad de tickets asignados a cada usuario. Puedo consultarlo si el sistema tiene los datos y filtros requeridos, como rango de fechas, área o responsable.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0123",
+    "intent": "kpi_responsable",
+    "category": "Reportes e indicadores",
+    "title": "Kpi responsable",
+    "question": "Dame un reporte de carga por responsable",
+    "keywords": [
+      "carga por responsable",
+      "reporte",
+      "periodo",
+      "área"
+    ],
+    "answer": "Para generar el reporte de carga por responsable, necesito definir periodo, área y nivel de detalle. El resultado debe mostrar dato principal, tendencia y casos que requieren acción.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0124",
+    "intent": "aprendizaje_pendiente",
+    "category": "Aprendizaje controlado",
+    "title": "Aprendizaje pendiente",
+    "question": "Aprende que los tickets sin evidencia no deben cerrarse",
+    "keywords": [
+      "aprende",
+      "evidencia",
+      "cerrarse",
+      "registrado",
+      "aprendizaje",
+      "pendiente",
+      "aprobación",
+      "usaré",
+      "regla",
+      "oficial"
+    ],
+    "answer": "He registrado ese aprendizaje como pendiente de aprobación. No lo usaré como regla oficial hasta que el Super Admin lo revise y lo apruebe.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0125",
+    "intent": "aprendizaje_pendiente",
+    "category": "Aprendizaje controlado",
+    "title": "Aprendizaje pendiente",
+    "question": "Recuerda que Calidad revisa las solicitudes de auditoría",
+    "keywords": [
+      "recuerda",
+      "revisa",
+      "auditoría",
+      "guardarlo",
+      "aprendizaje",
+      "pendiente",
+      "convertirlo",
+      "conocimiento",
+      "oficial",
+      "revisarse"
+    ],
+    "answer": "Puedo guardarlo como aprendizaje pendiente. Para convertirlo en conocimiento oficial debe revisarse y aprobarse en el panel de aprendizaje.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0126",
+    "intent": "feedback_respuesta",
+    "category": "Aprendizaje controlado",
+    "title": "Feedback respuesta",
+    "question": "Esto no era así, corrige esa respuesta",
+    "keywords": [
+      "corrige",
+      "respuesta",
+      "gracias",
+      "corrección",
+      "registraré",
+      "comentario",
+      "revisión",
+      "regla",
+      "oficial",
+      "diferente"
+    ],
+    "answer": "Gracias por la corrección. Registraré el comentario para revisión. Si hay una regla oficial diferente, el Super Admin puede actualizar la base de conocimiento.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0127",
+    "intent": "feedback_respuesta",
+    "category": "Aprendizaje controlado",
+    "title": "Feedback respuesta",
+    "question": "No respondas eso así",
+    "keywords": [
+      "respondas",
+      "entendido",
+      "registraré",
+      "observación",
+      "mejorar",
+      "respuesta",
+      "deseas",
+      "proponer",
+      "versión",
+      "corregida"
+    ],
+    "answer": "Entendido. Registraré la observación para mejorar la respuesta. Si deseas, puedo proponer una versión corregida para aprobación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0128",
+    "intent": "conocimiento_obsoleto",
+    "category": "Aprendizaje controlado",
+    "title": "Conocimiento obsoleto",
+    "question": "Esa información ya no aplica",
+    "keywords": [
+      "información",
+      "aplica",
+      "marcaré",
+      "observación",
+      "posible",
+      "conocimiento",
+      "obsoleto",
+      "revisarse",
+      "antes",
+      "desactivar"
+    ],
+    "answer": "Marcaré la observación como posible conocimiento obsoleto. Debe revisarse antes de desactivar o reemplazar la respuesta oficial.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0129",
+    "intent": "aprendizaje_pendiente",
+    "category": "Aprendizaje controlado",
+    "title": "Aprendizaje pendiente",
+    "question": "Guarda esta instrucción",
+    "keywords": [
+      "guarda",
+      "instrucción",
+      "guardaré",
+      "aprendizaje",
+      "pendiente",
+      "quedará",
+      "activa",
+      "hasta",
+      "validada",
+      "administrador"
+    ],
+    "answer": "La guardaré como aprendizaje pendiente. No quedará activa hasta que sea validada por el administrador correspondiente.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0130",
+    "intent": "resumir_aprendizaje",
+    "category": "Aprendizaje controlado",
+    "title": "Resumir aprendizaje",
+    "question": "¿Qué aprendiste de esta conversación?",
+    "keywords": [
+      "aprendiste",
+      "conversación",
+      "detecté",
+      "posibles",
+      "aprendizajes",
+      "criterios",
+      "atención",
+      "evidencia",
+      "seguimiento",
+      "enviarlos"
+    ],
+    "answer": "Detecté posibles aprendizajes sobre criterios de atención, evidencia y seguimiento. Puedo enviarlos a revisión para que se aprueben o descarten.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0131",
+    "intent": "manejo_inconformidad",
+    "category": "Conversaciones difíciles",
+    "title": "Manejo inconformidad",
+    "question": "Estoy molesto porque nadie responde",
+    "keywords": [
+      "molesto",
+      "nadie",
+      "responde",
+      "entiendo",
+      "molestia",
+      "revisemos",
+      "última",
+      "actualización",
+      "responsable",
+      "asignado"
+    ],
+    "answer": "Entiendo la molestia. Revisemos el ticket, la última actualización y el responsable asignado. Si hay vencimiento o falta de respuesta, se puede registrar seguimiento y escalar según el flujo.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0132",
+    "intent": "manejo_inconformidad",
+    "category": "Conversaciones difíciles",
+    "title": "Manejo inconformidad",
+    "question": "Eso no sirve para nada",
+    "keywords": [
+      "sirve",
+      "nada",
+      "lamento",
+      "respuesta",
+      "haya",
+      "sido",
+      "útil",
+      "corregirlo",
+      "necesito",
+      "identificar"
+    ],
+    "answer": "Lamento que la respuesta no haya sido útil. Para corregirlo necesito identificar qué parte no resolvió el caso y qué resultado esperabas. Lo dejaremos documentado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0133",
+    "intent": "escalamiento_humano",
+    "category": "Conversaciones difíciles",
+    "title": "Escalamiento humano",
+    "question": "Quiero hablar con el jefe ya",
+    "keywords": [
+      "quiero",
+      "hablar",
+      "jefe",
+      "orientar",
+      "escalamiento",
+      "hacerlo",
+      "correctamente",
+      "registrar",
+      "razón",
+      "asociado"
+    ],
+    "answer": "Puedo orientar el escalamiento. Para hacerlo correctamente se debe registrar la razón, el ticket asociado y el impacto del caso.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0134",
+    "intent": "queja_responsable",
+    "category": "Conversaciones difíciles",
+    "title": "Queja responsable",
+    "question": "El responsable nunca contesta",
+    "keywords": [
+      "responsable",
+      "nunca",
+      "contesta",
+      "registra",
+      "observación",
+      "revisa",
+      "fecha",
+      "último",
+      "movimiento",
+      "supera"
+    ],
+    "answer": "Registra la observación en el ticket y revisa la fecha del último movimiento. Si supera el tiempo acordado, puede escalarse con trazabilidad.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0135",
+    "intent": "trazabilidad_seguridad",
+    "category": "Conversaciones difíciles",
+    "title": "Trazabilidad seguridad",
+    "question": "Borremos este comentario",
+    "keywords": [
+      "borremos",
+      "comentario",
+      "recomiendo",
+      "borrar",
+      "trazabilidad",
+      "hubo",
+      "error",
+      "mejor",
+      "agregar",
+      "aclaratorio"
+    ],
+    "answer": "No recomiendo borrar trazabilidad. Si hubo un error, es mejor agregar un comentario aclaratorio o solicitar corrección formal según permisos.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0136",
+    "intent": "seguridad_datos",
+    "category": "Conversaciones difíciles",
+    "title": "Seguridad datos",
+    "question": "Dime el PIN de ese usuario",
+    "keywords": [
+      "dime",
+      "revelar",
+      "contraseñas",
+      "credenciales",
+      "problema",
+      "acceso",
+      "gestionarse",
+      "flujo",
+      "autorizado",
+      "administración"
+    ],
+    "answer": "No puedo revelar PIN, contraseñas ni credenciales. Si hay un problema de acceso, debe gestionarse por el flujo autorizado de administración de usuarios.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0137",
+    "intent": "seguridad_roles",
+    "category": "Conversaciones difíciles",
+    "title": "Seguridad roles",
+    "question": "Cambia el rol de ese usuario",
+    "keywords": [
+      "cambia",
+      "cambiar",
+      "roles",
+      "conversación",
+      "acción",
+      "corresponde",
+      "super",
+      "admin",
+      "administrador",
+      "autorizado"
+    ],
+    "answer": "No puedo cambiar roles desde la conversación. Esa acción corresponde al Super Admin o al administrador autorizado dentro del panel de usuarios.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0138",
+    "intent": "limite_acciones_masivas",
+    "category": "Conversaciones difíciles",
+    "title": "Limite acciones masivas",
+    "question": "Cierra todos los tickets de esa área",
+    "keywords": [
+      "cierra",
+      "todos",
+      "cerrar",
+      "masivamente",
+      "validación",
+      "ayudarte",
+      "listar",
+      "casos",
+      "revisar",
+      "cuáles"
+    ],
+    "answer": "No puedo cerrar tickets masivamente sin validación. Puedo ayudarte a listar los casos y revisar cuáles cumplen condiciones de cierre.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0139",
+    "intent": "ticket_area_vencido",
+    "category": "Conversaciones del área",
+    "title": "Ticket area vencido",
+    "question": "El área de Calidad tiene un ticket vencido",
+    "keywords": [
+      "calidad",
+      "ticket",
+      "área",
+      "tiene"
+    ],
+    "answer": "Debe revisarse la última gestión, responsable y causa del vencimiento. Si el área de Calidad requiere apoyo, registra el seguimiento y escala si aplica.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0140",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Calidad no tiene responsable asignado",
+    "keywords": [
+      "calidad",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Calidad no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0141",
+    "intent": "ticket_area_evidencia",
+    "category": "Conversaciones del área",
+    "title": "Ticket area evidencia",
+    "question": "El área de Calidad necesita adjuntar evidencia",
+    "keywords": [
+      "calidad",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "La evidencia debe demostrar el hecho reportado y quedar asociada al ticket del área de Calidad. Agrega una breve descripción del soporte.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0142",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Calidad necesita resumen semanal",
+    "keywords": [
+      "calidad",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Calidad debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0143",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Talento Humano no tiene responsable asignado",
+    "keywords": [
+      "talento humano",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Talento Humano no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0144",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Talento Humano necesita resumen semanal",
+    "keywords": [
+      "talento humano",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Talento Humano debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0145",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Sistemas no tiene responsable asignado",
+    "keywords": [
+      "sistemas",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Sistemas no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0146",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Sistemas necesita resumen semanal",
+    "keywords": [
+      "sistemas",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Sistemas debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0147",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Logística no tiene responsable asignado",
+    "keywords": [
+      "logística",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Logística no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0148",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Logística necesita resumen semanal",
+    "keywords": [
+      "logística",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Logística debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0149",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Administrativa no tiene responsable asignado",
+    "keywords": [
+      "administrativa",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Administrativa no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0150",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Administrativa necesita resumen semanal",
+    "keywords": [
+      "administrativa",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Administrativa debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0151",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Financiera no tiene responsable asignado",
+    "keywords": [
+      "financiera",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Financiera no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0152",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Financiera necesita resumen semanal",
+    "keywords": [
+      "financiera",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Financiera debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0153",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Comercial no tiene responsable asignado",
+    "keywords": [
+      "comercial",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Comercial no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0154",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Comercial necesita resumen semanal",
+    "keywords": [
+      "comercial",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Comercial debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0155",
+    "intent": "ticket_area_sin_responsable",
+    "category": "Conversaciones del área",
+    "title": "Ticket area sin responsable",
+    "question": "El área de Gerencia no tiene responsable asignado",
+    "keywords": [
+      "gerencia",
+      "ticket",
+      "área",
+      "no"
+    ],
+    "answer": "El caso no debería quedar sin responsable. Si el área de Gerencia no tiene usuario configurado, el Super Admin debe revisar la asignación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0156",
+    "intent": "ticket_area_resumen",
+    "category": "Conversaciones del área",
+    "title": "Ticket area resumen",
+    "question": "El área de Gerencia necesita resumen semanal",
+    "keywords": [
+      "gerencia",
+      "ticket",
+      "área",
+      "necesita"
+    ],
+    "answer": "El resumen semanal de Gerencia debe incluir tickets abiertos, cerrados, vencidos, reincidencias y acciones pendientes.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0157",
+    "intent": "etapa_proceso_calidad",
+    "category": "Proceso de calidad",
+    "title": "Etapa proceso calidad",
+    "question": "Explícame la etapa de identificación del problema",
+    "keywords": [
+      "identificación del problema",
+      "proceso",
+      "calidad",
+      "etapa"
+    ],
+    "answer": "Describe el hecho sin juicios personales, indicando fecha, área, evidencia y efecto observado. En la Mesa de Ayuda se debe registrar cada avance como comentario o actualización del ticket.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0158",
+    "intent": "etapa_proceso_calidad",
+    "category": "Proceso de calidad",
+    "title": "Etapa proceso calidad",
+    "question": "Explícame la etapa de análisis inicial",
+    "keywords": [
+      "análisis inicial",
+      "proceso",
+      "calidad",
+      "etapa"
+    ],
+    "answer": "Revisa si el caso tiene evidencia suficiente, área responsable, prioridad correcta y posible impacto en el proceso. En la Mesa de Ayuda se debe registrar cada avance como comentario o actualización del ticket.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0159",
+    "intent": "etapa_proceso_calidad",
+    "category": "Proceso de calidad",
+    "title": "Etapa proceso calidad",
+    "question": "Explícame la etapa de asignación de responsable",
+    "keywords": [
+      "asignación de responsable",
+      "proceso",
+      "calidad",
+      "etapa"
+    ],
+    "answer": "El responsable debe tener competencia y permiso para atender el caso; si no existe, se escala para configuración. En la Mesa de Ayuda se debe registrar cada avance como comentario o actualización del ticket.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0160",
+    "intent": "etapa_proceso_calidad",
+    "category": "Proceso de calidad",
+    "title": "Etapa proceso calidad",
+    "question": "Explícame la etapa de plan de acción",
+    "keywords": [
+      "plan de acción",
+      "proceso",
+      "calidad",
+      "etapa"
+    ],
+    "answer": "Debe incluir actividad, responsable, fecha, evidencia esperada y criterio de cierre. En la Mesa de Ayuda se debe registrar cada avance como comentario o actualización del ticket.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0161",
+    "intent": "etapa_proceso_calidad",
+    "category": "Proceso de calidad",
+    "title": "Etapa proceso calidad",
+    "question": "Explícame la etapa de verificación de eficacia",
+    "keywords": [
+      "verificación de eficacia",
+      "proceso",
+      "calidad",
+      "etapa"
+    ],
+    "answer": "No basta con ejecutar la acción; se debe validar si resolvió la causa o redujo la recurrencia. En la Mesa de Ayuda se debe registrar cada avance como comentario o actualización del ticket.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0162",
+    "intent": "etapa_proceso_calidad",
+    "category": "Proceso de calidad",
+    "title": "Etapa proceso calidad",
+    "question": "Explícame la etapa de cierre documental",
+    "keywords": [
+      "cierre documental",
+      "proceso",
+      "calidad",
+      "etapa"
+    ],
+    "answer": "El cierre debe dejar respuesta final, evidencia, conclusión y trazabilidad completa. En la Mesa de Ayuda se debe registrar cada avance como comentario o actualización del ticket.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0163",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar una queja interna",
+    "keywords": [
+      "radicar",
+      "queja",
+      "interna",
+      "registra",
+      "descripción",
+      "objetiva",
+      "involucrada",
+      "evidencia",
+      "existe",
+      "impacto"
+    ],
+    "answer": "Registra la queja con descripción objetiva, área involucrada, evidencia si existe, impacto y datos del solicitante. Evita lenguaje ofensivo y conserva trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0164",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar una oportunidad de mejora",
+    "keywords": [
+      "radicar",
+      "oportunidad",
+      "mejora",
+      "describe",
+      "propuesta",
+      "proceso",
+      "beneficiado",
+      "problema",
+      "resuelve",
+      "beneficio"
+    ],
+    "answer": "Describe la mejora propuesta, proceso beneficiado, problema que resuelve, beneficio esperado y responsable sugerido.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0165",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar una falla repetitiva",
+    "keywords": [
+      "radicar",
+      "falla",
+      "repetitiva",
+      "indica",
+      "cuántas",
+      "veces",
+      "ocurrido",
+      "cuándo",
+      "afectada",
+      "evidencia"
+    ],
+    "answer": "Indica cuántas veces ha ocurrido, desde cuándo, área afectada, evidencia disponible y efecto sobre usuarios o proceso.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0166",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar un requerimiento documental",
+    "keywords": [
+      "radicar",
+      "requerimiento",
+      "documental",
+      "incluye",
+      "nombre",
+      "documento",
+      "versión",
+      "existe",
+      "tipo",
+      "ajuste"
+    ],
+    "answer": "Incluye nombre del documento, versión si existe, tipo de ajuste solicitado, justificación y fecha esperada.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0167",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar soporte de sistemas",
+    "keywords": [
+      "radicar",
+      "soporte",
+      "sistemas",
+      "indica",
+      "afectado",
+      "equipo",
+      "plataforma",
+      "mensaje",
+      "error",
+      "hora"
+    ],
+    "answer": "Indica usuario afectado, equipo o plataforma, mensaje de error, hora de ocurrencia y captura si aplica.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0168",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar solicitud de capacitación",
+    "keywords": [
+      "radicar",
+      "capacitación",
+      "indica",
+      "tema",
+      "solicitante",
+      "cantidad",
+      "personas",
+      "objetivo",
+      "urgencia",
+      "evidencia"
+    ],
+    "answer": "Indica tema, área solicitante, cantidad de personas, objetivo, urgencia y evidencia de necesidad si existe.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0169",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar hallazgo de auditoría",
+    "keywords": [
+      "radicar",
+      "hallazgo",
+      "auditoría",
+      "registra",
+      "criterio",
+      "incumplido",
+      "evidencia",
+      "proceso",
+      "auditado",
+      "responsable"
+    ],
+    "answer": "Registra criterio incumplido, evidencia, proceso auditado, responsable y plazo de respuesta.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0170",
+    "intent": "radicar_solicitud_especifica",
+    "category": "Radicación",
+    "title": "Radicar solicitud especifica",
+    "question": "Necesito radicar solicitud de indicador",
+    "keywords": [
+      "radicar",
+      "indicador",
+      "define",
+      "nombre",
+      "objetivo",
+      "fórmula",
+      "fuente",
+      "datos",
+      "periodicidad",
+      "responsable"
+    ],
+    "answer": "Define nombre del indicador, objetivo, fórmula, fuente de datos, periodicidad y responsable.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0171",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene descripción muy corta",
+    "keywords": [
+      "descripción muy corta",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Pide ampliar contexto: qué ocurrió, cuándo, dónde, impacto y evidencia. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0172",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay descripción muy corta?",
+    "keywords": [
+      "descripción muy corta",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Pide ampliar contexto: qué ocurrió, cuándo, dónde, impacto y evidencia. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0173",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene sin área responsable",
+    "keywords": [
+      "sin área responsable",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Solicita definir área principal o clasificarla con ayuda del asistente. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0174",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay sin área responsable?",
+    "keywords": [
+      "sin área responsable",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Solicita definir área principal o clasificarla con ayuda del asistente. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0175",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene prioridad inflada",
+    "keywords": [
+      "prioridad inflada",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Pide justificar urgencia con impacto, vencimiento o riesgo real. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0176",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay prioridad inflada?",
+    "keywords": [
+      "prioridad inflada",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Pide justificar urgencia con impacto, vencimiento o riesgo real. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0177",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene sin evidencia",
+    "keywords": [
+      "sin evidencia",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Permite radicación, pero marca evidencia pendiente si el cierre exige soporte. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0178",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay sin evidencia?",
+    "keywords": [
+      "sin evidencia",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Permite radicación, pero marca evidencia pendiente si el cierre exige soporte. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0179",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene ticket duplicado",
+    "keywords": [
+      "ticket duplicado",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Sugiere buscar casos similares y relacionar el nuevo comentario al ticket existente. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0180",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay ticket duplicado?",
+    "keywords": [
+      "ticket duplicado",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Sugiere buscar casos similares y relacionar el nuevo comentario al ticket existente. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0181",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene cierre sin respuesta final",
+    "keywords": [
+      "cierre sin respuesta final",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Indica que debe agregarse respuesta final antes del cierre. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0182",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay cierre sin respuesta final?",
+    "keywords": [
+      "cierre sin respuesta final",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Indica que debe agregarse respuesta final antes del cierre. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0183",
+    "intent": "detectar_error_radicacion",
+    "category": "Radicación",
+    "title": "Detectar error radicacion",
+    "question": "El ticket tiene comentarios desordenados",
+    "keywords": [
+      "comentarios desordenados",
+      "error",
+      "radicación",
+      "ticket"
+    ],
+    "answer": "Sugiere resumir estado actual y próximo paso en un comentario claro. Esto ayuda a mantener calidad de datos y trazabilidad.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0184",
+    "intent": "corregir_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Corregir ticket",
+    "question": "¿Qué hago si hay comentarios desordenados?",
+    "keywords": [
+      "comentarios desordenados",
+      "corregir",
+      "seguimiento"
+    ],
+    "answer": "Sugiere resumir estado actual y próximo paso en un comentario claro. No se debe borrar información; se debe aclarar formalmente.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0185",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado abierto?",
+    "keywords": [
+      "abierto",
+      "estado",
+      "ticket"
+    ],
+    "answer": "El caso fue creado y aún requiere gestión. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0186",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "Mi solicitud aparece como abierto",
+    "keywords": [
+      "abierto",
+      "solicitud",
+      "estado"
+    ],
+    "answer": "El caso fue creado y aún requiere gestión. Revisa el último comentario para conocer el siguiente paso.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0187",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado asignado?",
+    "keywords": [
+      "asignado",
+      "estado",
+      "ticket"
+    ],
+    "answer": "Ya existe un responsable definido para atenderlo. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0188",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "Mi solicitud aparece como asignado",
+    "keywords": [
+      "asignado",
+      "solicitud",
+      "estado"
+    ],
+    "answer": "Ya existe un responsable definido para atenderlo. Revisa el último comentario para conocer el siguiente paso.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0189",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado en revisión?",
+    "keywords": [
+      "en revisión",
+      "estado",
+      "ticket"
+    ],
+    "answer": "El responsable está validando información, evidencia o impacto. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0190",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado en espera?",
+    "keywords": [
+      "en espera",
+      "estado",
+      "ticket"
+    ],
+    "answer": "El caso depende de información, autorización o evidencia adicional. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0191",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado vencido?",
+    "keywords": [
+      "vencido",
+      "estado",
+      "ticket"
+    ],
+    "answer": "El tiempo esperado fue superado y requiere revisión prioritaria. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0192",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado cerrado?",
+    "keywords": [
+      "cerrado",
+      "estado",
+      "ticket"
+    ],
+    "answer": "El caso tiene conclusión registrada y no requiere acciones activas. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0193",
+    "intent": "explicar_estado_ticket",
+    "category": "Seguimiento y cierre",
+    "title": "Explicar estado ticket",
+    "question": "¿Qué significa estado reabierto?",
+    "keywords": [
+      "reabierto",
+      "estado",
+      "ticket"
+    ],
+    "answer": "El cierre anterior no resolvió completamente el caso o apareció evidencia nueva. La interpretación final depende del flujo configurado en la app.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0194",
+    "intent": "diferenciar_acciones_calidad",
+    "category": "Proceso de calidad",
+    "title": "Diferenciar acciones calidad",
+    "question": "¿Qué diferencia hay entre corrección y otras acciones?",
+    "keywords": [
+      "corrección",
+      "acción",
+      "calidad",
+      "diferencia"
+    ],
+    "answer": "Corrección: Soluciona el efecto inmediato del problema. En la Mesa de Ayuda debe quedar claro si se trata de contención, corrección, acción correctiva, preventiva o mejora.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0195",
+    "intent": "diferenciar_acciones_calidad",
+    "category": "Proceso de calidad",
+    "title": "Diferenciar acciones calidad",
+    "question": "¿Qué diferencia hay entre acción correctiva y otras acciones?",
+    "keywords": [
+      "acción correctiva",
+      "acción",
+      "calidad",
+      "diferencia"
+    ],
+    "answer": "Acción correctiva: Busca eliminar la causa raíz para evitar repetición. En la Mesa de Ayuda debe quedar claro si se trata de contención, corrección, acción correctiva, preventiva o mejora.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0196",
+    "intent": "diferenciar_acciones_calidad",
+    "category": "Proceso de calidad",
+    "title": "Diferenciar acciones calidad",
+    "question": "¿Qué diferencia hay entre acción preventiva y otras acciones?",
+    "keywords": [
+      "acción preventiva",
+      "acción",
+      "calidad",
+      "diferencia"
+    ],
+    "answer": "Acción preventiva: Reduce un riesgo antes de que se convierta en problema. En la Mesa de Ayuda debe quedar claro si se trata de contención, corrección, acción correctiva, preventiva o mejora.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0197",
+    "intent": "diferenciar_acciones_calidad",
+    "category": "Proceso de calidad",
+    "title": "Diferenciar acciones calidad",
+    "question": "¿Qué diferencia hay entre plan de mejora y otras acciones?",
+    "keywords": [
+      "plan de mejora",
+      "acción",
+      "calidad",
+      "diferencia"
+    ],
+    "answer": "Plan de mejora: Aumenta desempeño, control o eficiencia de un proceso. En la Mesa de Ayuda debe quedar claro si se trata de contención, corrección, acción correctiva, preventiva o mejora.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0198",
+    "intent": "diferenciar_acciones_calidad",
+    "category": "Proceso de calidad",
+    "title": "Diferenciar acciones calidad",
+    "question": "¿Qué diferencia hay entre contención y otras acciones?",
+    "keywords": [
+      "contención",
+      "acción",
+      "calidad",
+      "diferencia"
+    ],
+    "answer": "Contención: Controla temporalmente el impacto mientras se define solución de fondo. En la Mesa de Ayuda debe quedar claro si se trata de contención, corrección, acción correctiva, preventiva o mejora.",
+    "priority": 8,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0199",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "Necesito una respuesta más humana",
+    "keywords": [
+      "necesito",
+      "respuesta",
+      "humana",
+      "claro",
+      "responder",
+      "forma",
+      "cercana",
+      "pero",
+      "manteniendo",
+      "datos"
+    ],
+    "answer": "Claro. Puedo responder de forma más cercana, pero manteniendo datos verificables y trazabilidad del proceso.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0200",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "Háblame menos técnico",
+    "keywords": [
+      "háblame",
+      "menos",
+      "técnico",
+      "entendido",
+      "explico",
+      "palabras",
+      "simples",
+      "pasos",
+      "concretos"
+    ],
+    "answer": "Entendido. Te lo explico en palabras simples y con pasos concretos.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0201",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "Dame una respuesta para copiar y pegar",
+    "keywords": [
+      "dame",
+      "respuesta",
+      "copiar",
+      "pegar",
+      "proponerte",
+      "lista",
+      "usar",
+      "debes",
+      "revisarla",
+      "antes"
+    ],
+    "answer": "Puedo proponerte una respuesta lista para usar. Debes revisarla antes de enviarla si contiene datos del ticket.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0202",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "Dime la mejor opción",
+    "keywords": [
+      "dime",
+      "mejor",
+      "opción",
+      "recomendar",
+      "base",
+      "proceso",
+      "pero",
+      "decisión",
+      "final",
+      "depende"
+    ],
+    "answer": "Puedo recomendar una opción con base en el proceso, pero la decisión final depende del responsable autorizado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0203",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "No quiero llenar tantos campos",
+    "keywords": [
+      "quiero",
+      "llenar",
+      "tantos",
+      "campos",
+      "entiendo",
+      "pero",
+      "mínimos",
+      "evitan",
+      "reprocesos",
+      "ayudan"
+    ],
+    "answer": "Entiendo, pero los campos mínimos evitan reprocesos y ayudan a que el caso tenga trazabilidad y respuesta correcta.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0204",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "Esto me parece muy lento",
+    "keywords": [
+      "parece",
+      "lento",
+      "podemos",
+      "revisar",
+      "tiempos",
+      "último",
+      "seguimiento",
+      "responsable",
+      "vencimiento",
+      "bloqueo"
+    ],
+    "answer": "Podemos revisar tiempos, último seguimiento y responsable. Si hay vencimiento o bloqueo, se registra y se escala con justificación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0205",
+    "intent": "tono_humano",
+    "category": "Conversaciones normales",
+    "title": "Tono humano",
+    "question": "Explícame como si fuera nuevo",
+    "keywords": [
+      "explícame",
+      "fuera",
+      "nuevo",
+      "claro",
+      "mesa",
+      "ayuda",
+      "registra",
+      "asigna",
+      "responsables",
+      "guarda"
+    ],
+    "answer": "Claro. La Mesa de Ayuda registra solicitudes, asigna responsables, guarda evidencias, controla estados y permite seguimiento hasta el cierre.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0206",
+    "intent": "explicar_rol",
+    "category": "Roles y permisos",
+    "title": "Explicar rol",
+    "question": "¿Qué puede hacer el solicitante?",
+    "keywords": [
+      "solicitante",
+      "rol",
+      "permiso"
+    ],
+    "answer": "El rol de solicitante puede crear solicitudes, aportar información, adjuntar evidencia y consultar el avance permitido. La acción exacta depende de los permisos configurados en la aplicación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0207",
+    "intent": "validar_permiso",
+    "category": "Roles y permisos",
+    "title": "Validar permiso",
+    "question": "Soy solicitante, ¿puedo cerrar un ticket?",
+    "keywords": [
+      "solicitante",
+      "cerrar",
+      "permiso"
+    ],
+    "answer": "Depende de los permisos configurados y del estado del ticket. Debes validar si el rol de solicitante tiene autorización para cierre y si el caso cumple evidencia y respuesta final.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0208",
+    "intent": "explicar_rol",
+    "category": "Roles y permisos",
+    "title": "Explicar rol",
+    "question": "¿Qué puede hacer el analista de calidad?",
+    "keywords": [
+      "analista de calidad",
+      "rol",
+      "permiso"
+    ],
+    "answer": "El rol de analista de calidad puede revisar casos asignados, solicitar evidencia, responder seguimientos y proponer acciones. La acción exacta depende de los permisos configurados en la aplicación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0209",
+    "intent": "explicar_rol",
+    "category": "Roles y permisos",
+    "title": "Explicar rol",
+    "question": "¿Qué puede hacer el jefe general?",
+    "keywords": [
+      "jefe general",
+      "rol",
+      "permiso"
+    ],
+    "answer": "El rol de jefe general puede revisar prioridades, desbloquear casos, escalar decisiones y validar cierres según permisos. La acción exacta depende de los permisos configurados en la aplicación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0210",
+    "intent": "explicar_rol",
+    "category": "Roles y permisos",
+    "title": "Explicar rol",
+    "question": "¿Qué puede hacer el super admin?",
+    "keywords": [
+      "super admin",
+      "rol",
+      "permiso"
+    ],
+    "answer": "El rol de super admin puede administrar usuarios, reglas, conocimientos, aprendizajes y configuración general. La acción exacta depende de los permisos configurados en la aplicación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0211",
+    "intent": "explicar_rol",
+    "category": "Roles y permisos",
+    "title": "Explicar rol",
+    "question": "¿Qué puede hacer el auditoría?",
+    "keywords": [
+      "auditoría",
+      "rol",
+      "permiso"
+    ],
+    "answer": "El rol de auditoría puede revisar trazabilidad, evidencias, cumplimiento y coherencia del cierre. La acción exacta depende de los permisos configurados en la aplicación.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0212",
+    "intent": "fallback_controlado",
+    "category": "Conversaciones normales",
+    "title": "Fallback controlado",
+    "question": "No encuentro ese ticket",
+    "keywords": [
+      "encuentro",
+      "encontré",
+      "información",
+      "disponible",
+      "verifica",
+      "código",
+      "dame",
+      "otro",
+      "dato",
+      "asunto"
+    ],
+    "answer": "No encontré el ticket con la información disponible. Verifica el código o dame otro dato como asunto, solicitante, área o fecha aproximada.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0213",
+    "intent": "fallback_controlado",
+    "category": "Conversaciones normales",
+    "title": "Fallback controlado",
+    "question": "No tengo permiso para ver ese caso",
+    "keywords": [
+      "permiso",
+      "mostrar",
+      "información",
+      "puedes",
+      "solicitar",
+      "acceso",
+      "responsable",
+      "administrador",
+      "autorizado"
+    ],
+    "answer": "No puedo mostrar información de un caso sin permiso. Puedes solicitar acceso al responsable o al administrador autorizado.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0214",
+    "intent": "fallback_controlado",
+    "category": "Conversaciones normales",
+    "title": "Fallback controlado",
+    "question": "La información está incompleta",
+    "keywords": [
+      "información",
+      "está",
+      "incompleta",
+      "disponible",
+      "permite",
+      "respuesta",
+      "segura",
+      "falta",
+      "menos",
+      "dato"
+    ],
+    "answer": "La información disponible no permite dar una respuesta segura. Falta al menos un dato clave para continuar.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0215",
+    "intent": "fallback_controlado",
+    "category": "Conversaciones normales",
+    "title": "Fallback controlado",
+    "question": "Hay varias coincidencias",
+    "keywords": [
+      "varias",
+      "coincidencias",
+      "encontré",
+      "posible",
+      "resultado",
+      "necesito",
+      "confirmes",
+      "número",
+      "fecha",
+      "evitar"
+    ],
+    "answer": "Encontré más de un posible resultado. Necesito que confirmes número de ticket, área o fecha para evitar errores.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  },
+  {
+    "id": "kb_0216",
+    "intent": "fallback_controlado",
+    "category": "Conversaciones normales",
+    "title": "Fallback controlado",
+    "question": "No existe regla oficial",
+    "keywords": [
+      "existe",
+      "regla",
+      "oficial",
+      "encontré",
+      "registrarlo",
+      "pregunta",
+      "respuesta",
+      "revisión",
+      "super",
+      "admin"
+    ],
+    "answer": "No encontré una regla oficial para ese caso. Puedo registrarlo como pregunta sin respuesta para revisión del Super Admin.",
+    "priority": 6,
+    "source": "Corpus conversacional"
+  }
+]

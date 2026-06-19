@@ -1,0 +1,2194 @@
+[
+  {
+    "id": "kb_ayuda_001",
+    "category_id": "uso_general",
+    "intent_id": "ayuda",
+    "title": "Qué puede hacer el asistente",
+    "question": "¿Qué puedes hacer?",
+    "answer": "Puedo ayudarte a consultar tickets, explicar estados, orientar cierres, revisar responsables, sugerir mejoras, identificar vencimientos, buscar conocimiento y registrar aprendizajes pendientes para aprobación.",
+    "keywords": [
+      "ayuda",
+      "qué puedes hacer",
+      "asistente",
+      "opciones"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_crear_ticket_001",
+    "category_id": "radicacion",
+    "intent_id": "crear_ticket",
+    "title": "Cómo radicar un ticket",
+    "question": "¿Cómo creo un ticket?",
+    "answer": "Para radicar un ticket, ingresa a la opción de creación, describe claramente la necesidad, selecciona categoría o área, adjunta evidencia si aplica y confirma el registro. El sistema debe generar un radicado para seguimiento.",
+    "keywords": [
+      "crear ticket",
+      "radicar",
+      "nueva solicitud",
+      "nuevo caso"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_consultar_radicado_001",
+    "category_id": "radicacion",
+    "intent_id": "consultar_ticket",
+    "title": "Consulta por radicado",
+    "question": "¿Cómo consulto un radicado?",
+    "answer": "Busca el número de radicado en la consulta de tickets. Si el radicado existe, se mostrará estado, responsable, fecha, trazabilidad y últimas respuestas disponibles según tus permisos.",
+    "keywords": [
+      "radicado",
+      "consultar radicado",
+      "DT-",
+      "buscar ticket"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_estado_001",
+    "category_id": "estados",
+    "intent_id": "consultar_estado",
+    "title": "Estados principales",
+    "question": "¿Qué significan los estados?",
+    "answer": "Los estados permiten saber en qué punto está una solicitud: abierta, asignada, en revisión, pendiente de evidencia, en espera, respondida, cerrada o reabierta. Cada cambio debe quedar registrado en la trazabilidad.",
+    "keywords": [
+      "estado",
+      "abierta",
+      "asignada",
+      "cerrada",
+      "reabierta"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_cierre_001",
+    "category_id": "cierre",
+    "intent_id": "cerrar_ticket",
+    "title": "Cierre correcto de un ticket",
+    "question": "¿Cómo cierro un ticket correctamente?",
+    "answer": "Un ticket se cierra cuando tiene gestión documentada, evidencia suficiente, respuesta final al solicitante y validación del responsable autorizado. No debe cerrarse un caso sin soporte o sin trazabilidad.",
+    "keywords": [
+      "cerrar ticket",
+      "finalizar",
+      "respuesta final",
+      "evidencia"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencia_001",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Evidencia suficiente",
+    "question": "¿Qué evidencia debo adjuntar?",
+    "answer": "La evidencia debe demostrar la gestión realizada. Puede ser un documento, imagen, acta, correo, captura de pantalla, enlace institucional o registro que permita verificar la atención del caso.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "adjunto",
+      "archivo"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_espera_001",
+    "category_id": "espera",
+    "intent_id": "ampliar_espera",
+    "title": "Ampliación de espera",
+    "question": "¿Cuándo se amplía la espera?",
+    "answer": "La espera se amplía cuando el caso depende de terceros, validación superior, información faltante, revisión documental o una condición que impide responder dentro del tiempo normal. Debe quedar justificada.",
+    "keywords": [
+      "ampliar espera",
+      "prórroga",
+      "más tiempo",
+      "aplazar"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_escalar_001",
+    "category_id": "escalamiento",
+    "intent_id": "escalar_ticket",
+    "title": "Cuándo escalar",
+    "question": "¿Cuándo debo escalar un ticket?",
+    "answer": "Escala el ticket cuando supera el tiempo esperado, requiere decisión de jefe general o Super Admin, tiene impacto alto, presenta reincidencia o no puede resolverse desde el nivel operativo.",
+    "keywords": [
+      "escalar",
+      "jefe general",
+      "super admin",
+      "urgente"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_roles_001",
+    "category_id": "roles",
+    "intent_id": "explicar_rol",
+    "title": "Permisos por rol",
+    "question": "¿Qué depende del rol del usuario?",
+    "answer": "El rol define qué puede ver o hacer cada usuario: responder tickets, cerrar casos, administrar usuarios, revisar KPIs, ampliar espera, gestionar conocimiento o supervisar trazabilidad.",
+    "keywords": [
+      "rol",
+      "permisos",
+      "acceso",
+      "usuario"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_superadmin_001",
+    "category_id": "super_admin",
+    "intent_id": "explicar_rol",
+    "title": "Super Admin",
+    "question": "¿Qué hace el Super Admin?",
+    "answer": "El Super Admin administra el sistema, usuarios, permisos, reglas de IA, conocimiento oficial, auditoría y configuración general. En este proyecto el Super Admin principal debe ser Juan Esteban Pérez.",
+    "keywords": [
+      "super admin",
+      "desarrollador",
+      "Juan Esteban",
+      "admin principal"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_kpi_001",
+    "category_id": "kpis",
+    "intent_id": "consultar_kpi",
+    "title": "Indicadores base",
+    "question": "¿Qué indicadores debe revisar la mesa?",
+    "answer": "La mesa debe revisar tickets abiertos, cerrados, vencidos, tiempo promedio de respuesta, carga por responsable, reincidencias, cierres por área y cumplimiento de tiempos.",
+    "keywords": [
+      "kpi",
+      "indicadores",
+      "dashboard",
+      "productividad"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_aprendizaje_001",
+    "category_id": "aprendizaje",
+    "intent_id": "registrar_aprendizaje",
+    "title": "Cómo aprende la IA",
+    "question": "¿Cómo aprende el asistente?",
+    "answer": "El asistente puede detectar información nueva durante la conversación, pero la guarda como aprendizaje pendiente. Solo después de aprobación administrativa se convierte en conocimiento oficial.",
+    "keywords": [
+      "aprende",
+      "aprendizaje",
+      "memoria",
+      "conocimiento"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_seguridad_001",
+    "category_id": "seguridad",
+    "intent_id": "seguridad_datos",
+    "title": "Límites de seguridad",
+    "question": "¿La IA puede mostrar contraseñas o PIN?",
+    "answer": "No. El asistente no debe revelar contraseñas, PIN, tokens, llaves ni datos sensibles. Tampoco debe cambiar roles o permisos desde una conversación casual.",
+    "keywords": [
+      "contraseña",
+      "pin",
+      "clave",
+      "seguridad"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_reincidencia_001",
+    "category_id": "mejora_continua",
+    "intent_id": "detectar_reincidencia",
+    "title": "Caso reincidente",
+    "question": "¿Qué es una reincidencia?",
+    "answer": "Una reincidencia ocurre cuando el mismo problema se repite por causa similar, área, procedimiento, responsable o falta de control. Debe analizarse para proponer acción de mejora.",
+    "keywords": [
+      "reincidencia",
+      "repetido",
+      "problema frecuente"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_reporte_001",
+    "category_id": "reportes",
+    "intent_id": "generar_reporte",
+    "title": "Reporte ejecutivo",
+    "question": "¿Qué debe tener un reporte?",
+    "answer": "Un reporte debe incluir periodo, volumen de tickets, estados, vencimientos, tiempos, responsables, áreas críticas, reincidencias, acciones de mejora y conclusiones para toma de decisiones.",
+    "keywords": [
+      "reporte",
+      "informe",
+      "excel",
+      "exportar"
+    ],
+    "priority": 10,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_001",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "¿Cuántos tickets abiertos hay?",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_002",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "Muéstrame los tickets activos",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_003",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "¿Qué casos siguen pendientes?",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_004",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "¿Hay solicitudes sin cerrar?",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_005",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "¿Qué tickets están en proceso?",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_006",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "Necesito revisar la bandeja abierta",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_abiertos_007",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_abiertos",
+    "title": "Consultar tickets abiertos",
+    "question": "¿Qué solicitudes activas tiene el sistema?",
+    "answer": "Cuando preguntes por tickets abiertos, el sistema debe consultar los registros activos y separar por estado, área o responsable cuando sea posible. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "abiertos",
+      "activos",
+      "pendientes",
+      "consultar tickets abiertos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_001",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Qué tickets están vencidos?",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_002",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Hay casos demorados?",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_003",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Cuáles se pasaron del tiempo?",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_004",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "Revisa los tickets atrasados",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_005",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Qué solicitudes están quietas?",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_006",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Qué casos requieren prioridad por demora?",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_tickets_consultar_tickets_vencidos_007",
+    "category_id": "tickets",
+    "intent_id": "consultar_tickets_vencidos",
+    "title": "Consultar tickets vencidos",
+    "question": "¿Cuáles tickets necesitan seguimiento urgente?",
+    "answer": "Un ticket vencido debe analizarse por fecha de creación, último movimiento, responsable, estado y causa de espera. Si no existe justificación, debe priorizarse. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "vencidos",
+      "atrasados",
+      "demorados",
+      "consultar tickets vencidos"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_001",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "¿Quién tiene este ticket?",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_002",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "¿Cuál es el responsable?",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_003",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "¿A quién está asignado?",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_004",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "¿Quién debe responder?",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_005",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "Necesito saber el encargado",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_006",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "¿Qué analista tiene el caso?",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_consultar_responsable_007",
+    "category_id": "asignacion",
+    "intent_id": "consultar_responsable",
+    "title": "Consultar responsable",
+    "question": "¿Quién aparece asignado?",
+    "answer": "El responsable es la persona asignada para atender o coordinar la respuesta del ticket. Si no hay responsable, el caso debe aparecer como pendiente de asignación. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "responsable",
+      "asignado",
+      "encargado",
+      "consultar responsable"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_001",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "¿Cómo asigno un ticket?",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_002",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "¿Puedo cambiar el responsable?",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_003",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "Necesito reasignar un caso",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_004",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "¿Cómo delego una solicitud?",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_005",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "¿Qué criterio uso para asignar?",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_006",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "¿Puedo pasar este caso a otro analista?",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_asignacion_asignar_ticket_007",
+    "category_id": "asignacion",
+    "intent_id": "asignar_ticket",
+    "title": "Asignación de ticket",
+    "question": "¿Cómo registro una reasignación?",
+    "answer": "La asignación debe considerar área, carga de trabajo, competencia del analista, prioridad y trazabilidad. Toda reasignación debe registrar motivo. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "asignar",
+      "reasignar",
+      "cambiar responsable",
+      "asignación de ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_001",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "¿Cómo respondo al solicitante?",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_002",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "Necesito contestar este caso",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_003",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "¿Qué debe decir la respuesta?",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_004",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "¿Cómo dejo respuesta final?",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_005",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "¿Cómo comunico el avance?",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_006",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "¿Puedo responder sin cerrar?",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_respuesta_responder_solicitante_007",
+    "category_id": "respuesta",
+    "intent_id": "responder_solicitante",
+    "title": "Respuesta al solicitante",
+    "question": "¿Qué debe tener una buena respuesta?",
+    "answer": "La respuesta debe ser clara, respetuosa y verificable. Debe explicar qué se hizo, qué falta o cuál es el siguiente paso. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "responder",
+      "contestar",
+      "solicitante",
+      "respuesta al solicitante"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_001",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Cómo agrego evidencia?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_002",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Qué soporte adjunto?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_003",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Sirve una captura como evidencia?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_004",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Puedo subir documentos?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_005",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Qué evidencia necesita el caso?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_006",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Cómo documento la gestión?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_evidencias_agregar_evidencia_007",
+    "category_id": "evidencias",
+    "intent_id": "agregar_evidencia",
+    "title": "Soporte documental",
+    "question": "¿Qué anexo debo dejar?",
+    "answer": "La evidencia debe ser coherente con la respuesta. No se recomienda cerrar un ticket con evidencia incompleta, ilegible o no relacionada. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "evidencia",
+      "soporte",
+      "documento",
+      "soporte documental"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_001",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "¿Cómo audito un ticket?",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_002",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "¿Qué reviso en trazabilidad?",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_003",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "¿Quién movió el caso?",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_004",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "Necesito revisar el historial",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_005",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "¿Cómo sé quién cerró?",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_006",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "¿Qué eventos tiene el ticket?",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_auditoria_auditar_ticket_007",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría del ticket",
+    "question": "¿Cómo verifico la gestión?",
+    "answer": "La auditoría revisa quién creó, asignó, respondió, escaló, amplió espera o cerró el ticket, incluyendo fechas y observaciones. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "auditar",
+      "historial",
+      "trazabilidad",
+      "auditoría del ticket"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_001",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "¿Qué mejora se puede proponer?",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_002",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "Sugiere una acción de mejora",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_003",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "¿Cómo evito que se repita?",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_004",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "¿Cuál sería la causa raíz?",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_005",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "¿Qué control recomiendas?",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_006",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "¿Cómo convierto esto en mejora continua?",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_mejora_continua_sugerir_mejora_007",
+    "category_id": "mejora_continua",
+    "intent_id": "sugerir_mejora",
+    "title": "Acción de mejora",
+    "question": "¿Qué acción preventiva aplica?",
+    "answer": "Una acción de mejora debe atacar causa raíz, tener responsable, fecha, evidencia de ejecución y seguimiento posterior. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "mejora",
+      "acción",
+      "causa raíz",
+      "acción de mejora"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_001",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "¿Qué dice el procedimiento?",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_002",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "Explícame la regla",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_003",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "¿Cómo funciona este proceso?",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_004",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "¿Cuál es el paso a paso?",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_005",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "¿Qué control aplica?",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_006",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "¿Cómo se debe hacer?",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_documentos_explicar_procedimiento_007",
+    "category_id": "documentos",
+    "intent_id": "explicar_procedimiento",
+    "title": "Procedimiento relacionado",
+    "question": "¿Qué lineamiento debo seguir?",
+    "answer": "Cuando una solicitud corresponde a un procedimiento, el asistente debe orientar con la regla oficial y sugerir revisar documento vigente. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "procedimiento",
+      "manual",
+      "proceso",
+      "procedimiento relacionado"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_001",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿Cuándo se notifica?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_002",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿A quién se alerta?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_003",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿Cómo funciona el aviso?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_004",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿Qué notificación recibe el responsable?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_005",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿Se avisa al solicitante?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_006",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿Hay alerta de vencimiento?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_notificaciones_notificacion_007",
+    "category_id": "notificaciones",
+    "intent_id": "notificacion",
+    "title": "Notificación interna",
+    "question": "¿Cómo se comunica el cierre?",
+    "answer": "Las notificaciones ayudan a alertar responsables, jefes o solicitantes sobre asignaciones, respuestas, vencimientos o cierres. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "notificación",
+      "alerta",
+      "aviso",
+      "notificación interna"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_001",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "No me carga la app",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_002",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "No guarda el ticket",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_003",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "No aparece el botón",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_004",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "Sale error de permisos",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_005",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "No puedo entrar",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_006",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "No me deja cerrar",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_errores_error_sistema_007",
+    "category_id": "errores",
+    "intent_id": "error_sistema",
+    "title": "Error frecuente",
+    "question": "La pantalla se queda quieta",
+    "answer": "Ante un error del sistema, primero valida conexión, sesión, permisos, datos obligatorios y que la tabla exista correctamente. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "error",
+      "falla",
+      "no guarda",
+      "error frecuente"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_001",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "¿Qué dice el procedimiento?",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_002",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "Explícame la regla",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos. Si el dato depende de registros reales, el asistente debe consultar la base antes de responder.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_003",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "¿Cómo funciona este proceso?",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos. Si no hay información suficiente, debe pedir radicado, área, responsable o rango de fechas.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_004",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "¿Cuál es el paso a paso?",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos. La respuesta debe quedar alineada con roles, permisos y trazabilidad institucional.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_005",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "¿Qué control aplica?",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos. Cuando aplique, conviene dejar comentario de seguimiento para futuras auditorías.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_006",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "¿Cómo se debe hacer?",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos. Si el caso tiene riesgo o impacto alto, se recomienda escalarlo oportunamente.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_calidad_explicar_procedimiento_007",
+    "category_id": "calidad",
+    "intent_id": "explicar_procedimiento",
+    "title": "Calidad institucional",
+    "question": "¿Qué lineamiento debo seguir?",
+    "answer": "La calidad implica trazabilidad, respuesta oportuna, control documental, evidencia y mejora continua sobre los casos atendidos. Este criterio también ayuda a alimentar indicadores y aprendizajes del sistema.",
+    "keywords": [
+      "calidad",
+      "gestión",
+      "control",
+      "calidad institucional"
+    ],
+    "priority": 7,
+    "requires_data_lookup": true,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_super_admin_001",
+    "category_id": "super_admin",
+    "intent_id": "explicar_rol",
+    "title": "Super Admin",
+    "question": "¿Qué hace Super Admin?",
+    "answer": "El Super Admin tiene control global del sistema: usuarios, permisos, reglas, auditoría, base de conocimiento, aprendizajes y configuración. Debe actuar con trazabilidad y mínimo privilegio. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "super admin",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_super_admin_002",
+    "category_id": "super_admin",
+    "intent_id": "explicar_rol",
+    "title": "Super Admin",
+    "question": "¿Qué hace Super Admin?",
+    "answer": "El Super Admin tiene control global del sistema: usuarios, permisos, reglas, auditoría, base de conocimiento, aprendizajes y configuración. Debe actuar con trazabilidad y mínimo privilegio. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "super admin",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_super_admin_003",
+    "category_id": "super_admin",
+    "intent_id": "explicar_rol",
+    "title": "Super Admin",
+    "question": "¿Qué hace Super Admin?",
+    "answer": "El Super Admin tiene control global del sistema: usuarios, permisos, reglas, auditoría, base de conocimiento, aprendizajes y configuración. Debe actuar con trazabilidad y mínimo privilegio. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "super admin",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_super_admin_004",
+    "category_id": "super_admin",
+    "intent_id": "explicar_rol",
+    "title": "Super Admin",
+    "question": "¿Qué hace Super Admin?",
+    "answer": "El Super Admin tiene control global del sistema: usuarios, permisos, reglas, auditoría, base de conocimiento, aprendizajes y configuración. Debe actuar con trazabilidad y mínimo privilegio. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "super admin",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_jefe_general_001",
+    "category_id": "jefe_general",
+    "intent_id": "explicar_rol",
+    "title": "Jefe general",
+    "question": "¿Qué hace Jefe general?",
+    "answer": "El jefe general supervisa operación, prioriza casos, revisa carga, valida tiempos, acompaña cierres críticos y puede revisar KPIs globales según permisos definidos. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "jefe general",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_jefe_general_002",
+    "category_id": "jefe_general",
+    "intent_id": "explicar_rol",
+    "title": "Jefe general",
+    "question": "¿Qué hace Jefe general?",
+    "answer": "El jefe general supervisa operación, prioriza casos, revisa carga, valida tiempos, acompaña cierres críticos y puede revisar KPIs globales según permisos definidos. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "jefe general",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_jefe_general_003",
+    "category_id": "jefe_general",
+    "intent_id": "explicar_rol",
+    "title": "Jefe general",
+    "question": "¿Qué hace Jefe general?",
+    "answer": "El jefe general supervisa operación, prioriza casos, revisa carga, valida tiempos, acompaña cierres críticos y puede revisar KPIs globales según permisos definidos. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "jefe general",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_jefe_general_004",
+    "category_id": "jefe_general",
+    "intent_id": "explicar_rol",
+    "title": "Jefe general",
+    "question": "¿Qué hace Jefe general?",
+    "answer": "El jefe general supervisa operación, prioriza casos, revisa carga, valida tiempos, acompaña cierres críticos y puede revisar KPIs globales según permisos definidos. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "jefe general",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_analistas_001",
+    "category_id": "analistas",
+    "intent_id": "explicar_rol",
+    "title": "Analista de calidad",
+    "question": "¿Qué hace Analista de calidad?",
+    "answer": "El analista atiende solicitudes, responde casos, adjunta evidencia, documenta avances y propone acciones de mejora cuando detecta problemas repetidos. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "analista de calidad",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_analistas_002",
+    "category_id": "analistas",
+    "intent_id": "explicar_rol",
+    "title": "Analista de calidad",
+    "question": "¿Qué hace Analista de calidad?",
+    "answer": "El analista atiende solicitudes, responde casos, adjunta evidencia, documenta avances y propone acciones de mejora cuando detecta problemas repetidos. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "analista de calidad",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_analistas_003",
+    "category_id": "analistas",
+    "intent_id": "explicar_rol",
+    "title": "Analista de calidad",
+    "question": "¿Qué hace Analista de calidad?",
+    "answer": "El analista atiende solicitudes, responde casos, adjunta evidencia, documenta avances y propone acciones de mejora cuando detecta problemas repetidos. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "analista de calidad",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_analistas_004",
+    "category_id": "analistas",
+    "intent_id": "explicar_rol",
+    "title": "Analista de calidad",
+    "question": "¿Qué hace Analista de calidad?",
+    "answer": "El analista atiende solicitudes, responde casos, adjunta evidencia, documenta avances y propone acciones de mejora cuando detecta problemas repetidos. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "analista de calidad",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_solicitantes_001",
+    "category_id": "solicitantes",
+    "intent_id": "explicar_rol",
+    "title": "Solicitante",
+    "question": "¿Qué hace Solicitante?",
+    "answer": "El solicitante registra necesidades, consulta el estado del radicado y recibe respuesta. No debe modificar información interna ni datos de otros casos. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "solicitante",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_solicitantes_002",
+    "category_id": "solicitantes",
+    "intent_id": "explicar_rol",
+    "title": "Solicitante",
+    "question": "¿Qué hace Solicitante?",
+    "answer": "El solicitante registra necesidades, consulta el estado del radicado y recibe respuesta. No debe modificar información interna ni datos de otros casos. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "solicitante",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_solicitantes_003",
+    "category_id": "solicitantes",
+    "intent_id": "explicar_rol",
+    "title": "Solicitante",
+    "question": "¿Qué hace Solicitante?",
+    "answer": "El solicitante registra necesidades, consulta el estado del radicado y recibe respuesta. No debe modificar información interna ni datos de otros casos. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "solicitante",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_solicitantes_004",
+    "category_id": "solicitantes",
+    "intent_id": "explicar_rol",
+    "title": "Solicitante",
+    "question": "¿Qué hace Solicitante?",
+    "answer": "El solicitante registra necesidades, consulta el estado del radicado y recibe respuesta. No debe modificar información interna ni datos de otros casos. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "solicitante",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_auditoria_001",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría interna",
+    "question": "¿Qué hace Auditoría interna?",
+    "answer": "Auditoría revisa trazabilidad, evidencia, cumplimiento de tiempos, coherencia del cierre y controles asociados a la mejora continua. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "auditoría interna",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_auditoria_002",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría interna",
+    "question": "¿Qué hace Auditoría interna?",
+    "answer": "Auditoría revisa trazabilidad, evidencia, cumplimiento de tiempos, coherencia del cierre y controles asociados a la mejora continua. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "auditoría interna",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_auditoria_003",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría interna",
+    "question": "¿Qué hace Auditoría interna?",
+    "answer": "Auditoría revisa trazabilidad, evidencia, cumplimiento de tiempos, coherencia del cierre y controles asociados a la mejora continua. La IA puede explicar su alcance, pero no puede modificar permisos por conversación.",
+    "keywords": [
+      "auditoría interna",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_role_auditoria_004",
+    "category_id": "auditoria",
+    "intent_id": "auditar_ticket",
+    "title": "Auditoría interna",
+    "question": "¿Qué hace Auditoría interna?",
+    "answer": "Auditoría revisa trazabilidad, evidencia, cumplimiento de tiempos, coherencia del cierre y controles asociados a la mejora continua. Cualquier cambio debe pasar por usuario autorizado y quedar registrado.",
+    "keywords": [
+      "auditoría interna",
+      "rol",
+      "permisos",
+      "alcance"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_conv_001",
+    "category_id": "conversacion",
+    "intent_id": "saludar",
+    "title": "Conversación natural",
+    "question": "Hola",
+    "answer": "Hola. Puedo ayudarte a revisar tickets, estados, responsables, cierres, evidencias, indicadores o procedimientos. ¿Qué necesitas consultar?",
+    "keywords": [
+      "hola",
+      "buenos días",
+      "buenas"
+    ],
+    "priority": 10,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_conv_002",
+    "category_id": "conversacion",
+    "intent_id": "agradecer",
+    "title": "Agradecimiento",
+    "question": "Gracias",
+    "answer": "Con gusto. Dejo la orientación lista y, si necesitas, también puedo ayudarte a ubicar el ticket o convertir el caso en una acción de mejora.",
+    "keywords": [
+      "gracias",
+      "muchas gracias"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  },
+  {
+    "id": "kb_conv_003",
+    "category_id": "conversacion",
+    "intent_id": "ayuda",
+    "title": "Pregunta ambigua",
+    "question": "No sé qué hacer",
+    "answer": "Para orientarte mejor necesito identificar si hablas de crear un ticket, responderlo, cerrarlo, escalarlo, adjuntar evidencia o revisar un indicador. Puedes darme el radicado o describir el caso.",
+    "keywords": [
+      "no sé",
+      "ayuda",
+      "qué hago"
+    ],
+    "priority": 8,
+    "requires_data_lookup": false,
+    "approved": true,
+    "status": "active"
+  }
+]
